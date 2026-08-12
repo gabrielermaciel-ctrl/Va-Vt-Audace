@@ -129,19 +129,14 @@ tr:hover td{background:var(--am-l)}
       <div class="lbox">
         <span class="g">Grupo</span>
         <span class="a">AUDACe</span>
-        <span class="s">AutopeÃ§as</span>
+        <span class="s">Autopeças</span>
       </div>
       <p>Sistema de VA/VT</p>
-    <div class="lf">
-  <label>E-mail</label>
-  <input type="email" id="l-email">
-</div>
-<div class="lf">
-  <label>Senha</label>
-  <input type="password" id="l-senha">
-</div>
-<button class="lbtn" onclick="fazerLogin()">Entrar</button>
-<p class="lerr" id="l-erro"></p>
+    </div>
+    <div class="lf"><label>E-mail</label><input type="email" id="l-email" placeholder="seu@email.com"/></div>
+    <div class="lf"><label>Senha</label><input type="password" id="l-senha" placeholder="••••••••"/></div>
+    <button class="lbtn" onclick="fazerLogin()">Entrar</button>
+    <p class="lerr" id="l-erro"></p>
   </div>
 </div>
 
@@ -150,7 +145,7 @@ tr:hover td{background:var(--am-l)}
   <div class="hdr">
     <div class="hbrand">
       <div class="hpill">AUDACe</div>
-      <div class="ht"><h2>VA/VT â Grupo Audace AutopeÃ§as</h2><p id="h-sub">Carregando...</p></div>
+      <div class="ht"><h2>VA/VT — Grupo Audace Autopeças</h2><p id="h-sub">Carregando...</p></div>
     </div>
     <div class="hr">
       <span class="bperfil" id="h-perfil"></span>
@@ -160,25 +155,25 @@ tr:hover td{background:var(--am-l)}
   </div>
 
   <div class="tbar" id="tbar">
-    <button class="tb active" data-tab="parametros" onclick="switchTab('parametros')">âï¸ ParÃ¢metros</button>
-    <button class="tb" data-tab="sabados" onclick="switchTab('sabados')">ð SÃ¡bados</button>
-    <button class="tb" data-tab="feriados" onclick="switchTab('feriados')">ðï¸ Feriados</button>
-    <button class="tb" data-tab="ausencias" onclick="switchTab('ausencias')">ð« AusÃªncias</button>
-    <button class="tb" data-tab="ferias" onclick="switchTab('ferias')">ðï¸ FÃ©rias</button>
-    <button class="tb" data-tab="resultado" onclick="switchTab('resultado')">ð Resultado</button>
-    <button class="tb" data-tab="custos" onclick="switchTab('custos')">ð° Custos por CC</button>
-    <button class="tb" data-tab="colaboradores" onclick="switchTab('colaboradores')">ð¥ Colaboradores</button>
+    <button class="tb active" data-tab="parametros" onclick="switchTab('parametros')">⚙️ Parâmetros</button>
+    <button class="tb" data-tab="sabados" onclick="switchTab('sabados')">📅 Sábados</button>
+    <button class="tb" data-tab="feriados" onclick="switchTab('feriados')">🗓️ Feriados</button>
+    <button class="tb" data-tab="ausencias" onclick="switchTab('ausencias')">🚫 Ausências</button>
+    <button class="tb" data-tab="ferias" onclick="switchTab('ferias')">🏖️ Férias</button>
+    <button class="tb" data-tab="resultado" onclick="switchTab('resultado')">📊 Resultado</button>
+    <button class="tb" data-tab="custos" onclick="switchTab('custos')">💰 Custos por CC</button>
+    <button class="tb" data-tab="colaboradores" onclick="switchTab('colaboradores')">👥 Colaboradores</button>
   </div>
 
-  <!-- PARÃMETROS -->
+  <!-- PARÂMETROS -->
   <div class="tc active" id="tab-parametros">
     <div class="card" style="max-width:480px">
-      <div class="ctit">ParÃ¢metros do MÃªs</div>
+      <div class="ctit">Parâmetros do Mês</div>
       <div class="g2">
-        <div class="fld"><label>MÃªs</label>
+        <div class="fld"><label>Mês</label>
           <select id="p-mes">
             <option value="1">Janeiro</option><option value="2">Fevereiro</option>
-            <option value="3">MarÃ§o</option><option value="4">Abril</option>
+            <option value="3">Março</option><option value="4">Abril</option>
             <option value="5">Maio</option><option value="6">Junho</option>
             <option value="7">Julho</option><option value="8">Agosto</option>
             <option value="9">Setembro</option><option value="10">Outubro</option>
@@ -187,73 +182,73 @@ tr:hover td{background:var(--am-l)}
         </div>
         <div class="fld"><label>Ano</label><input type="number" id="p-ano" value="2026" min="2020" max="2035"/></div>
       </div>
-      <div class="fld"><label>Valor do VA (R$ â mensal cheio)</label><input type="number" id="p-va" value="240" step="0.01" min="0"/></div>
-      <button class="btn ba" id="btn-p-salvar" onclick="salvarParametros()">ð¾ Salvar ParÃ¢metros</button>
+      <div class="fld"><label>Valor do VA (R$ — mensal cheio)</label><input type="number" id="p-va" value="240" step="0.01" min="0"/></div>
+      <button class="btn ba" id="btn-p-salvar" onclick="salvarParametros()">💾 Salvar Parâmetros</button>
       <span id="p-status" style="margin-left:10px;font-size:12px;color:var(--cz)"></span>
     </div>
     <div class="card" style="max-width:480px">
-      <div class="ctit">Dias Ãteis do MÃªs</div>
-      <div id="dias-info" style="color:var(--cz);font-size:13px">Selecione mÃªs e ano acima</div>
+      <div class="ctit">Dias Úteis do Mês</div>
+      <div id="dias-info" style="color:var(--cz);font-size:13px">Selecione mês e ano acima</div>
     </div>
   </div>
 
-  <!-- SÃBADOS -->
+  <!-- SÁBADOS -->
   <div class="tc" id="tab-sabados">
     <div class="card">
-      <div class="ctit">SÃ¡bados do MÃªs â Turmas A e B</div>
-      <p style="font-size:12px;color:var(--cz);margin-bottom:16px">NR/EX trabalham em todos os sÃ¡bados. C e AF nunca trabalham sÃ¡bados.</p>
+      <div class="ctit">Sábados do Mês — Turmas A e B</div>
+      <p style="font-size:12px;color:var(--cz);margin-bottom:16px">NR/EX trabalham em todos os sábados. C e AF nunca trabalham sábados.</p>
       <div id="sab-container" class="loading"><div class="spin"></div></div>
-      <div style="margin-top:16px"><button class="btn ba" id="btn-sab-salvar" onclick="salvarSabados()">ð¾ Salvar SÃ¡bados</button></div>
+      <div style="margin-top:16px"><button class="btn ba" id="btn-sab-salvar" onclick="salvarSabados()">💾 Salvar Sábados</button></div>
     </div>
   </div>
 
   <!-- FERIADOS -->
   <div class="tc" id="tab-feriados">
     <div class="card">
-      <div class="ctit">Feriados do MÃªs</div>
+      <div class="ctit">Feriados do Mês</div>
       <p style="font-size:12px;color:var(--cz);margin-bottom:12px">
-        Marque os feriados do mÃªs. Por padrÃ£o ninguÃ©m trabalha. Marque as escalas que trabalharam em cada feriado.
-        Feriados nÃ£o trabalhados sÃ£o excluÃ­dos do cÃ´mputo de dias Ãºteis de cada colaborador.
+        Marque os feriados do mês. Por padrão ninguém trabalha. Marque as escalas que trabalharam em cada feriado.
+        Feriados não trabalhados são excluídos do cômputo de dias úteis de cada colaborador.
       </p>
-      <div class="sqlnote">â ï¸ ATENÃÃO: execute o SQL em feriados_setup.sql no Supabase antes de usar esta aba pela primeira vez.</div>
-      <div id="fer-readonly" class="ronote" style="display:none">â ï¸ Apenas admin e RH podem editar feriados.</div>
+      <div class="sqlnote">⚠️ ATENÇÃO: execute o SQL em feriados_setup.sql no Supabase antes de usar esta aba pela primeira vez.</div>
+      <div id="fer-readonly" class="ronote" style="display:none">⚠️ Apenas admin e RH podem editar feriados.</div>
       <div class="abar">
         <button class="btn ba" id="btn-add-feriado" onclick="adicionarFeriado()">+ Adicionar Feriado</button>
-        <button class="btn bp" id="btn-feriados-salvar" onclick="salvarFeriados()">ð¾ Salvar Feriados</button>
+        <button class="btn bp" id="btn-feriados-salvar" onclick="salvarFeriados()">💾 Salvar Feriados</button>
       </div>
       <div id="feriados-container"></div>
     </div>
   </div>
 
-  <!-- AUSÃNCIAS -->
+  <!-- AUSÊNCIAS -->
   <div class="tc" id="tab-ausencias">
-    <div id="aus-ro" class="ronote" style="display:none">â ï¸ Seu perfil tem apenas leitura nesta seÃ§Ã£o.</div>
+    <div id="aus-ro" class="ronote" style="display:none">⚠️ Seu perfil tem apenas leitura nesta seção.</div>
     <div class="card">
-      <div class="ctit">LanÃ§amento de AusÃªncias</div>
+      <div class="ctit">Lançamento de Ausências</div>
       <p style="font-size:12px;color:var(--cz);margin-bottom:12px">
-        Informe o nÃºmero de dias. <strong>Injustificadas</strong> descontam VA e VT. <strong>Justificadas</strong> descontam apenas VT.
+        Informe o número de dias. <strong>Injustificadas</strong> descontam VA e VT. <strong>Justificadas</strong> descontam apenas VT.
       </p>
       <div class="sbar">
         <input type="text" id="aus-busca" placeholder="Buscar colaborador..." oninput="renderAusencias()"/>
         <select id="aus-cc" onchange="renderAusencias()"><option value="">Todos os CCs</option></select>
-        <button class="btn ba" id="btn-aus-salvar" onclick="salvarTodasAusencias()">ð¾ Salvar AusÃªncias</button>
+        <button class="btn ba" id="btn-aus-salvar" onclick="salvarTodasAusencias()">💾 Salvar Ausências</button>
       </div>
       <div id="aus-container" class="loading"><div class="spin"></div></div>
     </div>
   </div>
 
-  <!-- FÃRIAS -->
+  <!-- FÉRIAS -->
   <div class="tc" id="tab-ferias">
-    <div id="fer-ro" class="ronote" style="display:none">â ï¸ Seu perfil tem apenas leitura nesta seÃ§Ã£o.</div>
+    <div id="fer-ro" class="ronote" style="display:none">⚠️ Seu perfil tem apenas leitura nesta seção.</div>
     <div class="card">
-      <div class="ctit">LanÃ§amento de FÃ©rias</div>
+      <div class="ctit">Lançamento de Férias</div>
       <p style="font-size:12px;color:var(--cz);margin-bottom:12px">
-        Informe o perÃ­odo de fÃ©rias (inÃ­cio e fim). O sistema calcula automaticamente os dias Ãºteis e sÃ¡bados dentro do perÃ­odo. FÃ©rias descontam VA e VT.
+        Informe o período de férias (início e fim). O sistema calcula automaticamente os dias úteis e sábados dentro do período. Férias descontam VA e VT.
       </p>
       <div class="sbar">
         <input type="text" id="ferias-busca" placeholder="Buscar colaborador..." oninput="renderFerias()"/>
         <select id="ferias-cc" onchange="renderFerias()"><option value="">Todos os CCs</option></select>
-        <button class="btn ba" id="btn-ferias-salvar" onclick="salvarTodasFerias()">ð¾ Salvar FÃ©rias</button>
+        <button class="btn ba" id="btn-ferias-salvar" onclick="salvarTodasFerias()">💾 Salvar Férias</button>
       </div>
       <div id="ferias-container" class="loading"><div class="spin"></div></div>
     </div>
@@ -268,9 +263,9 @@ tr:hover td{background:var(--am-l)}
       <div class="sc cz2"><label>Colaboradores</label><div class="val" id="s-emp">0</div></div>
     </div>
     <div class="abar">
-      <button class="btn ba" id="btn-calcular" onclick="calcular()">â¡ Calcular</button>
-      <button class="btn bp" id="btn-salvar-res" onclick="salvarResultado()" style="display:none">ð¾ Salvar + Baixar CSV</button>
-      <button class="btn bd2 bsm" id="btn-resetar" onclick="resetarCalculo()" style="display:none">ð Novo CÃ¡lculo</button>
+      <button class="btn ba" id="btn-calcular" onclick="calcular()">⚡ Calcular</button>
+      <button class="btn bp" id="btn-salvar-res" onclick="salvarResultado()" style="display:none">💾 Salvar + Baixar CSV</button>
+      <button class="btn bd2 bsm" id="btn-resetar" onclick="resetarCalculo()" style="display:none">🔄 Novo Cálculo</button>
       <select id="res-cc" onchange="filtrarResultado()" style="padding:8px 12px;border:1.5px solid var(--bd);border-radius:7px;font-size:13px;outline:none;background:#fff"><option value="">Todos os CCs</option></select>
       <input type="text" id="res-busca" placeholder="Buscar..." oninput="filtrarResultado()" style="padding:8px 12px;border:1.5px solid var(--bd);border-radius:7px;font-size:13px;outline:none"/>
     </div>
@@ -278,12 +273,12 @@ tr:hover td{background:var(--am-l)}
       <table>
         <thead><tr>
           <th>Colaborador</th><th>CC</th><th>Escala</th>
-          <th class="nr">D.Ãteis</th>
-          <th class="nr">SÃ¡b.Trab.</th>
+          <th class="nr">D.Úteis</th>
+          <th class="nr">Sáb.Trab.</th>
           <th class="nr">Falta Inj.</th>
           <th class="nr">Falta Just.</th>
-          <th class="nr">FÃ©rias (d.u.)</th>
-          <th class="nr">SÃ¡b.FÃ©rias</th>
+          <th class="nr">Férias (d.u.)</th>
+          <th class="nr">Sáb.Férias</th>
           <th class="nr">Dias p/VA</th>
           <th class="nr">Dias p/VT</th>
           <th class="nr">VA (R$)</th>
@@ -303,13 +298,13 @@ tr:hover td{background:var(--am-l)}
 
   <!-- COLABORADORES -->
   <div class="tc" id="tab-colaboradores">
-    <div id="colab-ro" class="ronote" style="display:none">â ï¸ Apenas admin e RH podem editar colaboradores.</div>
+    <div id="colab-ro" class="ronote" style="display:none">⚠️ Apenas admin e RH podem editar colaboradores.</div>
     <div class="card">
-      <div class="ctit">Colaboradores â BenefÃ­cios VA e VT</div>
+      <div class="ctit">Colaboradores — Benefícios VA e VT</div>
       <div class="sbar">
         <input type="text" id="colab-busca" placeholder="Buscar por nome..." oninput="renderColaboradores()"/>
         <select id="colab-cc" onchange="renderColaboradores()"><option value="">Todos os CCs</option></select>
-        <button class="btn ba" id="btn-colab-salvar" onclick="salvarColaboradores()">ð¾ Salvar AlteraÃ§Ãµes</button>
+        <button class="btn ba" id="btn-colab-salvar" onclick="salvarColaboradores()">💾 Salvar Alterações</button>
       </div>
       <div id="colab-container" class="loading"><div class="spin"></div></div>
     </div>
@@ -353,7 +348,7 @@ async function iniciarApp() {
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return;
   const { data: p } = await sb.from('perfis').select('*').eq('id', user.id).single();
-  if (!p) { toast('Perfil nÃ£o encontrado.', 'error'); return; }
+  if (!p) { toast('Perfil não encontrado.', 'error'); return; }
   perfil = p;
   document.getElementById('h-nome').textContent = p.nome;
   document.getElementById('h-perfil').textContent = p.perfil;
@@ -387,7 +382,185 @@ async function carregarColaboradores() {
 async function carregarParametros() {
   const ano = parseInt(document.getElementById('p-ano').value) || params.ano;
   const mes = parseInt(document.getElementById('p-mes').value) || params.mes;
-  const { data } = await sb.from('parametros_mes').select('*').eq('ano', ano).C¢6ffb#ãÆ÷FöâfÇVSÒ"#åFöF÷2÷2473Âö÷FöããÂ÷6VÆV7Cà¢ÆçWBGSÒ'FWB"CÒ'&W2Ö'W66"Æ6VöÆFW#Ò$'W66"âââ"öæçWCÒ&fÇG&%&W7VÇFFò"7GÆSÒ'FFæs£'¶&÷&FW#£ãW6öÆBf"ÒÖ&B¶&÷&FW"×&FW3£w¶föçB×6¦S£7¶÷WFÆæS¦æöæR"óà¢ÂöFcà¢ÆFb6Æ73Ò'Gr#à¢ÇF&ÆSà¢ÇFVCãÇG#à¢ÇFä6öÆ&÷&F÷#Â÷FãÇFä43Â÷FãÇFäW66ÆÂ÷Fà¢ÇF6Æ73Ò&ç"#äBì9§FV3Â÷Fà¢ÇF6Æ73Ò&ç"#å<:"åG&"ãÂ÷Fà¢ÇF6Æ73Ò&ç"#äfÇFæ¢ãÂ÷Fà¢ÇF6Æ73Ò&ç"#äfÇF§W7BãÂ÷Fà¢ÇF6Æ73Ò&ç"#äl:&2BçRâÂ÷Fà¢ÇF6Æ73Ò&ç"#å<:"äl:&3Â÷Fà¢ÇF6Æ73Ò&ç"#äF2õdÂ÷Fà¢ÇF6Æ73Ò&ç"#äF2õeCÂ÷Fà¢ÇF6Æ73Ò&ç"#åd"BÂ÷Fà¢ÇF6Æ73Ò&ç"#åeB"BÂ÷Fà¢ÇF6Æ73Ò&ç"#åF÷FÂ"BÂ÷Fà¢ÇFäö'3Â÷Fà¢Â÷G#ãÂ÷FVCà¢ÇF&öGCÒ'&W2×F&öG#ãÂ÷F&öGà¢Â÷F&ÆSà¢ÂöFcà¢ÂöFcà ¢ÂÒÒ5U5Dõ2õ"42ÒÓà¢ÆFb6Æ73Ò'F2"CÒ'F"Ö7W7F÷2#à¢ÆFbCÒ&7W7F÷2Ö6öçFæW"#ãÇ7GÆSÒ&6öÆ÷#§f"ÒÖ7¢·FFæs£##ä6ÆVRVÒ6Æ7VÆ"æ&&W7VÇFFò&ÖV&òãÂ÷ãÂöFcà¢ÂöFcà ¢ÂÒÒ4ôÄ$õ$Dõ$U2ÒÓà¢ÆFb6Æ73Ò'F2"CÒ'F"Ö6öÆ&÷&F÷&W2#à¢ÆFbCÒ&6öÆ"×&ò"6Æ73Ò'&öæ÷FR"7GÆSÒ&F7Æ¦æöæR#î)ªûòVæ2FÖâR$öFVÒVFF"6öÆ&÷&F÷&W2ãÂöFcà¢ÆFb6Æ73Ò&6&B#à¢ÆFb6Æ73Ò&7FB#ä6öÆ&÷&F÷&W2(	B&VæVl:Ö6÷2dReCÂöFcà¢ÆFb6Æ73Ò'6&"#à¢ÆçWBGSÒ'FWB"CÒ&6öÆ"Ö'W66"Æ6VöÆFW#Ò$'W66"÷"æöÖRâââ"öæçWCÒ'&VæFW$6öÆ&÷&F÷&W2"óà¢Ç6VÆV7BCÒ&6öÆ"Ö62"öæ6ævSÒ'&VæFW$6öÆ&÷&F÷&W2#ãÆ÷FöâfÇVSÒ"#åFöF÷2÷2473Âö÷FöããÂ÷6VÆV7Cà¢Æ'WGFöâ6Æ73Ò&'Fâ&"CÒ&'FâÖ6öÆ"×6Çf""öæ6Æ6³Ò'6Çf$6öÆ&÷&F÷&W2#ï	ù+â6Çf"ÇFW&:|;VW3Âö'WGFöãà¢ÂöFcà¢ÆFbCÒ&6öÆ"Ö6öçFæW""6Æ73Ò&ÆöFær#ãÆFb6Æ73Ò'7â#ãÂöFcãÂöFcà¢ÂöFcà¢ÂöFcà£ÂöFcà £ÆFbCÒ'Fö7B#ãÂöFcà £Ç67&Cà¢òòÓÓÓÓÒ4ôädrÓÓÓÓÐ¦6öç7B4%õU$ÂÒvGG3¢òöæ'§G÷æÆÖv&·67gGç7W&6Ræ6òs°¦6öç7B4%ô´UÒvW¦$v6ö¤W¤æ4å#V44d·d4£æW§34Öö§¦E&Ôg¥¥44ä¦Å¦dÓVVå#V#6ÇV$sæ§&3$ã&5#Tv6Ó5¥4dÔgV##FÄ4§ö¤S4ôEç¦³TõFw4ÕcF44dÖ¤WtÖ¤åF³Tôåt%&³'tf%·6C'eefsÃ6T³&&´4Rs°¦6öç7B6"Ò7W&6Ræ7&VFT6ÆVçB4%õU$ÂÂ4%ô´U° ¢òòÓÓÓÓÒ5DDRÓÓÓÓÐ¦ÆWBW&fÂÒçVÆÂÂ6öÆ&÷&F÷&W2ÒµÒÂ6&F÷2ÒµÒÂW6Væ62ÒµÒÂfW&F÷2ÒµÒÂ&W7VÇFF÷2ÒµÓ°¦ÆWB&×2Ò²æó¢æWrFFRævWDgVÆÅV"ÂÖW3¢æWrFFRævWDÖöçF³ÂfÆ÷%÷f¢#CÓ° ¢òòÓÓÓÓÒUDÓÓÓÓÐ¦7æ2gVæ7Föâf¦W$Æövâ°¢6öç7BVÖÂÒFö7VÖVçBævWDVÆVÖVçD'BvÂÖVÖÂrçfÇVRçG&Ò°¢6öç7B6VæÒFö7VÖVçBævWDVÆVÖVçD'BvÂ×6VærçfÇVS°¢6öç7BW'"ÒFö7VÖVçBævWDVÆVÖVçD'BvÂÖW'&òr°¢W'"çFWD6öçFVçBÒrs°¢6öç7B'FâÒFö7VÖVçBçVW'6VÆV7F÷"ræÆ'Fâr°¢'FâçFWD6öçFVçBÒtVçG&æFòâââs²'FâæF6&ÆVBÒG'VS°¢6öç7B²W'&÷"ÒÒvB6"æWFç6väåvF77v÷&B²VÖÂÂ77v÷&C¢6VæÒ°¢'FâçFWD6öçFVçBÒtVçG&"s²'FâæF6&ÆVBÒfÇ6S°¢bW'&÷"²W'"çFWD6öçFVçBÒtRÖÖÂ÷R6Vææ6÷'&WF÷2âs²&WGW&ã²Ð¢vBæ6$°§Ð¦7æ2gVæ7Föâf¦W$Æöv÷WB°¢vB6"æWFç6vä÷WB°¢Fö7VÖVçBævWDVÆVÖVçD'Bvrç7GÆRæF7ÆÒvæöæRs°¢Fö7VÖVçBævWDVÆVÖVçD'BvÆövâ×67&VVârç7GÆRæF7ÆÒvfÆWs°§Ð§6"æWFæöäWF7FFT6ævR7æ2WbÂ6W76öâÓâ²bWbÓÓÒu4täTEôârbb6W76öâ²Fö7VÖVçBævWDVÆVÖVçD'BvÆövâ×67&VVârç7GÆRæF7ÆÒvæöæRs²vBæ6$²ÒÒ° ¢òòÓÓÓÓÒäBÓÓÓÓÐ¦7æ2gVæ7Föâæ6$°¢6öç7B²FF¢²W6W"ÒÒÒvB6"æWFævWEW6W"°¢bW6W"&WGW&ã°¢6öç7B²FF¢ÒÒvB6"æg&öÒwW&f2rç6VÆV7Br¢ræWvBrÂW6W"æBç6ævÆR°¢b²Fö7BuW&fÂì:6òVæ6öçG&FòârÂvW'&÷"r²&WGW&ã²Ð¢W&fÂÒ°¢Fö7VÖVçBævWDVÆVÖVçD'BvÖæöÖRrçFWD6öçFVçBÒææöÖS°¢Fö7VÖVçBævWDVÆVÖVçD'Bv×W&fÂrçFWD6öçFVçBÒçW&fÃ°¢§W7F%T°¢Fö7VÖVçBævWDVÆVÖVçD'Bvrç7GÆRæF7ÆÒv&Æö6²s°¢Fö7VÖVçBævWDVÆVÖVçD'BvÆövâ×67&VVârç7GÆRæF7ÆÒvæöæRs°¢vB&öÖ6RæÆÂ¶6'&Vv$6öÆ&÷&F÷&W2Â6'&Vv%&ÖWG&÷2Ò°¢&VæFW$W6Væ62²&VæFW$fW&2²&VæFW$fW&F÷2²&VæFW$6öÆ&÷&F÷&W2°§Ð ¦gVæ7Föâ§W7F%T°¢6öç7B&òÒ²vfææ6V&òrÂvvW7F÷"uÒææ6ÇVFW2W&fÃòçW&fÂ°¢b&ò°¢²w6&F÷2rÂvfW&F÷2rÂvW6Væ62rÂvfW&2uÒæf÷$V6BÓâFö7VÖVçBçVW'6VÆV7F÷"¶FF×F#Ò"G·GÒ%Öæ6Æ74Æ7BæFBvFFVâr°¢²v'FâÖ6Æ7VÆ"rÂv'Fâ××6Çf"rÂv'Fâ×6"×6Çf"uÒæf÷$V6BÓâ²6öç7BVÂÒFö7VÖVçBævWDVÆVÖVçD'BB²bVÂVÂç7GÆRæF7ÆÒvæöæRs²Ò°¢Ð§Ð ¢òòÓÓÓÓÒDDõ2ÓÓÓÓÐ¦7æ2gVæ7Föâ6'&Vv$6öÆ&÷&F÷&W2°¢6öç7B²FFÒÒvB6"æg&öÒv6öÆ&÷&F÷&W2rç6VÆV7Br¢ræWvFfòrÂG'VRæ÷&FW"væöÖRr°¢6öÆ&÷&F÷&W2ÒFFÇÂµÓ°¢6öç7B672Ò²ââææWr6WB6öÆ&÷&F÷&W2æÖ2Óâ2æ6VçG&õöFUö7W7FòæfÇFW"&ööÆVâÒç6÷'B°¢²vW2Ö62rÂvfW&2Ö62rÂw&W2Ö62rÂv6öÆ"Ö62uÒæf÷$V6BÓâ°¢6öç7BVÂÒFö7VÖVçBævWDVÆVÖVçD'BB²bVÂ&WGW&ã°¢VÂæææW$DÔÂÒsÆ÷FöâfÇVSÒ"#åFöF÷2÷2473Âö÷Föãâs°¢672æf÷$V662ÓâVÂæææW$DÔÂ³ÒÆ÷FöâfÇVSÒ"G¶67Ò#âG¶67ÓÂö÷Föãæ°¢Ò°§Ð ¦7æ2gVæ7Föâ6'&Vv%&ÖWG&÷2°¢6öç7BæòÒ'6TçBFö7VÖVçBævWDVÆVÖVçD'BwÖæòrçfÇVRÇÂ&×2ææó°¢6öç7BÖW2Ò'6TçBFö7VÖVçBævWDVÆVÖVçD'BwÖÖW2rçfÇVRÇÂ&×2æÖW3°¢6öç7B²FFÒÒvB6"æg&öÒw&ÖWG&÷5öÖW2rç6VÆV7Br¢ræWvæòrÂæòæWvÖW2rÂÖW2ç6ævÆR°¢bFF°¢&×2ÒFF°¢Fö7VÖVçBævWDVÆVÖVçD'Bw×frçfÇVRÒFFçfÆ÷%÷f°¢Fö7VÖVçBævWDVÆVÖVçD'BwÖÖW2rçfÇVRÒFFæÖW3°¢Fö7VÖVçBævWDVÆVÖVçD'BwÖæòrçfÇVRÒFFææó°¢Fö7VÖVçBævWDVÆVÖVçD'Bw×7FGW2rçFWD6öçFVçBÒ~)É26'&VvFòs°¢ÒVÇ6R°¢&×2Ò²æòÂÖW2ÂfÆ÷%÷f¢'6TfÆöBFö7VÖVçBævWDVÆVÖVçD'Bw×frçfÇVRÇÂ#CÓ°¢Fö7VÖVçBævWDVÆVÖVçD'Bw×7FGW2rçFWD6öçFVçBÒtæ÷fòÜ:§2s°¢Ð¢GVÆ¦$F4æfò°¢vB&öÖ6RæÆÂ¶6'&Vv%6&F÷2æòÂÖW2Â6'&Vv$W6Væ62æòÂÖW2Â6'&Vv$fW&F÷2æòÂÖW2Ò°¢Fö7VÖVçBævWDVÆVÖVçD'Bv×7V"rçFWD6öçFVçBÒG´ÔU4U5¶ÖW5×ÒòG¶æ÷Ö°§Ð ¦7æ2gVæ7Föâ6'&Vv%6&F÷2æòÂÖW2°¢6öç7B²FFÒÒvB6"æg&öÒw6&F÷5ö6öæfrrç6VÆV7Br¢ræWvæòrÂæòæWvÖW2rÂÖW2°¢6&F÷2ÒFFÇÂµÓ°¢&VæFW%6&F÷2æòÂÖW2°§Ð ¦7æ2gVæ7Föâ6'&Vv$W6Væ62æòÂÖW2°¢6öç7B²FFÒÒvB6"æg&öÒvW6Væ62rç6VÆV7Br¢ræWvæòrÂæòæWvÖW2rÂÖW2°¢W6Væ62ÒFFÇÂµÓ°§Ð ¦7æ2gVæ7Föâ6'&Vv$fW&F÷2æòÂÖW2°¢G'°¢6öç7B²FFÒÒvB6"æg&öÒvfW&F÷2rç6VÆV7Br¢ræWvæòrÂæòæWvÖW2rÂÖW2æ÷&FW"vFFr°¢fW&F÷2ÒFFÇÂµÓ°¢Ò6F6R²fW&F÷2ÒµÓ²Ð¢&VæFW$fW&F÷2°§Ð ¢òòÓÓÓÓÒ,8$ÔUE$õ2ÓÓÓÓÐ¦Fö7VÖVçBævWDVÆVÖVçD'BwÖÖW2ræFDWfVçDÆ7FVæW"v6ævRrÂÓâ6'&Vv%&ÖWG&÷2°¦Fö7VÖVçBævWDVÆVÖVçD'BwÖæòræFDWfVçDÆ7FVæW"v6ævRrÂÓâ6'&Vv%&ÖWG&÷2° ¦7æ2gVæ7Föâ6Çf%&ÖWG&÷2°¢6öç7BæòÒ'6TçBFö7VÖVçBævWDVÆVÖVçD'BwÖæòrçfÇVR°¢6öç7BÖW2Ò'6TçBFö7VÖVçBævWDVÆVÖVçD'BwÖÖW2rçfÇVR°¢6öç7BfÆ÷%÷fÒ'6TfÆöBFö7VÖVçBævWDVÆVÖVçD'Bw×frçfÇVR°¢6öç7B²W'&÷"ÒÒvB6"æg&öÒw&ÖWG&÷5öÖW2rçW6W'B²æòÂÖW2ÂfÆ÷%÷fÒÂ²öä6öæfÆ7C¢væòÆÖW2rÒ°¢bW'&÷"²Fö7BtW'&ó¢r¶W'&÷"æÖW76vRÂvW'&÷"r²&WGW&ã²Ð¢&×2Ò²ââç&×2ÂæòÂÖW2ÂfÆ÷%÷fÓ°¢Fö7VÖVçBævWDVÆVÖVçD'Bw×7FGW2rçFWD6öçFVçBÒ~)É26Çfòs°¢Fö7VÖVçBævWDVÆVÖVçD'Bv×7V"rçFWD6öçFVçBÒG´ÔU4U5¶ÖW5×ÒòG¶æ÷Ö°¢GVÆ¦$F4æfò°¢vB6'&Vv%6&F÷2æòÂÖW2°¢vB6'&Vv$W6Væ62æòÂÖW2°¢vB6'&Vv$fW&F÷2æòÂÖW2°¢&VæFW$W6Væ62²&VæFW$fW&2°¢Fö7Bu,:&ÖWG&÷26Çf÷2rÂw7V66W72r°§Ð ¦gVæ7FöâGVÆ¦$F4æfò°¢6öç7BæòÒ'6TçBFö7VÖVçBævWDVÆVÖVçD'BwÖæòrçfÇVRÇÂ&×2ææó°¢6öç7BÖW2Ò'6TçBFö7VÖVçBævWDVÆVÖVçD'BwÖÖW2rçfÇVRÇÂ&×2æÖW3°¢6öç7BF÷FÂÒF5WFV2æWrFFRæòÂÖW2ÓÂÂæWrFFRæòÂÖW2Â°¢6öç7B6'2Ò6&F÷4FôÖW2æòÂÖW2°¢Fö7VÖVçBævWDVÆVÖVçD'BvF2ÖæfòræææW$DÔÂÐ¢Ç7G&öær7GÆSÒ&föçB×6¦S£¶6öÆ÷#§f"ÒÖW62#âG·F÷FÇÓÂ÷7G&öæsâF2;§FV26Vr×6WVÒÇ7G&öæsâG´ÔU4U5¶ÖW5×ÒòG¶æ÷ÓÂ÷7G&öæsãÆ'#à¢Ç7â7GÆSÒ&6öÆ÷#§f"ÒÖ7¢¶föçB×6¦S£'¶Ö&vâ×F÷£G¶F7Æ¦&Æö6²#âG·6'2æÆVæwFÒ<:&F÷3¢G·6'2æÖCÓæBævWDFFR²ròr²BævWDÖöçF³æ¦öârÂrÓÂ÷7ãæ°§Ð ¢òòÓÓÓÓÒ<8$Dõ2ÓÓÓÓÐ¦gVæ7Föâ&VæFW%6&F÷2æòÂÖW2°¢6öç7B&òÒ²vfææ6V&òrÂvvW7F÷"uÒææ6ÇVFW2W&fÃòçW&fÂ°¢6öç7B6'2Ò6&F÷4FôÖW2æòÂÖW2°¢6öç7B2ÒFö7VÖVçBævWDVÆVÖVçD'Bw6"Ö6öçFæW"r°¢b6'2æÆVæwF²2æææW$DÔÂÒsÇ7GÆSÒ&6öÆ÷#§f"ÒÖ7¢#äæVæVÒ<:&FòæW7FRÜ:§2ãÂ÷âs²&WGW&ã²Ð¢2æææW$DÔÂÒÆFb6Æ73Ò'6&w&B#æ·6'2æÖBÓâ°¢6öç7BG2ÒBçFô4õ7G&ærç7ÆBuBr³Ó°¢6öç7BWÒ6&F÷2æfæB2Óâ2æFF÷6&FòÓÓÒG2°¢&WGW&âÆFb6Æ73Ò'6&#ãÆFb6Æ73Ò'6&B#âG¶f×DFFBÓÂöFcà¢ÆÆ&VÂ6Æ73Ò'6&6²#ãÆçWBGSÒ&6V6¶&÷"CÒ'6ÒG¶G7Ò"G¶WòçGW&Ööòv6V6¶VBs¢rwÒG·&óòvF6&ÆVBs¢rwÒóâGW&ÖÂöÆ&VÃà¢ÆÆ&VÂ6Æ73Ò'6&6²#ãÆçWBGSÒ&6V6¶&÷"CÒ'6"ÒG¶G7Ò"G¶WòçGW&Öö#òv6V6¶VBs¢rwÒG·&óòvF6&ÆVBs¢rwÒóâGW&Ö#ÂöÆ&VÃà¢ÂöFcæ°¢Òæ¦öârr¶ÂöFcæ°§Ð ¦7æ2gVæ7Föâ6Çf%6&F÷2°¢6öç7BæòÒ'6TçBFö7VÖVçBævWDVÆVÖVçD'BwÖæòrçfÇVR°¢6öç7BÖW2Ò'6TçBFö7VÖVçBævWDVÆVÖVçD'BwÖÖW2rçfÇVR°¢6öç7B&÷w2Ò6&F÷4FôÖW2æòÂÖW2æÖBÓâ°¢6öç7BG2ÒBçFô4õ7G&ærç7ÆBuBr³Ó°¢&WGW&â²æòÂÖW2ÂFF÷6&Fó¢G2À¢GW&Öö¢Fö7VÖVçBævWDVÆVÖVçD'B6ÒG¶G7Öòæ6V6¶VGÇÆfÇ6RÀ¢GW&Öö#¢Fö7VÖVçBævWDVÆVÖVçD'B6"ÒG¶G7Öòæ6V6¶VGÇÆfÇ6RÓ°¢Ò°¢6öç7B²W'&÷"ÒÒvB6"æg&öÒw6&F÷5ö6öæfrrçW6W'B&÷w2Â²öä6öæfÆ7C¢væòÆÖW2ÆFF÷6&FòrÒ°¢bW'&÷"²Fö7BtW'&ó¢r¶W'&÷"æÖW76vRÂvW'&÷"r²&WGW&ã²Ð¢6&F÷2Ò&÷w3°¢Fö7Bu<:&F÷26Çf÷2rÂw7V66W72r°§Ð ¢òòÓÓÓÓÒdU$Dõ2ÓÓÓÓÐ¦ÆWBfW&F÷4Æö6ÂÒµÓ²òòW7FFòÆö6ÂçFW2FR6Çf  ¦gVæ7Föâ&VæFW$fW&F÷2°¢6öç7B&òÒ²vfææ6V&òrÂvvW7F÷"uÒææ6ÇVFW2W&fÃòçW&fÂ°¢b&ò°¢Fö7VÖVçBævWDVÆVÖVçD'BvfW"×&VFöæÇrç7GÆRæF7ÆÒv&Æö6²s°¢Fö7VÖVçBævWDVÆVÖVçD'Bv'FâÖFBÖfW&Fòrç7GÆRæF7ÆÒvæöæRs°¢Fö7VÖVçBævWDVÆVÖVçD'Bv'FâÖfW&F÷2×6Çf"rç7GÆRæF7ÆÒvæöæRs°¢Ð¢fW&F÷4Æö6ÂÒfW&F÷2æÖbÓâ²ââægÒ°¢&VæFW$fW&F÷4Æ7B°§Ð ¦gVæ7Föâ&VæFW$fW&F÷4Æ7B°¢6öç7B&òÒ²vfææ6V&òrÂvvW7F÷"uÒææ6ÇVFW2W&fÃòçW&fÂ°¢6öç7B2ÒFö7VÖVçBævWDVÆVÖVçD'BvfW&F÷2Ö6öçFæW"r°¢bfW&F÷4Æö6ÂæÆVæwF²2æææW$DÔÂÒsÇ7GÆSÒ&6öÆ÷#§f"ÒÖ7¢·FFæs£'#äæVæVÒfW&Fò6F7G&Fò&W7FRÜ:§2ãÂ÷âs²&WGW&ã²Ð¢2æææW$DÔÂÒÆFb6Æ73Ò'Gr#ãÇF&ÆSà¢ÇFVCãÇG#ãÇFäFFÂ÷FãÇFäFW67&:|:6óÂ÷FãÇF7GÆSÒ'FWBÖÆvã¦ type="number" min="0" max="31" value="${nJus}" id="jus-${col.id}" style="width:70px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+  const { data } = await sb.from('parametros_mes').select('*').eq('ano', ano).eq('mes', mes).single();
+  if (data) {
+    params = data;
+    document.getElementById('p-va').value = data.valor_va;
+    document.getElementById('p-mes').value = data.mes;
+    document.getElementById('p-ano').value = data.ano;
+    document.getElementById('p-status').textContent = '✓ Carregado';
+  } else {
+    params = { ano, mes, valor_va: parseFloat(document.getElementById('p-va').value) || 240 };
+    document.getElementById('p-status').textContent = 'Novo mês';
+  }
+  atualizarDiasInfo();
+  await Promise.all([carregarSabados(ano, mes), carregarAusencias(ano, mes), carregarFeriados(ano, mes)]);
+  document.getElementById('h-sub').textContent = `${MESES[mes]}/${ano}`;
+}
+
+async function carregarSabados(ano, mes) {
+  const { data } = await sb.from('sabados_config').select('*').eq('ano', ano).eq('mes', mes);
+  sabados = data || [];
+  renderSabados(ano, mes);
+}
+
+async function carregarAusencias(ano, mes) {
+  const { data } = await sb.from('ausencias').select('*').eq('ano', ano).eq('mes', mes);
+  ausencias = data || [];
+}
+
+async function carregarFeriados(ano, mes) {
+  try {
+    const { data } = await sb.from('feriados').select('*').eq('ano', ano).eq('mes', mes).order('data');
+    feriados = data || [];
+  } catch(e) { feriados = []; }
+  renderFeriados();
+}
+
+// ===== PARÂMETROS =====
+document.getElementById('p-mes').addEventListener('change', () => carregarParametros());
+document.getElementById('p-ano').addEventListener('change', () => carregarParametros());
+
+async function salvarParametros() {
+  const ano = parseInt(document.getElementById('p-ano').value);
+  const mes = parseInt(document.getElementById('p-mes').value);
+  const valor_va = parseFloat(document.getElementById('p-va').value);
+  const { error } = await sb.from('parametros_mes').upsert({ ano, mes, valor_va }, { onConflict: 'ano,mes' });
+  if (error) { toast('Erro: '+error.message, 'error'); return; }
+  params = { ...params, ano, mes, valor_va };
+  document.getElementById('p-status').textContent = '✓ Salvo!';
+  document.getElementById('h-sub').textContent = `${MESES[mes]}/${ano}`;
+  atualizarDiasInfo();
+  await carregarSabados(ano, mes);
+  await carregarAusencias(ano, mes);
+  await carregarFeriados(ano, mes);
+  renderAusencias(); renderFerias();
+  toast('Parâmetros salvos!', 'success');
+}
+
+function atualizarDiasInfo() {
+  const ano = parseInt(document.getElementById('p-ano').value) || params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value) || params.mes;
+  const total = diasUteis(new Date(ano, mes-1, 1), new Date(ano, mes, 0));
+  const sabs = sabadosDoMes(ano, mes);
+  document.getElementById('dias-info').innerHTML =
+    `<strong style="font-size:18px;color:var(--esc)">${total}</strong> dias úteis (seg-sex) em <strong>${MESES[mes]}/${ano}</strong><br>
+     <span style="color:var(--cz);font-size:12px;margin-top:4px;display:block">${sabs.length} sábados: ${sabs.map(d=>d.getDate()+'/'+(d.getMonth()+1)).join(', ')}</span>`;
+}
+
+// ===== SÁBADOS =====
+function renderSabados(ano, mes) {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  const sabs = sabadosDoMes(ano, mes);
+  const c = document.getElementById('sab-container');
+  if (!sabs.length) { c.innerHTML = '<p style="color:var(--cz)">Nenhum sábado neste mês.</p>'; return; }
+  c.innerHTML = `<div class="sbgrid">`+sabs.map(d => {
+    const ds = d.toISOString().split('T')[0];
+    const ex = sabados.find(s => s.data_sabado === ds);
+    return `<div class="sbi"><div class="sbd">${fmtData(d)}</div>
+      <label class="sbck"><input type="checkbox" id="sa-${ds}" ${ex?.turma_a?'checked':''} ${ro?'disabled':''}/> Turma A</label>
+      <label class="sbck"><input type="checkbox" id="sb-${ds}" ${ex?.turma_b?'checked':''} ${ro?'disabled':''}/> Turma B</label>
+    </div>`;
+  }).join('')+`</div>`;
+}
+
+async function salvarSabados() {
+  const ano = parseInt(document.getElementById('p-ano').value);
+  const mes = parseInt(document.getElementById('p-mes').value);
+  const rows = sabadosDoMes(ano, mes).map(d => {
+    const ds = d.toISOString().split('T')[0];
+    return { ano, mes, data_sabado: ds,
+      turma_a: document.getElementById(`sa-${ds}`)?.checked||false,
+      turma_b: document.getElementById(`sb-${ds}`)?.checked||false };
+  });
+  const { error } = await sb.from('sabados_config').upsert(rows, { onConflict: 'ano,mes,data_sabado' });
+  if (error) { toast('Erro: '+error.message, 'error'); return; }
+  sabados = rows;
+  toast('Sábados salvos!', 'success');
+}
+
+// ===== FERIADOS =====
+let feriadosLocal = []; // estado local antes de salvar
+
+function renderFeriados() {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  if (ro) {
+    document.getElementById('fer-readonly').style.display = 'block';
+    document.getElementById('btn-add-feriado').style.display = 'none';
+    document.getElementById('btn-feriados-salvar').style.display = 'none';
+  }
+  feriadosLocal = feriados.map(f => ({...f}));
+  renderFeriadosList();
+}
+
+function renderFeriadosList() {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  const c = document.getElementById('feriados-container');
+  if (!feriadosLocal.length) { c.innerHTML = '<p style="color:var(--cz);padding:12px 0">Nenhum feriado cadastrado para este mês.</p>'; return; }
+  c.innerHTML = `<div class="tw"><table>
+    <thead><tr><th>Data</th><th>Descrição</th><th style="text-align:center">Turma A trab.</th><th style="text-align:center">Turma B trab.</th><th style="text-align:center">NR/EX trab.</th><th style="text-align:center">Demais trab.</th>${ro?'':'<th></th>'}</tr></thead>
+    <tbody>`+feriadosLocal.map((f,i) => `<tr>
+      <td>${ro ? f.data : `<input type="date" value="${f.data}" onchange="feriadosLocal[${i}].data=this.value" style="padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+      <td>${ro ? f.descricao : `<input type="text" value="${f.descricao||''}" onchange="feriadosLocal[${i}].descricao=this.value" placeholder="ex: Dia de Nossa Senhora" style="width:100%;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${f.turma_a_trabalhou?'bgrn':'bcz'}">${f.turma_a_trabalhou?'Sim':'Não'}</span>`:`<input type="checkbox" ${f.turma_a_trabalhou?'checked':''} onchange="feriadosLocal[${i}].turma_a_trabalhou=this.checked" style="width:16px;height:16px;accent-color:var(--am)"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${f.turma_b_trabalhou?'bgrn':'bcz'}">${f.turma_b_trabalhou?'Sim':'Não'}</span>`:`<input type="checkbox" ${f.turma_b_trabalhou?'checked':''} onchange="feriadosLocal[${i}].turma_b_trabalhou=this.checked" style="width:16px;height:16px;accent-color:var(--am)"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${f.nr_ex_trabalhou?'bgrn':'bcz'}">${f.nr_ex_trabalhou?'Sim':'Não'}</span>`:`<input type="checkbox" ${f.nr_ex_trabalhou?'checked':''} onchange="feriadosLocal[${i}].nr_ex_trabalhou=this.checked" style="width:16px;height:16px;accent-color:var(--am)"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${f.demais_trabalhou?'bgrn':'bcz'}">${f.demais_trabalhou?'Sim':'Não'}</span>`:`<input type="checkbox" ${f.demais_trabalhou?'checked':''} onchange="feriadosLocal[${i}].demais_trabalhou=this.checked" style="width:16px;height:16px;accent-color:var(--am)"/>`}</td>
+      ${ro?'':`<td><button class="btn bd2 bsm" onclick="removerFeriado(${i})">✕</button></td>`}
+    </tr>`).join('')+`</tbody></table></div>`;
+}
+
+function adicionarFeriado() {
+  const ano = parseInt(document.getElementById('p-ano').value) || params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value) || params.mes;
+  const d = String(mes).padStart(2,'0');
+  feriadosLocal.push({ ano, mes, data: `${ano}-${d}-01`, descricao: '', turma_a_trabalhou: false, turma_b_trabalhou: false, nr_ex_trabalhou: false, demais_trabalhou: false });
+  renderFeriadosList();
+}
+
+function removerFeriado(i) { feriadosLocal.splice(i,1); renderFeriadosList(); }
+
+async function salvarFeriados() {
+  const ano = parseInt(document.getElementById('p-ano').value) || params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value) || params.mes;
+  const btn = document.getElementById('btn-feriados-salvar');
+  btn.textContent = '⏳ Salvando...'; btn.disabled = true;
+  try {
+    await sb.from('feriados').delete().eq('ano', ano).eq('mes', mes);
+    const rows = feriadosLocal.filter(f => f.data).map(f => ({
+      ano, mes, data: f.data, descricao: f.descricao || '',
+      turma_a_trabalhou: !!f.turma_a_trabalhou, turma_b_trabalhou: !!f.turma_b_trabalhou,
+      nr_ex_trabalhou: !!f.nr_ex_trabalhou, demais_trabalhou: !!f.demais_trabalhou
+    }));
+    if (rows.length) { const { error } = await sb.from('feriados').insert(rows); if (error) throw error; }
+    feriados = rows;
+    toast(`${rows.length} feriado(s) salvo(s)!`, 'success');
+  } catch(e) { toast('Erro: '+(e.message||e), 'error'); }
+  btn.textContent = '💾 Salvar Feriados'; btn.disabled = false;
+}
+
+// ===== AUSÊNCIAS =====
+function renderAusencias() {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  if (ro) document.getElementById('aus-ro').style.display = 'block';
+  const btn = document.getElementById('btn-aus-salvar'); if(btn) btn.style.display = ro?'none':'inline-flex';
+  const busca = document.getElementById('aus-busca')?.value?.toLowerCase()||'';
+  const cc = document.getElementById('aus-cc')?.value||'';
+  const lista = colaboradores.filter(c => (!cc||c.centro_de_custo===cc) && (!busca||c.nome.toLowerCase().includes(busca)));
+  const c = document.getElementById('aus-container');
+  if (!lista.length) { c.innerHTML='<p style="color:var(--cz)">Nenhum colaborador.</p>'; return; }
+  c.innerHTML = `<div class="tw"><table>
+    <thead><tr><th>Colaborador</th><th>CC</th><th>Escala</th><th>Faltas Injustificadas</th><th>Faltas Justificadas</th></tr></thead>
+    <tbody>`+lista.map(col => {
+      const ea = ausencias.filter(a => a.colaborador_id === col.id);
+      const nInj = ea.find(a=>a.tipo==='Injustificada')?.datas?.length||0;
+      const nJus = ea.find(a=>a.tipo==='Justificada')?.datas?.length||0;
+      return `<tr>
+        <td><strong>${col.nome}</strong></td>
+        <td><span class="badge bcz">${col.centro_de_custo||'-'}</span></td>
+        <td><span class="badge besc">${col.escala||'-'}</span></td>
+        <td>${ro?`<span class="badge bred">${nInj} dia(s)</span>`:`<input type="number" min="0" max="31" value="${nInj}" id="inj-${col.id}" style="width:70px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+        <td>${ro?`<span class="badge bcz">${nJus} dia(s)</span>`:`<input type="number" min="0" max="31" value="${nJus}" id="jus-${col.id}" style="width:70px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
       </tr>`;
     }).join('')+`</tbody></table></div>`;
 }
@@ -396,10 +569,10 @@ async function salvarTodasAusencias() {
   const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
   const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
   const btn = document.getElementById('btn-aus-salvar');
-  btn.textContent='â³ Salvando...'; btn.disabled=true;
+  btn.textContent='⏳ Salvando...'; btn.disabled=true;
   try {
     const ids = colaboradores.map(c=>c.id);
-    // Preserva Ferias, deleta sÃ³ Injustificada e Justificada
+    // Preserva Ferias, deleta só Injustificada e Justificada
     const { error: de } = await sb.from('ausencias').delete().eq('ano',ano).eq('mes',mes).in('colaborador_id',ids).in('tipo',['Injustificada','Justificada']);
     if (de) throw de;
     const rows = [];
@@ -412,12 +585,12 @@ async function salvarTodasAusencias() {
     }
     if (rows.length) { const { error: ie } = await sb.from('ausencias').insert(rows); if (ie) throw ie; }
     ausencias = [...ausencias.filter(a=>a.tipo==='Ferias'), ...rows];
-    toast('AusÃªncias salvas! ('+rows.length+' registros)', 'success');
+    toast('Ausências salvas! ('+rows.length+' registros)', 'success');
   } catch(e) { toast('Erro: '+(e.message||e), 'error'); }
-  btn.textContent='ð¾ Salvar AusÃªncias'; btn.disabled=false;
+  btn.textContent='💾 Salvar Ausências'; btn.disabled=false;
 }
 
-// ===== FÃRIAS =====
+// ===== FÉRIAS =====
 function renderFerias() {
   const ro = ['financeiro','gestor'].includes(perfil?.perfil);
   if (ro) document.getElementById('fer-ro').style.display='block';
@@ -428,7 +601,7 @@ function renderFerias() {
   const c = document.getElementById('ferias-container');
   if (!lista.length) { c.innerHTML='<p style="color:var(--cz)">Nenhum colaborador.</p>'; return; }
   c.innerHTML = `<div class="tw"><table>
-    <thead><tr><th>Colaborador</th><th>CC</th><th>Escala</th><th>InÃ­cio FÃ©rias</th><th>Fim FÃ©rias</th><th>Dias Ãteis (auto)</th><th>SÃ¡b. FÃ©rias (auto)</th></tr></thead>
+    <thead><tr><th>Colaborador</th><th>CC</th><th>Escala</th><th>Início Férias</th><th>Fim Férias</th><th>Dias Úteis (auto)</th><th>Sáb. Férias (auto)</th></tr></thead>
     <tbody>`+lista.map(col => {
       const fer = ausencias.find(a=>a.colaborador_id===col.id && a.tipo==='Ferias');
       const ini = fer?.datas?.[0]||'';
@@ -441,7 +614,7 @@ function renderFerias() {
         <td>${ro?(ini||'-'):`<input type="date" value="${ini}" id="fi-${col.id}" onchange="atualizarInfoFer('${col.id}')" style="padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
         <td>${ro?(fim||'-'):`<input type="date" value="${fim}" id="ff-${col.id}" onchange="atualizarInfoFer('${col.id}')" style="padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
         <td id="fdu-${col.id}" style="text-align:center">${du>0?`<span class="badge bam">${du} d.u.</span>`:'-'}</td>
-        <td id="fsf-${col.id}" style="text-align:center">${sf>0?`<span class="badge bcz">${sf} sÃ¡b.</span>`:'-'}</td>
+        <td id="fsf-${col.id}" style="text-align:center">${sf>0?`<span class="badge bcz">${sf} sáb.</span>`:'-'}</td>
       </tr>`;
     }).join('')+`</tbody></table></div>`;
 }
@@ -452,14 +625,14 @@ function atualizarInfoFer(id) {
   const col = colaboradores.find(c=>c.id===id);
   const { du, sf } = calcFeriasInfo(ini, fim, col?.escala);
   const du_el = document.getElementById(`fdu-${id}`); if(du_el) du_el.innerHTML = du>0?`<span class="badge bam">${du} d.u.</span>`:'-';
-  const sf_el = document.getElementById(`fsf-${id}`); if(sf_el) sf_el.innerHTML = sf>0?`<span class="badge bcz">${sf} sÃ¡b.</span>`:'-';
+  const sf_el = document.getElementById(`fsf-${id}`); if(sf_el) sf_el.innerHTML = sf>0?`<span class="badge bcz">${sf} sáb.</span>`:'-';
 }
 
 function calcFeriasInfo(ini, fim, escala) {
   if (!ini||!fim||fim<ini) return { du:0, sf:0 };
   const fi = new Date(ini+'T00:00:00'), ff = new Date(fim+'T00:00:00');
   const du = diasUteis(fi, ff, feriadosDates(escala));
-  // conta sÃ¡bados dentro do perÃ­odo que sÃ£o da escala do colaborador
+  // conta sábados dentro do período que são da escala do colaborador
   let sf = 0;
   for (const sab of sabados) {
     const sd = new Date(sab.data_sabado+'T00:00:00');
@@ -475,7 +648,7 @@ async function salvarTodasFerias() {
   const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
   const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
   const btn = document.getElementById('btn-ferias-salvar');
-  btn.textContent='â³ Salvando...'; btn.disabled=true;
+  btn.textContent='⏳ Salvando...'; btn.disabled=true;
   try {
     const ids = colaboradores.map(c=>c.id);
     const { error: de } = await sb.from('ausencias').delete().eq('ano',ano).eq('mes',mes).in('colaborador_id',ids).eq('tipo','Ferias');
@@ -488,15 +661,15 @@ async function salvarTodasFerias() {
     }
     if (rows.length) { const { error: ie } = await sb.from('ausencias').insert(rows); if (ie) throw ie; }
     ausencias = [...ausencias.filter(a=>a.tipo!=='Ferias'), ...rows];
-    toast('FÃ©rias salvas! ('+rows.length+' registros)', 'success');
+    toast('Férias salvas! ('+rows.length+' registros)', 'success');
   } catch(e) { toast('Erro: '+(e.message||e), 'error'); }
-  btn.textContent='ð¾ Salvar FÃ©rias'; btn.disabled=false;
+  btn.textContent='💾 Salvar Férias'; btn.disabled=false;
 }
 
-// ===== CÃLCULO =====
+// ===== CÁLCULO =====
 async function calcular() {
   const btn = document.getElementById('btn-calcular');
-  btn.textContent='â³ Calculando...'; btn.disabled=true;
+  btn.textContent='⏳ Calculando...'; btn.disabled=true;
 
   const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
   const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
@@ -511,23 +684,23 @@ async function calcular() {
   resultados = colaboradores.map(emp => {
     const adm = emp.admissao ? new Date(emp.admissao+'T00:00:00') : null;
     const dem = emp.desligamento ? new Date(emp.desligamento+'T00:00:00') : null;
-    if (!adm) return { emp, valid:false, obs:'Sem data de admissÃ£o', VA:0, VT:0 };
-    if (!(adm<=meDate && (!dem||dem>=msDate))) return { emp, valid:false, obs:'Inativo no perÃ­odo', VA:0, VT:0 };
+    if (!adm) return { emp, valid:false, obs:'Sem data de admissão', VA:0, VT:0 };
+    if (!(adm<=meDate && (!dem||dem>=msDate))) return { emp, valid:false, obs:'Inativo no período', VA:0, VT:0 };
 
     const start = adm>msDate ? adm : new Date(msDate);
     const end = dem&&dem<meDate ? dem : new Date(meDate);
 
-    // Feriados que a escala nÃ£o trabalhou (excluir dos dias Ãºteis)
+    // Feriados que a escala não trabalhou (excluir dos dias úteis)
     const ferExclude = feriadosDates(emp.escala);
     const totalWD = diasUteis(msDate, meDate, feriadosDates(emp.escala)); // total esperado p/ esta escala
     const activeWD = diasUteis(start, end, ferExclude);
 
-    // AusÃªncias
+    // Ausências
     const ea = ausencias.filter(a=>a.colaborador_id===emp.id);
     const injust = ea.find(a=>a.tipo==='Injustificada')?.datas?.length||0;
     const just   = ea.find(a=>a.tipo==='Justificada')?.datas?.length||0;
 
-    // FÃ©rias (armazenadas como [ini, fim])
+    // Férias (armazenadas como [ini, fim])
     const ferEntry = ea.find(a=>a.tipo==='Ferias');
     let ferWD=0, sabsFer=0;
     if (ferEntry?.datas?.length>=2) {
@@ -547,7 +720,7 @@ async function calcular() {
       }
     }
 
-    // SÃ¡bados trabalhados (bruto da escala no perÃ­odo ativo)
+    // Sábados trabalhados (bruto da escala no período ativo)
     let sabsBruto=0;
     for (const sab of sabados) {
       const sd = new Date(sab.data_sabado+'T00:00:00');
@@ -561,20 +734,20 @@ async function calcular() {
     // Dias efetivamente trabalhados (mesma base para VA e VT)
     const diasTrab = Math.max(0, activeWD - injust - just - ferWD);
 
-    // FÃ³rmulas:
-    // VA proporcional: (dias trabalhados / total esperado) Ã valor_VA
+    // Fórmulas:
+    // VA proporcional: (dias trabalhados / total esperado) × valor_VA
     const VA = emp.ajuda_va ? Math.max(0, valorVA * diasTrab / totalWD) : 0;
-    // VT: dias trabalhados + sÃ¡bados lÃ­quidos Ã valor/dia
+    // VT: dias trabalhados + sábados líquidos × valor/dia
     const VT = Math.max(0, (diasTrab + sabsLiq) * (parseFloat(emp.vt_dia)||0));
 
     return { emp, valid:true, activeWD, totalWD, injust, just, ferWD, sabsFer, sabsBruto, sabsLiq, diasTrab, VA, VT, total:VA+VT, obs:'' };
   });
 
-  btn.textContent='â¡ Calcular'; btn.disabled=false;
+  btn.textContent='⚡ Calcular'; btn.disabled=false;
   document.getElementById('btn-salvar-res').style.display='inline-flex';
   document.getElementById('btn-resetar').style.display='inline-flex';
   renderResultado(); renderCustos();
-  toast('CÃ¡lculo concluÃ­do!', 'success');
+  toast('Cálculo concluído!', 'success');
 }
 
 function filtrarResultado() {
@@ -616,7 +789,7 @@ async function salvarResultado() {
   const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
   const { data: { user } } = await sb.auth.getUser();
   const btn = document.getElementById('btn-salvar-res');
-  btn.textContent='â³ Salvando...'; btn.disabled=true;
+  btn.textContent='⏳ Salvando...'; btn.disabled=true;
   const rows = resultados.filter(r=>r.valid).map(r=>({
     ano, mes, colaborador_id:r.emp.id, centro_de_custo:r.emp.centro_de_custo,
     dias_uteis_ativo:r.activeWD, sabs_trabalhados:r.sabsLiq,
@@ -625,27 +798,27 @@ async function salvarResultado() {
     observacao:r.obs||null, calculado_por:user.id
   }));
   const { error } = await sb.from('resultado').upsert(rows, { onConflict:'ano,mes,colaborador_id' });
-  btn.textContent='ð¾ Salvar + Baixar CSV'; btn.disabled=false;
+  btn.textContent='💾 Salvar + Baixar CSV'; btn.disabled=false;
   if (error) { toast('Erro: '+error.message, 'error'); return; }
   baixarCSV(ano, mes);
   toast(rows.length+' registros salvos! CSV baixado.', 'success');
 }
 
 function baixarCSV(ano, mes) {
-  const header = ['Colaborador','CC','Escala','D.Ãteis','SÃ¡b.Trab.','Falta Inj.','Falta Just.','FÃ©rias d.u.','SÃ¡b.FÃ©rias','Dias p/VA','Dias p/VT','VA (R$)','VT (R$)','Total (R$)'];
+  const header = ['Colaborador','CC','Escala','D.Úteis','Sáb.Trab.','Falta Inj.','Falta Just.','Férias d.u.','Sáb.Férias','Dias p/VA','Dias p/VT','VA (R$)','VT (R$)','Total (R$)'];
   const linhas = resultados.filter(r=>r.valid).map(r=>[
     r.emp.nome, r.emp.centro_de_custo||'', r.emp.escala||'',
     r.activeWD, r.sabsBruto, r.injust, r.just, r.ferWD, r.sabsFer, r.diasTrab, r.diasTrab+r.sabsLiq,
     r.VA.toFixed(2).replace('.',','), r.VT.toFixed(2).replace('.',','), r.total.toFixed(2).replace('.',',')
   ].map(v=>`"${v}"`).join(';'));
   const csv = [header.join(';'), ...linhas].join('\n');
-  const blob = new Blob(['ï»¿'+csv], { type:'text/csv;charset=utf-8;' });
+  const blob = new Blob(['﻿'+csv], { type:'text/csv;charset=utf-8;' });
   const a = document.createElement('a'); a.href=URL.createObjectURL(blob);
   a.download=`VA_VT_${MESES[mes]}_${ano}.csv`; a.click(); URL.revokeObjectURL(a.href);
 }
 
 function resetarCalculo() {
-  if (!confirm('Resetar o cÃ¡lculo? Os dados salvos no banco nÃ£o serÃ£o apagados.')) return;
+  if (!confirm('Resetar o cálculo? Os dados salvos no banco não serão apagados.')) return;
   resultados=[];
   document.getElementById('res-tbody').innerHTML='';
   ['s-va','s-vt','s-tot'].forEach(id=>document.getElementById(id).textContent='R$ 0,00');
@@ -653,7 +826,7 @@ function resetarCalculo() {
   document.getElementById('btn-salvar-res').style.display='none';
   document.getElementById('btn-resetar').style.display='none';
   document.getElementById('custos-container').innerHTML='<p style="color:var(--cz);padding:20px">Clique em Calcular na aba Resultado primeiro.</p>';
-  toast('CÃ¡lculo resetado.', '');
+  toast('Cálculo resetado.', '');
 }
 
 function renderCustos() {
@@ -690,14 +863,14 @@ function renderColaboradores() {
       <td><span class="badge bcz">${col.centro_de_custo||'-'}</span></td>
       <td style="font-size:12px;color:var(--cz)">${col.cargo||'-'}</td>
       <td><span class="badge besc">${col.escala||'-'}</span></td>
-      <td style="text-align:center">${ro?`<span class="badge ${col.ajuda_va?'bam':'bcz'}">${col.ajuda_va?'Sim':'NÃ£o'}</span>`:`<input type="checkbox" id="va-${col.id}" ${col.ajuda_va?'checked':''} style="width:17px;height:17px;accent-color:var(--am);cursor:pointer"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${col.ajuda_va?'bam':'bcz'}">${col.ajuda_va?'Sim':'Não'}</span>`:`<input type="checkbox" id="va-${col.id}" ${col.ajuda_va?'checked':''} style="width:17px;height:17px;accent-color:var(--am);cursor:pointer"/>`}</td>
       <td style="text-align:right">${ro?`<span style="font-weight:700">R$ ${(parseFloat(col.vt_dia)||0).toFixed(2).replace('.',',')}</span>`:`<input type="number" id="vt-${col.id}" value="${parseFloat(col.vt_dia)||0}" min="0" step="0.01" style="width:90px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px;text-align:right"/>`}</td>
     </tr>`).join('')+`</tbody></table></div>`;
 }
 
 async function salvarColaboradores() {
   const btn = document.getElementById('btn-colab-salvar');
-  btn.textContent='â³ Salvando...'; btn.disabled=true;
+  btn.textContent='⏳ Salvando...'; btn.disabled=true;
   try {
     const alt = [];
     for (const col of colaboradores) {
@@ -711,11 +884,11 @@ async function salvarColaboradores() {
         col.vt_dia=novoVT; col.ajuda_va=novoVA;
       }
     }
-    if (!alt.length) { toast('Nenhuma alteraÃ§Ã£o.',''); btn.textContent='ð¾ Salvar AlteraÃ§Ãµes'; btn.disabled=false; return; }
+    if (!alt.length) { toast('Nenhuma alteração.',''); btn.textContent='💾 Salvar Alterações'; btn.disabled=false; return; }
     for (const r of alt) { const { error } = await sb.from('colaboradores').update({ vt_dia:r.vt_dia, ajuda_va:r.ajuda_va, atualizado_em:new Date().toISOString() }).eq('id',r.id); if(error) throw error; }
     toast(alt.length+' colaborador(es) atualizado(s)!','success');
   } catch(e) { toast('Erro: '+(e.message||e),'error'); }
-  btn.textContent='ð¾ Salvar AlteraÃ§Ãµes'; btn.disabled=false;
+  btn.textContent='💾 Salvar Alterações'; btn.disabled=false;
 }
 
 // ===== TABS =====
@@ -739,7 +912,7 @@ function diasUteis(start, end, excludeDates=[]) {
   return count;
 }
 
-// Retorna datas de feriados onde essa escala NÃO trabalhou
+// Retorna datas de feriados onde essa escala NÃO trabalhou
 function feriadosDates(escala) {
   return feriados
     .filter(f => !escalaTrabalheuFeriado(escala, f))
@@ -761,7 +934,7 @@ function sabadosDoMes(ano, mes) {
 
 function fmt(v) { return 'R$ '+(v||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
 function fmtData(d) { return d.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'}); }
-const MESES = ['','Janeiro','Fevereiro','MarÃ§o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+const MESES = ['','Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 
 function toast(msg, tipo='') {
   const el=document.createElement('div'); el.className=`tmsg ${tipo}`; el.textContent=msg;
