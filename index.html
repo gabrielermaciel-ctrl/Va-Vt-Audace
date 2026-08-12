@@ -14,6 +14,962 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',sans-serif;background:#f4f5f7;color:var(--tx);font-size:14px}
+
+/* LOGIN */
+#login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--am)}
+.lcard{background:#fff;border-radius:16px;padding:40px;width:100%;max-width:400px;box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.llogo{text-align:center;margin-bottom:28px}
+.lbox{display:inline-block;background:var(--esc);border-radius:10px;padding:14px 28px;margin-bottom:12px;transform:skewX(-4deg)}
+.lbox span{display:block;transform:skewX(4deg)}
+.lbox .g{font-size:11px;font-weight:700;color:var(--am);letter-spacing:2px;text-transform:uppercase}
+.lbox .a{font-size:28px;font-weight:900;color:#fff;line-height:1}
+.lbox .s{font-size:11px;font-weight:700;color:var(--am);letter-spacing:2px;text-transform:uppercase;text-align:right}
+.llogo p{color:var(--cz);font-size:13px;margin-top:8px}
+.lf{margin-bottom:16px}
+.lf label{display:block;font-size:12px;font-weight:600;color:var(--cz);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.lf input{width:100%;padding:11px 14px;border:1.5px solid var(--bd);border-radius:8px;font-size:14px;outline:none;transition:border .2s}
+.lf input:focus{border-color:var(--esc)}
+.lbtn{width:100%;padding:13px;background:var(--am);color:var(--esc);border:none;border-radius:8px;font-size:15px;font-weight:800;cursor:pointer;margin-top:8px;transition:opacity .2s}
+.lbtn:hover{opacity:.88}
+.lerr{color:#dc2626;font-size:13px;margin-top:10px;text-align:center}
+
+/* APP */
+#app{display:none}
+.hdr{background:var(--esc);color:#fff;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.hbrand{display:flex;align-items:center;gap:14px}
+.hpill{background:var(--am);color:var(--esc);font-weight:900;font-size:13px;padding:4px 12px;border-radius:6px;transform:skewX(-4deg)}
+.ht h2{font-size:15px;font-weight:700}
+.ht p{font-size:11px;opacity:.65;margin-top:1px}
+.hr{display:flex;align-items:center;gap:12px}
+.bperfil{background:var(--am);color:var(--esc);padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase}
+.blog{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px}
+.blog:hover{background:rgba(255,255,255,.2)}
+
+/* TABS */
+.tbar{background:#fff;border-bottom:2px solid var(--bd);display:flex;padding:0 24px;gap:2px;position:sticky;top:53px;z-index:90;overflow-x:auto}
+.tb{padding:12px 16px;border:none;background:none;cursor:pointer;font-size:13px;font-weight:500;color:var(--cz);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s;white-space:nowrap}
+.tb:hover{color:var(--esc)}
+.tb.active{color:var(--esc);border-bottom-color:var(--am);font-weight:700}
+.tb.hidden{display:none}
+.tc{display:none;padding:24px;max-width:1200px;margin:0 auto}
+.tc.active{display:block}
+
+/* CARDS */
+.card{background:#fff;border-radius:var(--r);border:1px solid var(--bd);padding:20px;margin-bottom:16px}
+.ctit{font-size:12px;font-weight:700;color:var(--cz);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* FORM */
+.fld{margin-bottom:14px}
+.fld label{display:block;font-size:12px;font-weight:600;color:var(--cz);margin-bottom:5px;text-transform:uppercase;letter-spacing:.4px}
+.fld input,.fld select{width:100%;padding:9px 12px;border:1.5px solid var(--bd);border-radius:7px;font-size:14px;outline:none;transition:border .2s;background:#fff}
+.fld input:focus,.fld select:focus{border-color:var(--esc)}
+.fld input[disabled]{background:var(--cz-l);color:var(--cz)}
+
+/* BUTTONS */
+.btn{padding:9px 18px;border-radius:7px;border:none;cursor:pointer;font-size:13px;font-weight:700;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+.bp{background:var(--esc);color:#fff}.bp:hover{background:#263548}
+.ba{background:var(--am);color:var(--esc)}.ba:hover{background:#e09900}
+.bo{background:#fff;color:var(--esc);border:1.5px solid var(--esc)}.bo:hover{background:var(--esc-l)}
+.bsm{padding:6px 12px;font-size:12px}
+.bd2{background:#dc2626;color:#fff}.bd2:hover{background:#b91c1c}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+
+/* SUMMARY */
+.scards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
+.sc{background:#fff;border-radius:var(--r);padding:18px;border-left:4px solid;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.sc.am{border-color:var(--am)}.sc.esc{border-color:var(--esc)}.sc.rox{border-color:#8b5cf6}.sc.cz2{border-color:var(--cz)}
+.sc label{font-size:11px;font-weight:600;color:var(--cz);text-transform:uppercase;letter-spacing:.5px}
+.sc .val{font-size:22px;font-weight:800;margin-top:6px}
+.sc.am .val{color:#c47f00}.sc.esc .val{color:var(--esc)}.sc.rox .val{color:#8b5cf6}.sc.cz2 .val{color:var(--cz)}
+
+/* TABLE */
+.tw{overflow-x:auto;border-radius:var(--r);border:1px solid var(--bd)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:var(--esc);color:#fff;padding:10px 12px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--bd);white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid var(--bd);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--am-l)}
+.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600}
+.bam{background:var(--am-l);color:#c47f00}.besc{background:var(--esc-l);color:var(--esc)}
+.bcz{background:var(--cz-l);color:var(--cz)}.bred{background:#fee2e2;color:#dc2626}
+.bgrn{background:#dcfce7;color:#16a34a}
+
+/* MISC */
+.sbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.sbi{background:var(--cz-l);border-radius:8px;padding:14px;border-left:3px solid var(--am)}
+.sbd{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--esc)}
+.sbck{display:flex;align-items:center;gap:6px;margin-bottom:6px;font-size:13px}
+.sbck input[type=checkbox]{width:15px;height:15px;accent-color:var(--am);cursor:pointer}
+.sbar{display:flex;gap:10px;margin-bottom:16px;align-items:center;flex-wrap:wrap}
+.sbar input,.sbar select{padding:9px 12px;border:1.5px solid var(--bd);border-radius:7px;font-size:13px;outline:none;background:#fff}
+.sbar input{flex:1;min-width:180px}
+.sbar input:focus,.sbar select:focus{border-color:var(--esc)}
+.abar{display:flex;gap:10px;margin-bottom:16px;align-items:center;flex-wrap:wrap}
+.loading{text-align:center;padding:40px;color:var(--cz)}
+.spin{display:inline-block;width:24px;height:24px;border:3px solid var(--bd);border-top-color:var(--am);border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+#toast{position:fixed;bottom:24px;right:24px;z-index:999}
+.tmsg{background:var(--esc);color:#fff;padding:12px 20px;border-radius:8px;font-size:13px;margin-top:8px;animation:si .3s ease;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.tmsg.success{background:#16a34a}.tmsg.error{background:#dc2626}
+@keyframes si{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+.ronote{background:var(--am-l);border:1px solid var(--am);border-radius:8px;padding:10px 14px;font-size:13px;color:#92400e;margin-bottom:16px;font-weight:500}
+.sqlnote{background:#f0f9ff;border:1px solid #0ea5e9;border-radius:8px;padding:12px 16px;font-size:12px;color:#0369a1;margin-bottom:16px;font-family:monospace;white-space:pre-wrap}
+.nr{text-align:right;font-variant-numeric:tabular-nums}
+.cc-tot{font-weight:700;background:var(--esc-l)!important}
+@media(max-width:768px){.scards{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="lcard">
+    <div class="llogo">
+      <div class="lbox">
+        <span class="g">Grupo</span>
+        <span class="a">AUDACe</span>
+        <span class="s">Autopeças</span>
+      </div>
+      <p>Sistema de VA/VT</p>
+    </div>
+    <div class="lf"><label>E-mail</label><input type="email" id="l-email" placeholder="seu@email.com"/></div>
+    <div class="lf"><label>Senha</label><input type="password" id="l-senha" placeholder="••••••••"/></div>
+    <button class="lbtn" onclick="fazerLogin()">Entrar</button>
+    <p class="lerr" id="l-erro"></p>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <div class="hdr">
+    <div class="hbrand">
+      <div class="hpill">AUDACe</div>
+      <div class="ht"><h2>VA/VT — Grupo Audace Autopeças</h2><p id="h-sub">Carregando...</p></div>
+    </div>
+    <div class="hr">
+      <span class="bperfil" id="h-perfil"></span>
+      <span style="font-size:13px;opacity:.75;color:#fff" id="h-nome"></span>
+      <button class="blog" onclick="fazerLogout()">Sair</button>
+    </div>
+  </div>
+
+  <div class="tbar" id="tbar">
+    <button class="tb active" data-tab="parametros" onclick="switchTab('parametros')">⚙️ Parâmetros</button>
+    <button class="tb" data-tab="sabados" onclick="switchTab('sabados')">📅 Sábados</button>
+    <button class="tb" data-tab="feriados" onclick="switchTab('feriados')">🗓️ Feriados</button>
+    <button class="tb" data-tab="ausencias" onclick="switchTab('ausencias')">🚫 Ausências</button>
+    <button class="tb" data-tab="ferias" onclick="switchTab('ferias')">🏖️ Férias</button>
+    <button class="tb" data-tab="resultado" onclick="switchTab('resultado')">📊 Resultado</button>
+    <button class="tb" data-tab="custos" onclick="switchTab('custos')">💰 Custos por CC</button>
+    <button class="tb" data-tab="colaboradores" onclick="switchTab('colaboradores')">👥 Colaboradores</button>
+  </div>
+
+  <!-- PARÂMETROS -->
+  <div class="tc active" id="tab-parametros">
+    <div class="card" style="max-width:480px">
+      <div class="ctit">Parâmetros do Mês</div>
+      <div class="g2">
+        <div class="fld"><label>Mês</label>
+          <select id="p-mes">
+            <option value="1">Janeiro</option><option value="2">Fevereiro</option>
+            <option value="3">Março</option><option value="4">Abril</option>
+            <option value="5">Maio</option><option value="6">Junho</option>
+            <option value="7">Julho</option><option value="8">Agosto</option>
+            <option value="9">Setembro</option><option value="10">Outubro</option>
+            <option value="11">Novembro</option><option value="12">Dezembro</option>
+          </select>
+        </div>
+        <div class="fld"><label>Ano</label><input type="number" id="p-ano" value="2026" min="2020" max="2035"/></div>
+      </div>
+      <div class="fld"><label>Valor do VA (R$ — mensal cheio)</label><input type="number" id="p-va" value="240" step="0.01" min="0"/></div>
+      <button class="btn ba" id="btn-p-salvar" onclick="salvarParametros()">💾 Salvar Parâmetros</button>
+      <span id="p-status" style="margin-left:10px;font-size:12px;color:var(--cz)"></span>
+    </div>
+    <div class="card" style="max-width:480px">
+      <div class="ctit">Dias Úteis do Mês</div>
+      <div id="dias-info" style="color:var(--cz);font-size:13px">Selecione mês e ano acima</div>
+    </div>
+  </div>
+
+  <!-- SÁBADOS -->
+  <div class="tc" id="tab-sabados">
+    <div class="card">
+      <div class="ctit">Sábados do Mês — Turmas A e B</div>
+      <p style="font-size:12px;color:var(--cz);margin-bottom:16px">NR/EX trabalham em todos os sábados. C e AF nunca trabalham sábados.</p>
+      <div id="sab-container" class="loading"><div class="spin"></div></div>
+      <div style="margin-top:16px"><button class="btn ba" id="btn-sab-salvar" onclick="salvarSabados()">💾 Salvar Sábados</button></div>
+    </div>
+  </div>
+
+  <!-- FERIADOS -->
+  <div class="tc" id="tab-feriados">
+    <div class="card">
+      <div class="ctit">Feriados do Mês</div>
+      <p style="font-size:12px;color:var(--cz);margin-bottom:12px">
+        Marque os feriados do mês. Por padrão ninguém trabalha. Marque as escalas que trabalharam em cada feriado.
+        Feriados não trabalhados são excluídos do cômputo de dias úteis de cada colaborador.
+      </p>
+      <div class="sqlnote">⚠️ ATENÇÃO: execute o SQL em feriados_setup.sql no Supabase antes de usar esta aba pela primeira vez.</div>
+      <div id="fer-readonly" class="ronote" style="display:none">⚠️ Apenas admin e RH podem editar feriados.</div>
+      <div class="abar">
+        <button class="btn ba" id="btn-add-feriado" onclick="adicionarFeriado()">+ Adicionar Feriado</button>
+        <button class="btn bp" id="btn-feriados-salvar" onclick="salvarFeriados()">💾 Salvar Feriados</button>
+      </div>
+      <div id="feriados-container"></div>
+    </div>
+  </div>
+
+  <!-- AUSÊNCIAS -->
+  <div class="tc" id="tab-ausencias">
+    <div id="aus-ro" class="ronote" style="display:none">⚠️ Seu perfil tem apenas leitura nesta seção.</div>
+    <div class="card">
+      <div class="ctit">Lançamento de Ausências</div>
+      <p style="font-size:12px;color:var(--cz);margin-bottom:12px">
+        Informe o número de dias. <strong>Injustificadas</strong> descontam VA e VT. <strong>Justificadas</strong> descontam apenas VT.
+      </p>
+      <div class="sbar">
+        <input type="text" id="aus-busca" placeholder="Buscar colaborador..." oninput="renderAusencias()"/>
+        <select id="aus-cc" onchange="renderAusencias()"><option value="">Todos os CCs</option></select>
+        <button class="btn ba" id="btn-aus-salvar" onclick="salvarTodasAusencias()">💾 Salvar Ausências</button>
+      </div>
+      <div id="aus-container" class="loading"><div class="spin"></div></div>
+    </div>
+  </div>
+
+  <!-- FÉRIAS -->
+  <div class="tc" id="tab-ferias">
+    <div id="fer-ro" class="ronote" style="display:none">⚠️ Seu perfil tem apenas leitura nesta seção.</div>
+    <div class="card">
+      <div class="ctit">Lançamento de Férias</div>
+      <p style="font-size:12px;color:var(--cz);margin-bottom:12px">
+        Informe o período de férias (início e fim). O sistema calcula automaticamente os dias úteis e sábados dentro do período. Férias descontam VA e VT.
+      </p>
+      <div class="sbar">
+        <input type="text" id="ferias-busca" placeholder="Buscar colaborador..." oninput="renderFerias()"/>
+        <select id="ferias-cc" onchange="renderFerias()"><option value="">Todos os CCs</option></select>
+        <button class="btn ba" id="btn-ferias-salvar" onclick="salvarTodasFerias()">💾 Salvar Férias</button>
+      </div>
+      <div id="ferias-container" class="loading"><div class="spin"></div></div>
+    </div>
+  </div>
+
+  <!-- RESULTADO -->
+  <div class="tc" id="tab-resultado">
+    <div class="scards">
+      <div class="sc am"><label>Total VA</label><div class="val" id="s-va">R$ 0,00</div></div>
+      <div class="sc esc"><label>Total VT</label><div class="val" id="s-vt">R$ 0,00</div></div>
+      <div class="sc rox"><label>Total Geral</label><div class="val" id="s-tot">R$ 0,00</div></div>
+      <div class="sc cz2"><label>Colaboradores</label><div class="val" id="s-emp">0</div></div>
+    </div>
+    <div class="abar">
+      <button class="btn ba" id="btn-calcular" onclick="calcular()">⚡ Calcular</button>
+      <button class="btn bp" id="btn-salvar-res" onclick="salvarResultado()" style="display:none">💾 Salvar + Baixar CSV</button>
+      <button class="btn bd2 bsm" id="btn-resetar" onclick="resetarCalculo()" style="display:none">🔄 Novo Cálculo</button>
+      <select id="res-cc" onchange="filtrarResultado()" style="padding:8px 12px;border:1.5px solid var(--bd);border-radius:7px;font-size:13px;outline:none;background:#fff"><option value="">Todos os CCs</option></select>
+      <input type="text" id="res-busca" placeholder="Buscar..." oninput="filtrarResultado()" style="padding:8px 12px;border:1.5px solid var(--bd);border-radius:7px;font-size:13px;outline:none"/>
+    </div>
+    <div class="tw">
+      <table>
+        <thead><tr>
+          <th>Colaborador</th><th>CC</th><th>Escala</th>
+          <th class="nr">D.Úteis</th>
+          <th class="nr">Sáb.Trab.</th>
+          <th class="nr">Falta Inj.</th>
+          <th class="nr">Falta Just.</th>
+          <th class="nr">Férias (d.u.)</th>
+          <th class="nr">Sáb.Férias</th>
+          <th class="nr">Dias p/VA</th>
+          <th class="nr">Dias p/VT</th>
+          <th class="nr">VA (R$)</th>
+          <th class="nr">VT (R$)</th>
+          <th class="nr">Total (R$)</th>
+          <th>Obs</th>
+        </tr></thead>
+        <tbody id="res-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CUSTOS POR CC -->
+  <div class="tc" id="tab-custos">
+    <div id="custos-container"><p style="color:var(--cz);padding:20px">Clique em Calcular na aba Resultado primeiro.</p></div>
+  </div>
+
+  <!-- COLABORADORES -->
+  <div class="tc" id="tab-colaboradores">
+    <div id="colab-ro" class="ronote" style="display:none">⚠️ Apenas admin e RH podem editar colaboradores.</div>
+    <div class="card">
+      <div class="ctit">Colaboradores — Benefícios VA e VT</div>
+      <div class="sbar">
+        <input type="text" id="colab-busca" placeholder="Buscar por nome..." oninput="renderColaboradores()"/>
+        <select id="colab-cc" onchange="renderColaboradores()"><option value="">Todos os CCs</option></select>
+        <button class="btn ba" id="btn-colab-salvar" onclick="salvarColaboradores()">💾 Salvar Alterações</button>
+      </div>
+      <div id="colab-container" class="loading"><div class="spin"></div></div>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ===== CONFIG =====
+const SB_URL = 'https://nbztyoynlmgirkscvqty.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ienR5b3lubG1naXJrc2N2cXR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY0Nzk5OTgsImV4cCI6MjEwMjA1NTk5OH0.PwBXXrk9BwIqvhQ2PKsd02yfXFVg9XXL3eK2habkASE';
+const sb = supabase.createClient(SB_URL, SB_KEY);
+
+// ===== STATE =====
+let perfil = null, colaboradores = [], sabados = [], ausencias = [], feriados = [], resultados = [];
+let params = { ano: new Date().getFullYear(), mes: new Date().getMonth()+1, valor_va: 240 };
+
+// ===== AUTH =====
+async function fazerLogin() {
+  const email = document.getElementById('l-email').value.trim();
+  const senha = document.getElementById('l-senha').value;
+  const err = document.getElementById('l-erro');
+  err.textContent = '';
+  const btn = document.querySelector('.lbtn');
+  btn.textContent = 'Entrando...'; btn.disabled = true;
+  const { error } = await sb.auth.signInWithPassword({ email, password: senha });
+  btn.textContent = 'Entrar'; btn.disabled = false;
+  if (error) { err.textContent = 'E-mail ou senha incorretos.'; return; }
+  await iniciarApp();
+}
+async function fazerLogout() {
+  await sb.auth.signOut();
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('login-screen').style.display = 'flex';
+}
+sb.auth.onAuthStateChange(async (ev, session) => { if (ev === 'SIGNED_IN' && session) { document.getElementById('login-screen').style.display = 'none'; await iniciarApp(); } });
+
+// ===== INIT =====
+async function iniciarApp() {
+  const { data: { user } } = await sb.auth.getUser();
+  if (!user) return;
+  const { data: p } = await sb.from('perfis').select('*').eq('id', user.id).single();
+  if (!p) { toast('Perfil não encontrado.', 'error'); return; }
+  perfil = p;
+  document.getElementById('h-nome').textContent = p.nome;
+  document.getElementById('h-perfil').textContent = p.perfil;
+  ajustarUI();
+  document.getElementById('app').style.display = 'block';
+  document.getElementById('login-screen').style.display = 'none';
+  await Promise.all([carregarColaboradores(), carregarParametros()]);
+  renderAusencias(); renderFerias(); renderFeriados(); renderColaboradores();
+}
+
+function ajustarUI() {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  if (ro) {
+    ['sabados','feriados','ausencias','ferias'].forEach(t => document.querySelector(`[data-tab="${t}"]`).classList.add('hidden'));
+    ['btn-calcular','btn-p-salvar','btn-sab-salvar'].forEach(id => { const el = document.getElementById(id); if(el) el.style.display='none'; });
+  }
+}
+
+// ===== DADOS =====
+async function carregarColaboradores() {
+  const { data } = await sb.from('colaboradores').select('*').eq('ativo', true).order('nome');
+  colaboradores = data || [];
+  const ccs = [...new Set(colaboradores.map(c => c.centro_de_custo).filter(Boolean))].sort();
+  ['aus-cc','ferias-cc','res-cc','colab-cc'].forEach(id => {
+    const el = document.getElementById(id); if (!el) return;
+    el.innerHTML = '<option value="">Todos os CCs</option>';
+    ccs.forEach(cc => el.innerHTML += `<option value="${cc}">${cc}</option>`);
+  });
+}
+
+async function carregarParametros() {
+  const ano = parseInt(document.getElementById('p-ano').value) || params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value) || params.mes;
+  const { data } = await sb.from('parametros_mes').select('*').eq('ano', ano).eq('mes', mes).single();
+  if (data) {
+    params = data;
+    document.getElementById('p-va').value = data.valor_va;
+    document.getElementById('p-mes').value = data.mes;
+    document.getElementById('p-ano').value = data.ano;
+    document.getElementById('p-status').textContent = '✓ Carregado';
+  } else {
+    params = { ano, mes, valor_va: parseFloat(document.getElementById('p-va').value) || 240 };
+    document.getElementById('p-status').textContent = 'Novo mês';
+  }
+  atualizarDiasInfo();
+  await Promise.all([carregarSabados(ano, mes), carregarAusencias(ano, mes), carregarFeriados(ano, mes)]);
+  document.getElementById('h-sub').textContent = `${MESES[mes]}/${ano}`;
+}
+
+async function carregarSabados(ano, mes) {
+  const { data } = await sb.from('sabados_config').select('*').eq('ano', ano).eq('mes', mes);
+  sabados = data || [];
+  renderSabados(ano, mes);
+}
+
+async function carregarAusencias(ano, mes) {
+  const { data } = await sb.from('ausencias').select('*').eq('ano', ano).eq('mes', mes);
+  ausencias = data || [];
+}
+
+async function carregarFeriados(ano, mes) {
+  try {
+    const { data } = await sb.from('feriados').select('*').eq('ano', ano).eq('mes', mes).order('data');
+    feriados = data || [];
+  } catch(e) { feriados = []; }
+  renderFeriados();
+}
+
+// ===== PARÂMETROS =====
+document.getElementById('p-mes').addEventListener('change', () => carregarParametros());
+document.getElementById('p-ano').addEventListener('change', () => carregarParametros());
+
+async function salvarParametros() {
+  const ano = parseInt(document.getElementById('p-ano').value);
+  const mes = parseInt(document.getElementById('p-mes').value);
+  const valor_va = parseFloat(document.getElementById('p-va').value);
+  const { error } = await sb.from('parametros_mes').upsert({ ano, mes, valor_va }, { onConflict: 'ano,mes' });
+  if (error) { toast('Erro: '+error.message, 'error'); return; }
+  params = { ...params, ano, mes, valor_va };
+  document.getElementById('p-status').textContent = '✓ Salvo!';
+  document.getElementById('h-sub').textContent = `${MESES[mes]}/${ano}`;
+  atualizarDiasInfo();
+  await carregarSabados(ano, mes);
+  await carregarAusencias(ano, mes);
+  await carregarFeriados(ano, mes);
+  renderAusencias(); renderFerias();
+  toast('Parâmetros salvos!', 'success');
+}
+
+function atualizarDiasInfo() {
+  const ano = parseInt(document.getElementById('p-ano').value) || params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value) || params.mes;
+  const total = diasUteis(new Date(ano, mes-1, 1), new Date(ano, mes, 0));
+  const sabs = sabadosDoMes(ano, mes);
+  document.getElementById('dias-info').innerHTML =
+    `<strong style="font-size:18px;color:var(--esc)">${total}</strong> dias úteis (seg-sex) em <strong>${MESES[mes]}/${ano}</strong><br>
+     <span style="color:var(--cz);font-size:12px;margin-top:4px;display:block">${sabs.length} sábados: ${sabs.map(d=>d.getDate()+'/'+(d.getMonth()+1)).join(', ')}</span>`;
+}
+
+// ===== SÁBADOS =====
+function renderSabados(ano, mes) {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  const sabs = sabadosDoMes(ano, mes);
+  const c = document.getElementById('sab-container');
+  if (!sabs.length) { c.innerHTML = '<p style="color:var(--cz)">Nenhum sábado neste mês.</p>'; return; }
+  c.innerHTML = `<div class="sbgrid">`+sabs.map(d => {
+    const ds = d.toISOString().split('T')[0];
+    const ex = sabados.find(s => s.data_sabado === ds);
+    return `<div class="sbi"><div class="sbd">${fmtData(d)}</div>
+      <label class="sbck"><input type="checkbox" id="sa-${ds}" ${ex?.turma_a?'checked':''} ${ro?'disabled':''}/> Turma A</label>
+      <label class="sbck"><input type="checkbox" id="sb-${ds}" ${ex?.turma_b?'checked':''} ${ro?'disabled':''}/> Turma B</label>
+    </div>`;
+  }).join('')+`</div>`;
+}
+
+async function salvarSabados() {
+  const ano = parseInt(document.getElementById('p-ano').value);
+  const mes = parseInt(document.getElementById('p-mes').value);
+  const rows = sabadosDoMes(ano, mes).map(d => {
+    const ds = d.toISOString().split('T')[0];
+    return { ano, mes, data_sabado: ds,
+      turma_a: document.getElementById(`sa-${ds}`)?.checked||false,
+      turma_b: document.getElementById(`sb-${ds}`)?.checked||false };
+  });
+  const { error } = await sb.from('sabados_config').upsert(rows, { onConflict: 'ano,mes,data_sabado' });
+  if (error) { toast('Erro: '+error.message, 'error'); return; }
+  sabados = rows;
+  toast('Sábados salvos!', 'success');
+}
+
+// ===== FERIADOS =====
+let feriadosLocal = []; // estado local antes de salvar
+
+function renderFeriados() {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  if (ro) {
+    document.getElementById('fer-readonly').style.display = 'block';
+    document.getElementById('btn-add-feriado').style.display = 'none';
+    document.getElementById('btn-feriados-salvar').style.display = 'none';
+  }
+  feriadosLocal = feriados.map(f => ({...f}));
+  renderFeriadosList();
+}
+
+function renderFeriadosList() {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  const c = document.getElementById('feriados-container');
+  if (!feriadosLocal.length) { c.innerHTML = '<p style="color:var(--cz);padding:12px 0">Nenhum feriado cadastrado para este mês.</p>'; return; }
+  c.innerHTML = `<div class="tw"><table>
+    <thead><tr><th>Data</th><th>Descrição</th><th style="text-align:center">Turma A trab.</th><th style="text-align:center">Turma B trab.</th><th style="text-align:center">NR/EX trab.</th><th style="text-align:center">Demais trab.</th>${ro?'':'<th></th>'}</tr></thead>
+    <tbody>`+feriadosLocal.map((f,i) => `<tr>
+      <td>${ro ? f.data : `<input type="date" value="${f.data}" onchange="feriadosLocal[${i}].data=this.value" style="padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+      <td>${ro ? f.descricao : `<input type="text" value="${f.descricao||''}" onchange="feriadosLocal[${i}].descricao=this.value" placeholder="ex: Dia de Nossa Senhora" style="width:100%;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${f.turma_a_trabalhou?'bgrn':'bcz'}">${f.turma_a_trabalhou?'Sim':'Não'}</span>`:`<input type="checkbox" ${f.turma_a_trabalhou?'checked':''} onchange="feriadosLocal[${i}].turma_a_trabalhou=this.checked" style="width:16px;height:16px;accent-color:var(--am)"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${f.turma_b_trabalhou?'bgrn':'bcz'}">${f.turma_b_trabalhou?'Sim':'Não'}</span>`:`<input type="checkbox" ${f.turma_b_trabalhou?'checked':''} onchange="feriadosLocal[${i}].turma_b_trabalhou=this.checked" style="width:16px;height:16px;accent-color:var(--am)"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${f.nr_ex_trabalhou?'bgrn':'bcz'}">${f.nr_ex_trabalhou?'Sim':'Não'}</span>`:`<input type="checkbox" ${f.nr_ex_trabalhou?'checked':''} onchange="feriadosLocal[${i}].nr_ex_trabalhou=this.checked" style="width:16px;height:16px;accent-color:var(--am)"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${f.demais_trabalhou?'bgrn':'bcz'}">${f.demais_trabalhou?'Sim':'Não'}</span>`:`<input type="checkbox" ${f.demais_trabalhou?'checked':''} onchange="feriadosLocal[${i}].demais_trabalhou=this.checked" style="width:16px;height:16px;accent-color:var(--am)"/>`}</td>
+      ${ro?'':`<td><button class="btn bd2 bsm" onclick="removerFeriado(${i})">✕</button></td>`}
+    </tr>`).join('')+`</tbody></table></div>`;
+}
+
+function adicionarFeriado() {
+  const ano = parseInt(document.getElementById('p-ano').value) || params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value) || params.mes;
+  const d = String(mes).padStart(2,'0');
+  feriadosLocal.push({ ano, mes, data: `${ano}-${d}-01`, descricao: '', turma_a_trabalhou: false, turma_b_trabalhou: false, nr_ex_trabalhou: false, demais_trabalhou: false });
+  renderFeriadosList();
+}
+
+function removerFeriado(i) { feriadosLocal.splice(i,1); renderFeriadosList(); }
+
+async function salvarFeriados() {
+  const ano = parseInt(document.getElementById('p-ano').value) || params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value) || params.mes;
+  const btn = document.getElementById('btn-feriados-salvar');
+  btn.textContent = '⏳ Salvando...'; btn.disabled = true;
+  try {
+    await sb.from('feriados').delete().eq('ano', ano).eq('mes', mes);
+    const rows = feriadosLocal.filter(f => f.data).map(f => ({
+      ano, mes, data: f.data, descricao: f.descricao || '',
+      turma_a_trabalhou: !!f.turma_a_trabalhou, turma_b_trabalhou: !!f.turma_b_trabalhou,
+      nr_ex_trabalhou: !!f.nr_ex_trabalhou, demais_trabalhou: !!f.demais_trabalhou
+    }));
+    if (rows.length) { const { error } = await sb.from('feriados').insert(rows); if (error) throw error; }
+    feriados = rows;
+    toast(`${rows.length} feriado(s) salvo(s)!`, 'success');
+  } catch(e) { toast('Erro: '+(e.message||e), 'error'); }
+  btn.textContent = '💾 Salvar Feriados'; btn.disabled = false;
+}
+
+// ===== AUSÊNCIAS =====
+function renderAusencias() {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  if (ro) document.getElementById('aus-ro').style.display = 'block';
+  const btn = document.getElementById('btn-aus-salvar'); if(btn) btn.style.display = ro?'none':'inline-flex';
+  const busca = document.getElementById('aus-busca')?.value?.toLowerCase()||'';
+  const cc = document.getElementById('aus-cc')?.value||'';
+  const lista = colaboradores.filter(c => (!cc||c.centro_de_custo===cc) && (!busca||c.nome.toLowerCase().includes(busca)));
+  const c = document.getElementById('aus-container');
+  if (!lista.length) { c.innerHTML='<p style="color:var(--cz)">Nenhum colaborador.</p>'; return; }
+  c.innerHTML = `<div class="tw"><table>
+    <thead><tr><th>Colaborador</th><th>CC</th><th>Escala</th><th>Faltas Injustificadas</th><th>Faltas Justificadas</th></tr></thead>
+    <tbody>`+lista.map(col => {
+      const ea = ausencias.filter(a => a.colaborador_id === col.id);
+      const nInj = ea.find(a=>a.tipo==='Injustificada')?.datas?.length||0;
+      const nJus = ea.find(a=>a.tipo==='Justificada')?.datas?.length||0;
+      return `<tr>
+        <td><strong>${col.nome}</strong></td>
+        <td><span class="badge bcz">${col.centro_de_custo||'-'}</span></td>
+        <td><span class="badge besc">${col.escala||'-'}</span></td>
+        <td>${ro?`<span class="badge bred">${nInj} dia(s)</span>`:`<input type="number" min="0" max="31" value="${nInj}" id="inj-${col.id}" style="width:70px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+        <td>${ro?`<span class="badge bcz">${nJus} dia(s)</span>`:`<input type="number" min="0" max="31" value="${nJus}" id="jus-${col.id}" style="width:70px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+      </tr>`;
+    }).join('')+`</tbody></table></div>`;
+}
+
+async function salvarTodasAusencias() {
+  const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
+  const btn = document.getElementById('btn-aus-salvar');
+  btn.textContent='⏳ Salvando...'; btn.disabled=true;
+  try {
+    const ids = colaboradores.map(c=>c.id);
+    // Preserva Ferias, deleta só Injustificada e Justificada
+    const { error: de } = await sb.from('ausencias').delete().eq('ano',ano).eq('mes',mes).in('colaborador_id',ids).in('tipo',['Injustificada','Justificada']);
+    if (de) throw de;
+    const rows = [];
+    for (const col of colaboradores) {
+      for (const [pre,tipo] of [['inj','Injustificada'],['jus','Justificada']]) {
+        const inp = document.getElementById(`${pre}-${col.id}`); if (!inp) continue;
+        const n = parseInt(inp.value)||0;
+        if (n>0) rows.push({ ano, mes, colaborador_id:col.id, tipo, datas: Array.from({length:n},(_,i)=>{const d=new Date(ano,mes-1,1+i);return d.toISOString().split('T')[0];}) });
+      }
+    }
+    if (rows.length) { const { error: ie } = await sb.from('ausencias').insert(rows); if (ie) throw ie; }
+    ausencias = [...ausencias.filter(a=>a.tipo==='Ferias'), ...rows];
+    toast('Ausências salvas! ('+rows.length+' registros)', 'success');
+  } catch(e) { toast('Erro: '+(e.message||e), 'error'); }
+  btn.textContent='💾 Salvar Ausências'; btn.disabled=false;
+}
+
+// ===== FÉRIAS =====
+function renderFerias() {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  if (ro) document.getElementById('fer-ro').style.display='block';
+  const btn = document.getElementById('btn-ferias-salvar'); if(btn) btn.style.display=ro?'none':'inline-flex';
+  const busca = document.getElementById('ferias-busca')?.value?.toLowerCase()||'';
+  const cc = document.getElementById('ferias-cc')?.value||'';
+  const lista = colaboradores.filter(c => (!cc||c.centro_de_custo===cc) && (!busca||c.nome.toLowerCase().includes(busca)));
+  const c = document.getElementById('ferias-container');
+  if (!lista.length) { c.innerHTML='<p style="color:var(--cz)">Nenhum colaborador.</p>'; return; }
+  c.innerHTML = `<div class="tw"><table>
+    <thead><tr><th>Colaborador</th><th>CC</th><th>Escala</th><th>Início Férias</th><th>Fim Férias</th><th>Dias Úteis (auto)</th><th>Sáb. Férias (auto)</th></tr></thead>
+    <tbody>`+lista.map(col => {
+      const fer = ausencias.find(a=>a.colaborador_id===col.id && a.tipo==='Ferias');
+      const ini = fer?.datas?.[0]||'';
+      const fim = fer?.datas?.[1]||'';
+      const { du, sf } = calcFeriasInfo(ini, fim, col.escala);
+      return `<tr>
+        <td><strong>${col.nome}</strong></td>
+        <td><span class="badge bcz">${col.centro_de_custo||'-'}</span></td>
+        <td><span class="badge besc">${col.escala||'-'}</span></td>
+        <td>${ro?(ini||'-'):`<input type="date" value="${ini}" id="fi-${col.id}" onchange="atualizarInfoFer('${col.id}')" style="padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+        <td>${ro?(fim||'-'):`<input type="date" value="${fim}" id="ff-${col.id}" onchange="atualizarInfoFer('${col.id}')" style="padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+        <td id="fdu-${col.id}" style="text-align:center">${du>0?`<span class="badge bam">${du} d.u.</span>`:'-'}</td>
+        <td id="fsf-${col.id}" style="text-align:center">${sf>0?`<span class="badge bcz">${sf} sáb.</span>`:'-'}</td>
+      </tr>`;
+    }).join('')+`</tbody></table></div>`;
+}
+
+function atualizarInfoFer(id) {
+  const ini = document.getElementById(`fi-${id}`)?.value||'';
+  const fim = document.getElementById(`ff-${id}`)?.value||'';
+  const col = colaboradores.find(c=>c.id===id);
+  const { du, sf } = calcFeriasInfo(ini, fim, col?.escala);
+  const du_el = document.getElementById(`fdu-${id}`); if(du_el) du_el.innerHTML = du>0?`<span class="badge bam">${du} d.u.</span>`:'-';
+  const sf_el = document.getElementById(`fsf-${id}`); if(sf_el) sf_el.innerHTML = sf>0?`<span class="badge bcz">${sf} sáb.</span>`:'-';
+}
+
+function calcFeriasInfo(ini, fim, escala) {
+  if (!ini||!fim||fim<ini) return { du:0, sf:0 };
+  const fi = new Date(ini+'T00:00:00'), ff = new Date(fim+'T00:00:00');
+  const du = diasUteis(fi, ff, feriadosDates(escala));
+  // conta sábados dentro do período que são da escala do colaborador
+  let sf = 0;
+  for (const sab of sabados) {
+    const sd = new Date(sab.data_sabado+'T00:00:00');
+    if (sd<fi||sd>ff) continue;
+    if (['NR','EX'].includes(escala)) sf++;
+    else if (escala==='A'&&sab.turma_a) sf++;
+    else if (escala==='B'&&sab.turma_b) sf++;
+  }
+  return { du, sf };
+}
+
+async function salvarTodasFerias() {
+  const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
+  const btn = document.getElementById('btn-ferias-salvar');
+  btn.textContent='⏳ Salvando...'; btn.disabled=true;
+  try {
+    const ids = colaboradores.map(c=>c.id);
+    const { error: de } = await sb.from('ausencias').delete().eq('ano',ano).eq('mes',mes).in('colaborador_id',ids).eq('tipo','Ferias');
+    if (de) throw de;
+    const rows = [];
+    for (const col of colaboradores) {
+      const ini = document.getElementById(`fi-${col.id}`)?.value;
+      const fim = document.getElementById(`ff-${col.id}`)?.value;
+      if (ini&&fim&&fim>=ini) rows.push({ ano, mes, colaborador_id:col.id, tipo:'Ferias', datas:[ini,fim] });
+    }
+    if (rows.length) { const { error: ie } = await sb.from('ausencias').insert(rows); if (ie) throw ie; }
+    ausencias = [...ausencias.filter(a=>a.tipo!=='Ferias'), ...rows];
+    toast('Férias salvas! ('+rows.length+' registros)', 'success');
+  } catch(e) { toast('Erro: '+(e.message||e), 'error'); }
+  btn.textContent='💾 Salvar Férias'; btn.disabled=false;
+}
+
+// ===== CÁLCULO =====
+async function calcular() {
+  const btn = document.getElementById('btn-calcular');
+  btn.textContent='⏳ Calculando...'; btn.disabled=true;
+
+  const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
+  const valorVA = parseFloat(document.getElementById('p-va').value)||params.valor_va;
+
+  // Garante dados frescos do banco
+  await Promise.all([carregarSabados(ano,mes), carregarAusencias(ano,mes), carregarFeriados(ano,mes)]);
+
+  const msDate = new Date(ano,mes-1,1);
+  const meDate = new Date(ano,mes,0);
+
+  resultados = colaboradores.map(emp => {
+    const adm = emp.admissao ? new Date(emp.admissao+'T00:00:00') : null;
+    const dem = emp.desligamento ? new Date(emp.desligamento+'T00:00:00') : null;
+    if (!adm) return { emp, valid:false, obs:'Sem data de admissão', VA:0, VT:0 };
+    if (!(adm<=meDate && (!dem||dem>=msDate))) return { emp, valid:false, obs:'Inativo no período', VA:0, VT:0 };
+
+    const start = adm>msDate ? adm : new Date(msDate);
+    const end = dem&&dem<meDate ? dem : new Date(meDate);
+
+    // Feriados que a escala não trabalhou (excluir dos dias úteis)
+    const ferExclude = feriadosDates(emp.escala);
+    const totalWD = diasUteis(msDate, meDate, feriadosDates(emp.escala)); // total esperado p/ esta escala
+    const activeWD = diasUteis(start, end, ferExclude);
+
+    // Ausências
+    const ea = ausencias.filter(a=>a.colaborador_id===emp.id);
+    const injust = ea.find(a=>a.tipo==='Injustificada')?.datas?.length||0;
+    const just   = ea.find(a=>a.tipo==='Justificada')?.datas?.length||0;
+
+    // Férias (armazenadas como [ini, fim])
+    const ferEntry = ea.find(a=>a.tipo==='Ferias');
+    let ferWD=0, sabsFer=0;
+    if (ferEntry?.datas?.length>=2) {
+      const fi = new Date(ferEntry.datas[0]+'T00:00:00');
+      const ff = new Date(ferEntry.datas[1]+'T00:00:00');
+      const ferStart = fi>start ? fi : new Date(start);
+      const ferEnd   = ff<end  ? ff : new Date(end);
+      if (ferStart<=ferEnd) {
+        ferWD = diasUteis(ferStart, ferEnd, ferExclude);
+        for (const sab of sabados) {
+          const sd = new Date(sab.data_sabado+'T00:00:00');
+          if (sd<ferStart||sd>ferEnd) continue;
+          if (['NR','EX'].includes(emp.escala)) sabsFer++;
+          else if (emp.escala==='A'&&sab.turma_a) sabsFer++;
+          else if (emp.escala==='B'&&sab.turma_b) sabsFer++;
+        }
+      }
+    }
+
+    // Sábados trabalhados (bruto da escala no período ativo)
+    let sabsBruto=0;
+    for (const sab of sabados) {
+      const sd = new Date(sab.data_sabado+'T00:00:00');
+      if (sd<start||sd>end) continue;
+      if (['NR','EX'].includes(emp.escala)) sabsBruto++;
+      else if (emp.escala==='A'&&sab.turma_a) sabsBruto++;
+      else if (emp.escala==='B'&&sab.turma_b) sabsBruto++;
+    }
+    const sabsLiq = Math.max(0, sabsBruto - sabsFer);
+
+    // Dias efetivamente trabalhados (mesma base para VA e VT)
+    const diasTrab = Math.max(0, activeWD - injust - just - ferWD);
+
+    // Fórmulas:
+    // VA proporcional: (dias trabalhados / total esperado) × valor_VA
+    const VA = emp.ajuda_va ? Math.max(0, valorVA * diasTrab / totalWD) : 0;
+    // VT: dias trabalhados + sábados líquidos × valor/dia
+    const VT = Math.max(0, (diasTrab + sabsLiq) * (parseFloat(emp.vt_dia)||0));
+
+    return { emp, valid:true, activeWD, totalWD, injust, just, ferWD, sabsFer, sabsBruto, sabsLiq, diasTrab, VA, VT, total:VA+VT, obs:'' };
+  });
+
+  btn.textContent='⚡ Calcular'; btn.disabled=false;
+  document.getElementById('btn-salvar-res').style.display='inline-flex';
+  document.getElementById('btn-resetar').style.display='inline-flex';
+  renderResultado(); renderCustos();
+  toast('Cálculo concluído!', 'success');
+}
+
+function filtrarResultado() {
+  const busca = document.getElementById('res-busca')?.value?.toLowerCase()||'';
+  const cc = document.getElementById('res-cc')?.value||'';
+  const filt = resultados.filter(r => (!cc||r.emp.centro_de_custo===cc) && (!busca||r.emp.nome.toLowerCase().includes(busca)));
+  document.getElementById('res-tbody').innerHTML = filt.map(r => {
+    if (!r.valid) return `<tr><td><strong>${r.emp.nome}</strong></td><td>${r.emp.centro_de_custo||'-'}</td><td>${r.emp.escala||'-'}</td><td colspan="12"><span class="badge bcz">${r.obs}</span></td></tr>`;
+    return `<tr>
+      <td><strong>${r.emp.nome}</strong></td>
+      <td><span class="badge bcz">${r.emp.centro_de_custo||'-'}</span></td>
+      <td><span class="badge besc">${r.emp.escala||'-'}</span></td>
+      <td class="nr">${r.activeWD}</td>
+      <td class="nr">${r.sabsBruto}</td>
+      <td class="nr">${r.injust>0?`<span class="badge bred">${r.injust}</span>`:'0'}</td>
+      <td class="nr">${r.just>0?`<span class="badge bcz">${r.just}</span>`:'0'}</td>
+      <td class="nr">${r.ferWD>0?`<span class="badge bam">${r.ferWD}</span>`:'0'}</td>
+      <td class="nr">${r.sabsFer>0?`<span class="badge bcz">${r.sabsFer}</span>`:'0'}</td>
+      <td class="nr" style="font-weight:600">${r.diasTrab}</td>
+      <td class="nr" style="font-weight:600">${r.diasTrab+r.sabsLiq}</td>
+      <td class="nr" style="color:#c47f00;font-weight:700">${fmt(r.VA)}</td>
+      <td class="nr" style="color:var(--esc);font-weight:700">${fmt(r.VT)}</td>
+      <td class="nr" style="font-weight:800">${fmt(r.total)}</td>
+      <td style="font-size:12px;color:var(--cz)">${r.obs||''}</td>
+    </tr>`;
+  }).join('');
+  const val = filt.filter(r=>r.valid);
+  const tVA = val.reduce((s,r)=>s+r.VA,0);
+  const tVT = val.reduce((s,r)=>s+r.VT,0);
+  document.getElementById('s-va').textContent = fmt(tVA);
+  document.getElementById('s-vt').textContent = fmt(tVT);
+  document.getElementById('s-tot').textContent = fmt(tVA+tVT);
+  document.getElementById('s-emp').textContent = val.length;
+}
+function renderResultado() { filtrarResultado(); }
+
+async function salvarResultado() {
+  const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
+  const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
+  const { data: { user } } = await sb.auth.getUser();
+  const btn = document.getElementById('btn-salvar-res');
+  btn.textContent='⏳ Salvando...'; btn.disabled=true;
+  const rows = resultados.filter(r=>r.valid).map(r=>({
+    ano, mes, colaborador_id:r.emp.id, centro_de_custo:r.emp.centro_de_custo,
+    dias_uteis_ativo:r.activeWD, sabs_trabalhados:r.sabsLiq,
+    faltas_injust:r.injust, faltas_just:r.just, dias_ferias:r.ferWD,
+    va:Math.round(r.VA*100)/100, vt:Math.round(r.VT*100)/100,
+    observacao:r.obs||null, calculado_por:user.id
+  }));
+  const { error } = await sb.from('resultado').upsert(rows, { onConflict:'ano,mes,colaborador_id' });
+  btn.textContent='💾 Salvar + Baixar CSV'; btn.disabled=false;
+  if (error) { toast('Erro: '+error.message, 'error'); return; }
+  baixarCSV(ano, mes);
+  toast(rows.length+' registros salvos! CSV baixado.', 'success');
+}
+
+function baixarCSV(ano, mes) {
+  const header = ['Colaborador','CC','Escala','D.Úteis','Sáb.Trab.','Falta Inj.','Falta Just.','Férias d.u.','Sáb.Férias','Dias p/VA','Dias p/VT','VA (R$)','VT (R$)','Total (R$)'];
+  const linhas = resultados.filter(r=>r.valid).map(r=>[
+    r.emp.nome, r.emp.centro_de_custo||'', r.emp.escala||'',
+    r.activeWD, r.sabsBruto, r.injust, r.just, r.ferWD, r.sabsFer, r.diasTrab, r.diasTrab+r.sabsLiq,
+    r.VA.toFixed(2).replace('.',','), r.VT.toFixed(2).replace('.',','), r.total.toFixed(2).replace('.',',')
+  ].map(v=>`"${v}"`).join(';'));
+  const csv = [header.join(';'), ...linhas].join('\n');
+  const blob = new Blob(['﻿'+csv], { type:'text/csv;charset=utf-8;' });
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download=`VA_VT_${MESES[mes]}_${ano}.csv`; a.click(); URL.revokeObjectURL(a.href);
+}
+
+function resetarCalculo() {
+  if (!confirm('Resetar o cálculo? Os dados salvos no banco não serão apagados.')) return;
+  resultados=[];
+  document.getElementById('res-tbody').innerHTML='';
+  ['s-va','s-vt','s-tot'].forEach(id=>document.getElementById(id).textContent='R$ 0,00');
+  document.getElementById('s-emp').textContent='0';
+  document.getElementById('btn-salvar-res').style.display='none';
+  document.getElementById('btn-resetar').style.display='none';
+  document.getElementById('custos-container').innerHTML='<p style="color:var(--cz);padding:20px">Clique em Calcular na aba Resultado primeiro.</p>';
+  toast('Cálculo resetado.', '');
+}
+
+function renderCustos() {
+  const val = resultados.filter(r=>r.valid);
+  const ccm = {};
+  for (const r of val) {
+    const cc = r.emp.centro_de_custo||'SEM CC';
+    if (!ccm[cc]) ccm[cc]={VA:0,VT:0,n:0};
+    ccm[cc].VA+=r.VA; ccm[cc].VT+=r.VT; ccm[cc].n++;
+  }
+  const ccs = Object.entries(ccm).sort((a,b)=>a[0].localeCompare(b[0]));
+  const tVA=val.reduce((s,r)=>s+r.VA,0), tVT=val.reduce((s,r)=>s+r.VT,0);
+  document.getElementById('custos-container').innerHTML=`<div class="tw"><table>
+    <thead><tr><th>Centro de Custo</th><th class="nr">Colaboradores</th><th class="nr">VA (R$)</th><th class="nr">VT (R$)</th><th class="nr">Total (R$)</th></tr></thead>
+    <tbody>`+ccs.map(([cc,d])=>`<tr><td><strong>${cc}</strong></td><td class="nr">${d.n}</td><td class="nr" style="color:#c47f00;font-weight:600">${fmt(d.VA)}</td><td class="nr" style="color:var(--esc);font-weight:600">${fmt(d.VT)}</td><td class="nr" style="font-weight:700">${fmt(d.VA+d.VT)}</td></tr>`).join('')
+    +`<tr class="cc-tot"><td>TOTAL GERAL</td><td class="nr">${val.length}</td><td class="nr">${fmt(tVA)}</td><td class="nr">${fmt(tVT)}</td><td class="nr">${fmt(tVA+tVT)}</td></tr>
+    </tbody></table></div>`;
+}
+
+// ===== COLABORADORES =====
+function renderColaboradores() {
+  const ro = ['financeiro','gestor'].includes(perfil?.perfil);
+  if (ro) document.getElementById('colab-ro').style.display='block';
+  const btn = document.getElementById('btn-colab-salvar'); if(btn) btn.style.display=ro?'none':'inline-flex';
+  const busca = document.getElementById('colab-busca')?.value?.toLowerCase()||'';
+  const cc = document.getElementById('colab-cc')?.value||'';
+  const lista = colaboradores.filter(c=>(!cc||c.centro_de_custo===cc)&&(!busca||c.nome.toLowerCase().includes(busca)));
+  const c = document.getElementById('colab-container');
+  if (!lista.length) { c.innerHTML='<p style="color:var(--cz)">Nenhum colaborador.</p>'; return; }
+  c.innerHTML=`<div class="tw"><table>
+    <thead><tr><th>Colaborador</th><th>CC</th><th>Cargo</th><th>Escala</th><th style="text-align:center">Recebe VA</th><th style="text-align:right">VT/dia (R$)</th></tr></thead>
+    <tbody>`+lista.map(col=>`<tr>
+      <td><strong>${col.nome}</strong></td>
+      <td><span class="badge bcz">${col.centro_de_custo||'-'}</span></td>
+      <td style="font-size:12px;color:var(--cz)">${col.cargo||'-'}</td>
+      <td><span class="badge besc">${col.escala||'-'}</span></td>
+      <td style="text-align:center">${ro?`<span class="badge ${col.ajuda_va?'bam':'bcz'}">${col.ajuda_va?'Sim':'Não'}</span>`:`<input type="checkbox" id="va-${col.id}" ${col.ajuda_va?'checked':''} style="width:17px;height:17px;accent-color:var(--am);cursor:pointer"/>`}</td>
+      <td style="text-align:right">${ro?`<span style="font-weight:700">R$ ${(parseFloat(col.vt_dia)||0).toFixed(2).replace('.',',')}</span>`:`<input type="number" id="vt-${col.id}" value="${parseFloat(col.vt_dia)||0}" min="0" step="0.01" style="width:90px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px;text-align:right"/>`}</td>
+    </tr>`).join('')+`</tbody></table></div>`;
+}
+
+async function salvarColaboradores() {
+  const btn = document.getElementById('btn-colab-salvar');
+  btn.textContent='⏳ Salvando...'; btn.disabled=true;
+  try {
+    const alt = [];
+    for (const col of colaboradores) {
+      const vtEl = document.getElementById(`vt-${col.id}`);
+      const vaEl = document.getElementById(`va-${col.id}`);
+      if (!vtEl&&!vaEl) continue;
+      const novoVT = parseFloat(vtEl?.value)||0;
+      const novoVA = vaEl?.checked||false;
+      if (novoVT!==(parseFloat(col.vt_dia)||0)||novoVA!==col.ajuda_va) {
+        alt.push({ id:col.id, vt_dia:novoVT, ajuda_va:novoVA });
+        col.vt_dia=novoVT; col.ajuda_va=novoVA;
+      }
+    }
+    if (!alt.length) { toast('Nenhuma alteração.',''); btn.textContent='💾 Salvar Alterações'; btn.disabled=false; return; }
+    for (const r of alt) { const { error } = await sb.from('colaboradores').update({ vt_dia:r.vt_dia, ajuda_va:r.ajuda_va, atualizado_em:new Date().toISOString() }).eq('id',r.id); if(error) throw error; }
+    toast(alt.length+' colaborador(es) atualizado(s)!','success');
+  } catch(e) { toast('Erro: '+(e.message||e),'error'); }
+  btn.textContent='💾 Salvar Alterações'; btn.disabled=false;
+}
+
+// ===== TABS =====
+function switchTab(tab) {
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tc').forEach(c=>c.classList.remove('active'));
+  document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
+  document.getElementById(`tab-${tab}`).classList.add('active');
+}
+
+// ===== UTILS =====
+function diasUteis(start, end, excludeDates=[]) {
+  let count=0, d=new Date(start); d.setHours(0,0,0,0);
+  const e=new Date(end); e.setHours(0,0,0,0);
+  const excSet = new Set(excludeDates);
+  while (d<=e) {
+    const dw=d.getDay();
+    if (dw>0&&dw<6) { const ds=d.toISOString().split('T')[0]; if(!excSet.has(ds)) count++; }
+    d.setDate(d.getDate()+1);
+  }
+  return count;
+}
+
+// Retorna datas de feriados onde essa escala NÃO trabalhou
+function feriadosDates(escala) {
+  return feriados
+    .filter(f => !escalaTrabalheuFeriado(escala, f))
+    .map(f => f.data);
+}
+
+function escalaTrabalheuFeriado(escala, f) {
+  if (['A'].includes(escala)) return f.turma_a_trabalhou;
+  if (['B'].includes(escala)) return f.turma_b_trabalhou;
+  if (['NR','EX'].includes(escala)) return f.nr_ex_trabalhou;
+  return f.demais_trabalhou; // C, AF, GERAL, etc
+}
+
+function sabadosDoMes(ano, mes) {
+  const sabs=[], d=new Date(ano,mes-1,1);
+  while (d.getMonth()===mes-1) { if(d.getDay()===6) sabs.push(new Date(d)); d.setDate(d.getDate()+1); }
+  return sabs;
+}
+
+function fmt(v) { return 'R$ '+(v||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function fmtData(d) { return d.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'}); }
+const MESES = ['','Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+function toast(msg, tipo='') {
+  const el=document.createElement('div'); el.className=`tmsg ${tipo}`; el.textContent=msg;
+  document.getElementById('toast').appendChild(el);
+  setTimeout(()=>el.remove(),3500);
+}
+
+// ===== LOAD =====
+window.addEventListener('load', async () => {
+  const now=new Date();
+  document.getElementById('p-mes').value=now.getMonth()+1;
+  document.getElementById('p-ano').value=now.getFullYear();
+  const { data: { session } } = await sb.auth.getSession();
+  if (session) { document.getElementById('login-screen').style.display='none'; await iniciarApp(); }
+});
+document.addEventListener('keydown', e => { if(e.key==='Enter') { const ls=document.getElementById('login-screen'); if(ls.style.display!=='none') fazerLogin(); } });
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VA/VT Audace</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root {
+  --am: #F5A800; --am-l: #FFF3CC;
+  --esc: #1E2A3B; --esc-l: #EEF1F5;
+  --cz: #6b7280; --cz-l: #f3f4f6;
+  --bd: #e5e7eb; --tx: #111827; --r: 10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f4f5f7;color:var(--tx);font-size:14px}
 #login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--am)}
 .lcard{background:#fff;border-radius:16px;padding:40px;width:100%;max-width:400px;box-shadow:0 20px 60px rgba(0,0,0,.18)}
 .llogo{text-align:center;margin-bottom:28px}
