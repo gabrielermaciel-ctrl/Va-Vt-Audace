@@ -129,14 +129,19 @@ tr:hover td{background:var(--am-l)}
       <div class="lbox">
         <span class="g">Grupo</span>
         <span class="a">AUDACe</span>
-        <span class="s">AutopeÃ§as</span>
+        <span class="s">AutopeÃƒÂ§as</span>
       </div>
       <p>Sistema de VA/VT</p>
-    </div>
-    <div class="lf"><label>E-mail</label><input type="email" id="l-email" placeholder="seu@email.com"/></div>
-    <div class="lf"><label>Senha</label><input type="password" id="l-senha" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"/></div>
-    <button class="lbtn" onclick="fazerLogin()">Entrar</button>
-    <p class="lerr" id="l-erro"></p>
+    <div class="lf">
+  <label>E-mail</label>
+  <input type="email" id="l-email">
+</div>
+<div class="lf">
+  <label>Senha</label>
+  <input type="password" id="l-senha">
+</div>
+<button class="lbtn" onclick="fazerLogin()">Entrar</button>
+<p class="lerr" id="l-erro"></p>
   </div>
 </div>
 
@@ -145,7 +150,7 @@ tr:hover td{background:var(--am-l)}
   <div class="hdr">
     <div class="hbrand">
       <div class="hpill">AUDACe</div>
-      <div class="ht"><h2>VA/VT â€” Grupo Audace AutopeÃ§as</h2><p id="h-sub">Carregando...</p></div>
+      <div class="ht"><h2>VA/VT Ã¢Â€Â” Grupo Audace AutopeÃƒÂ§as</h2><p id="h-sub">Carregando...</p></div>
     </div>
     <div class="hr">
       <span class="bperfil" id="h-perfil"></span>
@@ -155,25 +160,25 @@ tr:hover td{background:var(--am-l)}
   </div>
 
   <div class="tbar" id="tbar">
-    <button class="tb active" data-tab="parametros" onclick="switchTab('parametros')">âš™ï¸ ParÃ¢metros</button>
-    <button class="tb" data-tab="sabados" onclick="switchTab('sabados')">ğŸ“… SÃ¡bados</button>
-    <button class="tb" data-tab="feriados" onclick="switchTab('feriados')">ğŸ—“ï¸ Feriados</button>
-    <button class="tb" data-tab="ausencias" onclick="switchTab('ausencias')">ğŸš« AusÃªncias</button>
-    <button class="tb" data-tab="ferias" onclick="switchTab('ferias')">ğŸ–ï¸ FÃ©rias</button>
-    <button class="tb" data-tab="resultado" onclick="switchTab('resultado')">ğŸ“Š Resultado</button>
-    <button class="tb" data-tab="custos" onclick="switchTab('custos')">ğŸ’° Custos por CC</button>
-    <button class="tb" data-tab="colaboradores" onclick="switchTab('colaboradores')">ğŸ‘¥ Colaboradores</button>
+    <button class="tb active" data-tab="parametros" onclick="switchTab('parametros')">Ã¢ÂšÂ™Ã¯Â¸Â ParÃƒÂ¢metros</button>
+    <button class="tb" data-tab="sabados" onclick="switchTab('sabados')">Ã°ÂŸÂ“Â… SÃƒÂ¡bados</button>
+    <button class="tb" data-tab="feriados" onclick="switchTab('feriados')">Ã°ÂŸÂ—Â“Ã¯Â¸Â Feriados</button>
+    <button class="tb" data-tab="ausencias" onclick="switchTab('ausencias')">Ã°ÂŸÂšÂ« AusÃƒÂªncias</button>
+    <button class="tb" data-tab="ferias" onclick="switchTab('ferias')">Ã°ÂŸÂÂ–Ã¯Â¸Â FÃƒÂ©rias</button>
+    <button class="tb" data-tab="resultado" onclick="switchTab('resultado')">Ã°ÂŸÂ“ÂŠ Resultado</button>
+    <button class="tb" data-tab="custos" onclick="switchTab('custos')">Ã°ÂŸÂ’Â° Custos por CC</button>
+    <button class="tb" data-tab="colaboradores" onclick="switchTab('colaboradores')">Ã°ÂŸÂ‘Â¥ Colaboradores</button>
   </div>
 
-  <!-- PARÃ‚METROS -->
+  <!-- PARÃƒÂ‚METROS -->
   <div class="tc active" id="tab-parametros">
     <div class="card" style="max-width:480px">
-      <div class="ctit">ParÃ¢metros do MÃªs</div>
+      <div class="ctit">ParÃƒÂ¢metros do MÃƒÂªs</div>
       <div class="g2">
-        <div class="fld"><label>MÃªs</label>
+        <div class="fld"><label>MÃƒÂªs</label>
           <select id="p-mes">
             <option value="1">Janeiro</option><option value="2">Fevereiro</option>
-            <option value="3">MarÃ§o</option><option value="4">Abril</option>
+            <option value="3">MarÃƒÂ§o</option><option value="4">Abril</option>
             <option value="5">Maio</option><option value="6">Junho</option>
             <option value="7">Julho</option><option value="8">Agosto</option>
             <option value="9">Setembro</option><option value="10">Outubro</option>
@@ -182,73 +187,73 @@ tr:hover td{background:var(--am-l)}
         </div>
         <div class="fld"><label>Ano</label><input type="number" id="p-ano" value="2026" min="2020" max="2035"/></div>
       </div>
-      <div class="fld"><label>Valor do VA (R$ â€” mensal cheio)</label><input type="number" id="p-va" value="240" step="0.01" min="0"/></div>
-      <button class="btn ba" id="btn-p-salvar" onclick="salvarParametros()">ğŸ’¾ Salvar ParÃ¢metros</button>
+      <div class="fld"><label>Valor do VA (R$ Ã¢Â€Â” mensal cheio)</label><input type="number" id="p-va" value="240" step="0.01" min="0"/></div>
+      <button class="btn ba" id="btn-p-salvar" onclick="salvarParametros()">Ã°ÂŸÂ’Â¾ Salvar ParÃƒÂ¢metros</button>
       <span id="p-status" style="margin-left:10px;font-size:12px;color:var(--cz)"></span>
     </div>
     <div class="card" style="max-width:480px">
-      <div class="ctit">Dias Ãšteis do MÃªs</div>
-      <div id="dias-info" style="color:var(--cz);font-size:13px">Selecione mÃªs e ano acima</div>
+      <div class="ctit">Dias ÃƒÂšteis do MÃƒÂªs</div>
+      <div id="dias-info" style="color:var(--cz);font-size:13px">Selecione mÃƒÂªs e ano acima</div>
     </div>
   </div>
 
-  <!-- SÃBADOS -->
+  <!-- SÃƒÂBADOS -->
   <div class="tc" id="tab-sabados">
     <div class="card">
-      <div class="ctit">SÃ¡bados do MÃªs â€” Turmas A e B</div>
-      <p style="font-size:12px;color:var(--cz);margin-bottom:16px">NR/EX trabalham em todos os sÃ¡bados. C e AF nunca trabalham sÃ¡bados.</p>
+      <div class="ctit">SÃƒÂ¡bados do MÃƒÂªs Ã¢Â€Â” Turmas A e B</div>
+      <p style="font-size:12px;color:var(--cz);margin-bottom:16px">NR/EX trabalham em todos os sÃƒÂ¡bados. C e AF nunca trabalham sÃƒÂ¡bados.</p>
       <div id="sab-container" class="loading"><div class="spin"></div></div>
-      <div style="margin-top:16px"><button class="btn ba" id="btn-sab-salvar" onclick="salvarSabados()">ğŸ’¾ Salvar SÃ¡bados</button></div>
+      <div style="margin-top:16px"><button class="btn ba" id="btn-sab-salvar" onclick="salvarSabados()">Ã°ÂŸÂ’Â¾ Salvar SÃƒÂ¡bados</button></div>
     </div>
   </div>
 
   <!-- FERIADOS -->
   <div class="tc" id="tab-feriados">
     <div class="card">
-      <div class="ctit">Feriados do MÃªs</div>
+      <div class="ctit">Feriados do MÃƒÂªs</div>
       <p style="font-size:12px;color:var(--cz);margin-bottom:12px">
-        Marque os feriados do mÃªs. Por padrÃ£o ninguÃ©m trabalha. Marque as escalas que trabalharam em cada feriado.
-        Feriados nÃ£o trabalhados sÃ£o excluÃ­dos do cÃ´mputo de dias Ãºteis de cada colaborador.
+        Marque os feriados do mÃƒÂªs. Por padrÃƒÂ£o ninguÃƒÂ©m trabalha. Marque as escalas que trabalharam em cada feriado.
+        Feriados nÃƒÂ£o trabalhados sÃƒÂ£o excluÃƒÂ­dos do cÃƒÂ´mputo de dias ÃƒÂºteis de cada colaborador.
       </p>
-      <div class="sqlnote">âš ï¸ ATENÃ‡ÃƒO: execute o SQL em feriados_setup.sql no Supabase antes de usar esta aba pela primeira vez.</div>
-      <div id="fer-readonly" class="ronote" style="display:none">âš ï¸ Apenas admin e RH podem editar feriados.</div>
+      <div class="sqlnote">Ã¢ÂšÂ Ã¯Â¸Â ATENÃƒÂ‡ÃƒÂƒO: execute o SQL em feriados_setup.sql no Supabase antes de usar esta aba pela primeira vez.</div>
+      <div id="fer-readonly" class="ronote" style="display:none">Ã¢ÂšÂ Ã¯Â¸Â Apenas admin e RH podem editar feriados.</div>
       <div class="abar">
         <button class="btn ba" id="btn-add-feriado" onclick="adicionarFeriado()">+ Adicionar Feriado</button>
-        <button class="btn bp" id="btn-feriados-salvar" onclick="salvarFeriados()">ğŸ’¾ Salvar Feriados</button>
+        <button class="btn bp" id="btn-feriados-salvar" onclick="salvarFeriados()">Ã°ÂŸÂ’Â¾ Salvar Feriados</button>
       </div>
       <div id="feriados-container"></div>
     </div>
   </div>
 
-  <!-- AUSÃŠNCIAS -->
+  <!-- AUSÃƒÂŠNCIAS -->
   <div class="tc" id="tab-ausencias">
-    <div id="aus-ro" class="ronote" style="display:none">âš ï¸ Seu perfil tem apenas leitura nesta seÃ§Ã£o.</div>
+    <div id="aus-ro" class="ronote" style="display:none">Ã¢ÂšÂ Ã¯Â¸Â Seu perfil tem apenas leitura nesta seÃƒÂ§ÃƒÂ£o.</div>
     <div class="card">
-      <div class="ctit">LanÃ§amento de AusÃªncias</div>
+      <div class="ctit">LanÃƒÂ§amento de AusÃƒÂªncias</div>
       <p style="font-size:12px;color:var(--cz);margin-bottom:12px">
-        Informe o nÃºmero de dias. <strong>Injustificadas</strong> descontam VA e VT. <strong>Justificadas</strong> descontam apenas VT.
+        Informe o nÃƒÂºmero de dias. <strong>Injustificadas</strong> descontam VA e VT. <strong>Justificadas</strong> descontam apenas VT.
       </p>
       <div class="sbar">
         <input type="text" id="aus-busca" placeholder="Buscar colaborador..." oninput="renderAusencias()"/>
         <select id="aus-cc" onchange="renderAusencias()"><option value="">Todos os CCs</option></select>
-        <button class="btn ba" id="btn-aus-salvar" onclick="salvarTodasAusencias()">ğŸ’¾ Salvar AusÃªncias</button>
+        <button class="btn ba" id="btn-aus-salvar" onclick="salvarTodasAusencias()">Ã°ÂŸÂ’Â¾ Salvar AusÃƒÂªncias</button>
       </div>
       <div id="aus-container" class="loading"><div class="spin"></div></div>
     </div>
   </div>
 
-  <!-- FÃ‰RIAS -->
+  <!-- FÃƒÂ‰RIAS -->
   <div class="tc" id="tab-ferias">
-    <div id="fer-ro" class="ronote" style="display:none">âš ï¸ Seu perfil tem apenas leitura nesta seÃ§Ã£o.</div>
+    <div id="fer-ro" class="ronote" style="display:none">Ã¢ÂšÂ Ã¯Â¸Â Seu perfil tem apenas leitura nesta seÃƒÂ§ÃƒÂ£o.</div>
     <div class="card">
-      <div class="ctit">LanÃ§amento de FÃ©rias</div>
+      <div class="ctit">LanÃƒÂ§amento de FÃƒÂ©rias</div>
       <p style="font-size:12px;color:var(--cz);margin-bottom:12px">
-        Informe o perÃ­odo de fÃ©rias (inÃ­cio e fim). O sistema calcula automaticamente os dias Ãºteis e sÃ¡bados dentro do perÃ­odo. FÃ©rias descontam VA e VT.
+        Informe o perÃƒÂ­odo de fÃƒÂ©rias (inÃƒÂ­cio e fim). O sistema calcula automaticamente os dias ÃƒÂºteis e sÃƒÂ¡bados dentro do perÃƒÂ­odo. FÃƒÂ©rias descontam VA e VT.
       </p>
       <div class="sbar">
         <input type="text" id="ferias-busca" placeholder="Buscar colaborador..." oninput="renderFerias()"/>
         <select id="ferias-cc" onchange="renderFerias()"><option value="">Todos os CCs</option></select>
-        <button class="btn ba" id="btn-ferias-salvar" onclick="salvarTodasFerias()">ğŸ’¾ Salvar FÃ©rias</button>
+        <button class="btn ba" id="btn-ferias-salvar" onclick="salvarTodasFerias()">Ã°ÂŸÂ’Â¾ Salvar FÃƒÂ©rias</button>
       </div>
       <div id="ferias-container" class="loading"><div class="spin"></div></div>
     </div>
@@ -263,9 +268,9 @@ tr:hover td{background:var(--am-l)}
       <div class="sc cz2"><label>Colaboradores</label><div class="val" id="s-emp">0</div></div>
     </div>
     <div class="abar">
-      <button class="btn ba" id="btn-calcular" onclick="calcular()">âš¡ Calcular</button>
-      <button class="btn bp" id="btn-salvar-res" onclick="salvarResultado()" style="display:none">ğŸ’¾ Salvar + Baixar CSV</button>
-      <button class="btn bd2 bsm" id="btn-resetar" onclick="resetarCalculo()" style="display:none">ğŸ”„ Novo CÃ¡lculo</button>
+      <button class="btn ba" id="btn-calcular" onclick="calcular()">Ã¢ÂšÂ¡ Calcular</button>
+      <button class="btn bp" id="btn-salvar-res" onclick="salvarResultado()" style="display:none">Ã°ÂŸÂ’Â¾ Salvar + Baixar CSV</button>
+      <button class="btn bd2 bsm" id="btn-resetar" onclick="resetarCalculo()" style="display:none">Ã°ÂŸÂ”Â„ Novo CÃƒÂ¡lculo</button>
       <select id="res-cc" onchange="filtrarResultado()" style="padding:8px 12px;border:1.5px solid var(--bd);border-radius:7px;font-size:13px;outline:none;background:#fff"><option value="">Todos os CCs</option></select>
       <input type="text" id="res-busca" placeholder="Buscar..." oninput="filtrarResultado()" style="padding:8px 12px;border:1.5px solid var(--bd);border-radius:7px;font-size:13px;outline:none"/>
     </div>
@@ -273,12 +278,12 @@ tr:hover td{background:var(--am-l)}
       <table>
         <thead><tr>
           <th>Colaborador</th><th>CC</th><th>Escala</th>
-          <th class="nr">D.Ãšteis</th>
-          <th class="nr">SÃ¡b.Trab.</th>
+          <th class="nr">D.ÃƒÂšteis</th>
+          <th class="nr">SÃƒÂ¡b.Trab.</th>
           <th class="nr">Falta Inj.</th>
           <th class="nr">Falta Just.</th>
-          <th class="nr">FÃ©rias (d.u.)</th>
-          <th class="nr">SÃ¡b.FÃ©rias</th>
+          <th class="nr">FÃƒÂ©rias (d.u.)</th>
+          <th class="nr">SÃƒÂ¡b.FÃƒÂ©rias</th>
           <th class="nr">Dias p/VA</th>
           <th class="nr">Dias p/VT</th>
           <th class="nr">VA (R$)</th>
@@ -298,13 +303,13 @@ tr:hover td{background:var(--am-l)}
 
   <!-- COLABORADORES -->
   <div class="tc" id="tab-colaboradores">
-    <div id="colab-ro" class="ronote" style="display:none">âš ï¸ Apenas admin e RH podem editar colaboradores.</div>
+    <div id="colab-ro" class="ronote" style="display:none">Ã¢ÂšÂ Ã¯Â¸Â Apenas admin e RH podem editar colaboradores.</div>
     <div class="card">
-      <div class="ctit">Colaboradores â€” BenefÃ­cios VA e VT</div>
+      <div class="ctit">Colaboradores Ã¢Â€Â” BenefÃƒÂ­cios VA e VT</div>
       <div class="sbar">
         <input type="text" id="colab-busca" placeholder="Buscar por nome..." oninput="renderColaboradores()"/>
         <select id="colab-cc" onchange="renderColaboradores()"><option value="">Todos os CCs</option></select>
-        <button class="btn ba" id="btn-colab-salvar" onclick="salvarColaboradores()">ğŸ’¾ Salvar AlteraÃ§Ãµes</button>
+        <button class="btn ba" id="btn-colab-salvar" onclick="salvarColaboradores()">Ã°ÂŸÂ’Â¾ Salvar AlteraÃƒÂ§ÃƒÂµes</button>
       </div>
       <div id="colab-container" class="loading"><div class="spin"></div></div>
     </div>
@@ -348,7 +353,7 @@ async function iniciarApp() {
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return;
   const { data: p } = await sb.from('perfis').select('*').eq('id', user.id).single();
-  if (!p) { toast('Perfil nÃ£o encontrado.', 'error'); return; }
+  if (!p) { toast('Perfil nÃƒÂ£o encontrado.', 'error'); return; }
   perfil = p;
   document.getElementById('h-nome').textContent = p.nome;
   document.getElementById('h-perfil').textContent = p.perfil;
@@ -382,7 +387,7 @@ async function carregarColaboradores() {
 async function carregarParametros() {
   const ano = parseInt(document.getElementById('p-ano').value) || params.ano;
   const mes = parseInt(document.getElementById('p-mes').value) || params.mes;
-  const { data } = await sb.from('parametros_mes').select('*').eq('ano', ano).C¢6ffb#ãÆ÷F–öâfÇVSÒ"#åFöF÷2÷2473Âö÷F–öããÂ÷6VÆV7Cà¢Æ–çWBG—SÒ'FW‡B"–CÒ'&W2Ö'W66"Æ6V†öÆFW#Ò$'W66"âââ"öæ–çWCÒ&f–ÇG&%&W7VÇFFò‚’"7G–ÆSÒ'FF–æs£‡‚'ƒ¶&÷&FW#£ãW‚6öÆ–Bf"‚ÒÖ&B“¶&÷&FW"×&F—W3£wƒ¶föçB×6—¦S£7ƒ¶÷WFÆ–æS¦æöæR"óà¢ÂöF—cà¢ÆF—b6Æ73Ò'Gr#à¢ÇF&ÆSà¢ÇF†VCãÇG#à¢ÇFƒä6öÆ&÷&F÷#Â÷FƒãÇFƒä43Â÷FƒãÇFƒäW66ÆÂ÷Fƒà¢ÇF‚6Æ73Ò&ç"#äBì9§FV—3Â÷Fƒà¢ÇF‚6Æ73Ò&ç"#å<:"åG&"ãÂ÷Fƒà¢ÇF‚6Æ73Ò&ç"#äfÇF–æ¢ãÂ÷Fƒà¢ÇF‚6Æ73Ò&ç"#äfÇF§W7BãÂ÷Fƒà¢ÇF‚6Æ73Ò&ç"#äl:—&–2†BçRâ“Â÷Fƒà¢ÇF‚6Æ73Ò&ç"#å<:"äl:—&–3Â÷Fƒà¢ÇF‚6Æ73Ò&ç"#äF–2õdÂ÷Fƒà¢ÇF‚6Æ73Ò&ç"#äF–2õeCÂ÷Fƒà¢ÇF‚6Æ73Ò&ç"#åd…"B“Â÷Fƒà¢ÇF‚6Æ73Ò&ç"#åeB…"B“Â÷Fƒà¢ÇF‚6Æ73Ò&ç"#åF÷FÂ…"B“Â÷Fƒà¢ÇFƒäö'3Â÷Fƒà¢Â÷G#ãÂ÷F†VCà¢ÇF&öG’–CÒ'&W2×F&öG’#ãÂ÷F&öG“à¢Â÷F&ÆSà¢ÂöF—cà¢ÂöF—cà ¢ÂÒÒ5U5Dõ2õ"42ÒÓà¢ÆF—b6Æ73Ò'F2"–CÒ'F"Ö7W7F÷2#à¢ÆF—b–CÒ&7W7F÷2Ö6öçF–æW"#ãÇ7G–ÆSÒ&6öÆ÷#§f"‚ÒÖ7¢“·FF–æs£#‚#ä6Æ—VRVÒ6Æ7VÆ"æ&&W7VÇFFò&–ÖV—&òãÂ÷ãÂöF—cà¢ÂöF—cà ¢ÂÒÒ4ôÄ$õ$Dõ$U2ÒÓà¢ÆF—b6Æ73Ò'F2"–CÒ'F"Ö6öÆ&÷&F÷&W2#à¢ÆF—b–CÒ&6öÆ"×&ò"6Æ73Ò'&öæ÷FR"7G–ÆSÒ&F—7Æ“¦æöæR#î)ªûˆòVæ2FÖ–âR$‚öFVÒVF—F"6öÆ&÷&F÷&W2ãÂöF—cà¢ÆF—b6Æ73Ò&6&B#à¢ÆF—b6Æ73Ò&7F—B#ä6öÆ&÷&F÷&W2(	B&VæVl:Ö6–÷2dReCÂöF—cà¢ÆF—b6Æ73Ò'6&"#à¢Æ–çWBG—SÒ'FW‡B"–CÒ&6öÆ"Ö'W66"Æ6V†öÆFW#Ò$'W66"÷"æöÖRâââ"öæ–çWCÒ'&VæFW$6öÆ&÷&F÷&W2‚’"óà¢Ç6VÆV7B–CÒ&6öÆ"Ö62"öæ6†ævSÒ'&VæFW$6öÆ&÷&F÷&W2‚’#ãÆ÷F–öâfÇVSÒ"#åFöF÷2÷2473Âö÷F–öããÂ÷6VÆV7Cà¢Æ'WGFöâ6Æ73Ò&'Fâ&"–CÒ&'FâÖ6öÆ"×6Çf""öæ6Æ–6³Ò'6Çf$6öÆ&÷&F÷&W2‚’#ï	ù+â6Çf"ÇFW&:|;VW3Âö'WGFöãà¢ÂöF—cà¢ÆF—b–CÒ&6öÆ"Ö6öçF–æW""6Æ73Ò&ÆöF–ær#ãÆF—b6Æ73Ò'7–â#ãÂöF—cãÂöF—cà¢ÂöF—cà¢ÂöF—cà£ÂöF—cà £ÆF—b–CÒ'Fö7B#ãÂöF—cà £Ç67&—Cà¢òòÓÓÓÓÒ4ôäd”rÓÓÓÓĞ¦6öç7B4%õU$ÂÒv‡GG3¢òöæ'§G–÷–æÆÖv—&·67gG’ç7W&6Ræ6òs°¦6öç7B4%ô´U’ÒvW”¦†$v6”ö”¤•W¤“æ”—4–å#V44“d–·…d4£’æW”§34Ö”ö”§¦E„&…–Ôg¥¥4—4–ä¦Å¦”“d–ÓV–Vå#V#6ÇV$sæ„§&3$ã&5…#T–—v–6Ó—5¥4“d–ÔgV##F”Ä4§•…”ö¤S4ôE“ç¦³TõFw4–ÕcF44“dÖ¤WtÖ¤åF³Tôƒåt%…‡&³”'t—f…%·6C'–e„efs•…„Ã6T³&†&´4Rs°¦6öç7B6"Ò7W&6Ræ7&VFT6Æ–VçB…4%õU$ÂÂ4%ô´U’“° ¢òòÓÓÓÓÒ5DDRÓÓÓÓĞ¦ÆWBW&f–ÂÒçVÆÂÂ6öÆ&÷&F÷&W2ÒµÒÂ6&F÷2ÒµÒÂW6Væ6–2ÒµÒÂfW&–F÷2ÒµÒÂ&W7VÇFF÷2ÒµÓ°¦ÆWB&×2Ò²æó¢æWrFFR‚’ævWDgVÆÅ–V"‚’ÂÖW3¢æWrFFR‚’ævWDÖöçF‚‚’³ÂfÆ÷%÷f¢#CÓ° ¢òòÓÓÓÓÒUD‚ÓÓÓÓĞ¦7–æ2gVæ7F–öâf¦W$Æöv–â‚’°¢6öç7BVÖ–ÂÒFö7VÖVçBævWDVÆVÖVçD'”–B‚vÂÖVÖ–Âr’çfÇVRçG&–Ò‚“°¢6öç7B6Væ†ÒFö7VÖVçBævWDVÆVÖVçD'”–B‚vÂ×6Væ†r’çfÇVS°¢6öç7BW'"ÒFö7VÖVçBævWDVÆVÖVçD'”–B‚vÂÖW'&òr“°¢W'"çFW‡D6öçFVçBÒrs°¢6öç7B'FâÒFö7VÖVçBçVW'•6VÆV7F÷"‚ræÆ'Fâr“°¢'FâçFW‡D6öçFVçBÒtVçG&æFòâââs²'FâæF—6&ÆVBÒG'VS°¢6öç7B²W'&÷"ÒÒv—B6"æWF‚ç6–vä–åv—F…77v÷&B‡²VÖ–ÂÂ77v÷&C¢6Væ†Ò“°¢'FâçFW‡D6öçFVçBÒtVçG&"s²'FâæF—6&ÆVBÒfÇ6S°¢–b†W'&÷"’²W'"çFW‡D6öçFVçBÒtRÖÖ–Â÷R6Væ†–æ6÷'&WF÷2âs²&WGW&ã²Ğ¢v—B–æ–6–$‚“°§Ğ¦7–æ2gVæ7F–öâf¦W$Æöv÷WB‚’°¢v—B6"æWF‚ç6–vä÷WB‚“°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚vr’ç7G–ÆRæF—7Æ’ÒvæöæRs°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚vÆöv–â×67&VVâr’ç7G–ÆRæF—7Æ’ÒvfÆW‚s°§Ğ§6"æWF‚æöäWF…7FFT6†ævR†7–æ2†WbÂ6W76–öâ’Óâ²–b†WbÓÓÒu4”täTEô”ârbb6W76–öâ’²Fö7VÖVçBævWDVÆVÖVçD'”–B‚vÆöv–â×67&VVâr’ç7G–ÆRæF—7Æ’ÒvæöæRs²v—B–æ–6–$‚“²ÒÒ“° ¢òòÓÓÓÓÒ”ä•BÓÓÓÓĞ¦7–æ2gVæ7F–öâ–æ–6–$‚’°¢6öç7B²FF¢²W6W"ÒÒÒv—B6"æWF‚ævWEW6W"‚“°¢–b‚W6W"’&WGW&ã°¢6öç7B²FF¢ÒÒv—B6"æg&öÒ‚wW&f—2r’ç6VÆV7B‚r¢r’æW‚v–BrÂW6W"æ–B’ç6–ævÆR‚“°¢–b‚’²Fö7B‚uW&f–Âì:6òVæ6öçG&FòârÂvW'&÷"r“²&WGW&ã²Ğ¢W&f–ÂÒ°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚v‚ÖæöÖRr’çFW‡D6öçFVçBÒææöÖS°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚v‚×W&f–Âr’çFW‡D6öçFVçBÒçW&f–Ã°¢§W7F%T’‚“°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚vr’ç7G–ÆRæF—7Æ’Òv&Æö6²s°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚vÆöv–â×67&VVâr’ç7G–ÆRæF—7Æ’ÒvæöæRs°¢v—B&öÖ—6RæÆÂ…¶6'&Vv$6öÆ&÷&F÷&W2‚’Â6'&Vv%&ÖWG&÷2‚•Ò“°¢&VæFW$W6Væ6–2‚“²&VæFW$fW&–2‚“²&VæFW$fW&–F÷2‚“²&VæFW$6öÆ&÷&F÷&W2‚“°§Ğ ¦gVæ7F–öâ§W7F%T’‚’°¢6öç7B&òÒ²vf–ææ6V—&òrÂvvW7F÷"uÒæ–æ6ÇVFW2‡W&f–ÃòçW&f–Â“°¢–b‡&ò’°¢²w6&F÷2rÂvfW&–F÷2rÂvW6Væ6–2rÂvfW&–2uÒæf÷$V6‚‡BÓâFö7VÖVçBçVW'•6VÆV7F÷"†¶FF×F#Ò"G·GÒ%Ö’æ6Æ74Æ—7BæFB‚v†–FFVâr’“°¢²v'FâÖ6Æ7VÆ"rÂv'Fâ××6Çf"rÂv'Fâ×6"×6Çf"uÒæf÷$V6‚†–BÓâ²6öç7BVÂÒFö7VÖVçBævWDVÆVÖVçD'”–B†–B“²–b†VÂ’VÂç7G–ÆRæF—7Æ“ÒvæöæRs²Ò“°¢Ğ§Ğ ¢òòÓÓÓÓÒDDõ2ÓÓÓÓĞ¦7–æ2gVæ7F–öâ6'&Vv$6öÆ&÷&F÷&W2‚’°¢6öç7B²FFÒÒv—B6"æg&öÒ‚v6öÆ&÷&F÷&W2r’ç6VÆV7B‚r¢r’æW‚vF—fòrÂG'VR’æ÷&FW"‚væöÖRr“°¢6öÆ&÷&F÷&W2ÒFFÇÂµÓ°¢6öç7B672Ò²ââææWr6WB†6öÆ&÷&F÷&W2æÖ†2Óâ2æ6VçG&õöFUö7W7Fò’æf–ÇFW"„&ööÆVâ’•Òç6÷'B‚“°¢²vW2Ö62rÂvfW&–2Ö62rÂw&W2Ö62rÂv6öÆ"Ö62uÒæf÷$V6‚†–BÓâ°¢6öç7BVÂÒFö7VÖVçBævWDVÆVÖVçD'”–B†–B“²–b‚VÂ’&WGW&ã°¢VÂæ–ææW$…DÔÂÒsÆ÷F–öâfÇVSÒ"#åFöF÷2÷2473Âö÷F–öãâs°¢672æf÷$V6‚†62ÓâVÂæ–ææW$…DÔÂ³ÒÆ÷F–öâfÇVSÒ"G¶67Ò#âG¶67ÓÂö÷F–öãæ“°¢Ò“°§Ğ ¦7–æ2gVæ7F–öâ6'&Vv%&ÖWG&÷2‚’°¢6öç7BæòÒ'6T–çB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖæòr’çfÇVR’ÇÂ&×2ææó°¢6öç7BÖW2Ò'6T–çB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖÖW2r’çfÇVR’ÇÂ&×2æÖW3°¢6öç7B²FFÒÒv—B6"æg&öÒ‚w&ÖWG&÷5öÖW2r’ç6VÆV7B‚r¢r’æW‚væòrÂæò’æW‚vÖW2rÂÖW2’ç6–ævÆR‚“°¢–b†FF’°¢&×2ÒFF°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚w×fr’çfÇVRÒFFçfÆ÷%÷f°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖÖW2r’çfÇVRÒFFæÖW3°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖæòr’çfÇVRÒFFææó°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚w×7FGW2r’çFW‡D6öçFVçBÒ~)É26'&VvFòs°¢ÒVÇ6R°¢&×2Ò²æòÂÖW2ÂfÆ÷%÷f¢'6TfÆöB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚w×fr’çfÇVR’ÇÂ#CÓ°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚w×7FGW2r’çFW‡D6öçFVçBÒtæ÷fòÜ:§2s°¢Ğ¢GVÆ—¦$F–4–æfò‚“°¢v—B&öÖ—6RæÆÂ…¶6'&Vv%6&F÷2†æòÂÖW2’Â6'&Vv$W6Væ6–2†æòÂÖW2’Â6'&Vv$fW&–F÷2†æòÂÖW2•Ò“°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚v‚×7V"r’çFW‡D6öçFVçBÒG´ÔU4U5¶ÖW5×ÒòG¶æ÷Ö°§Ğ ¦7–æ2gVæ7F–öâ6'&Vv%6&F÷2†æòÂÖW2’°¢6öç7B²FFÒÒv—B6"æg&öÒ‚w6&F÷5ö6öæf–rr’ç6VÆV7B‚r¢r’æW‚væòrÂæò’æW‚vÖW2rÂÖW2“°¢6&F÷2ÒFFÇÂµÓ°¢&VæFW%6&F÷2†æòÂÖW2“°§Ğ ¦7–æ2gVæ7F–öâ6'&Vv$W6Væ6–2†æòÂÖW2’°¢6öç7B²FFÒÒv—B6"æg&öÒ‚vW6Væ6–2r’ç6VÆV7B‚r¢r’æW‚væòrÂæò’æW‚vÖW2rÂÖW2“°¢W6Væ6–2ÒFFÇÂµÓ°§Ğ ¦7–æ2gVæ7F–öâ6'&Vv$fW&–F÷2†æòÂÖW2’°¢G'’°¢6öç7B²FFÒÒv—B6"æg&öÒ‚vfW&–F÷2r’ç6VÆV7B‚r¢r’æW‚væòrÂæò’æW‚vÖW2rÂÖW2’æ÷&FW"‚vFFr“°¢fW&–F÷2ÒFFÇÂµÓ°¢Ò6F6‚†R’²fW&–F÷2ÒµÓ²Ğ¢&VæFW$fW&–F÷2‚“°§Ğ ¢òòÓÓÓÓÒ,8$ÔUE$õ2ÓÓÓÓĞ¦Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖÖW2r’æFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ6'&Vv%&ÖWG&÷2‚’“°¦Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖæòr’æFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ6'&Vv%&ÖWG&÷2‚’“° ¦7–æ2gVæ7F–öâ6Çf%&ÖWG&÷2‚’°¢6öç7BæòÒ'6T–çB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖæòr’çfÇVR“°¢6öç7BÖW2Ò'6T–çB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖÖW2r’çfÇVR“°¢6öç7BfÆ÷%÷fÒ'6TfÆöB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚w×fr’çfÇVR“°¢6öç7B²W'&÷"ÒÒv—B6"æg&öÒ‚w&ÖWG&÷5öÖW2r’çW6W'B‡²æòÂÖW2ÂfÆ÷%÷fÒÂ²öä6öæfÆ–7C¢væòÆÖW2rÒ“°¢–b†W'&÷"’²Fö7B‚tW'&ó¢r¶W'&÷"æÖW76vRÂvW'&÷"r“²&WGW&ã²Ğ¢&×2Ò²ââç&×2ÂæòÂÖW2ÂfÆ÷%÷fÓ°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚w×7FGW2r’çFW‡D6öçFVçBÒ~)É26Çfòs°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚v‚×7V"r’çFW‡D6öçFVçBÒG´ÔU4U5¶ÖW5×ÒòG¶æ÷Ö°¢GVÆ—¦$F–4–æfò‚“°¢v—B6'&Vv%6&F÷2†æòÂÖW2“°¢v—B6'&Vv$W6Væ6–2†æòÂÖW2“°¢v—B6'&Vv$fW&–F÷2†æòÂÖW2“°¢&VæFW$W6Væ6–2‚“²&VæFW$fW&–2‚“°¢Fö7B‚u,:&ÖWG&÷26Çf÷2rÂw7V66W72r“°§Ğ ¦gVæ7F–öâGVÆ—¦$F–4–æfò‚’°¢6öç7BæòÒ'6T–çB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖæòr’çfÇVR’ÇÂ&×2ææó°¢6öç7BÖW2Ò'6T–çB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖÖW2r’çfÇVR’ÇÂ&×2æÖW3°¢6öç7BF÷FÂÒF–5WFV—2†æWrFFR†æòÂÖW2ÓÂ’ÂæWrFFR†æòÂÖW2Â’“°¢6öç7B6'2Ò6&F÷4FôÖW2†æòÂÖW2“°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚vF–2Ö–æfòr’æ–ææW$…DÔÂĞ¢Ç7G&öær7G–ÆSÒ&föçB×6—¦S£‡ƒ¶6öÆ÷#§f"‚ÒÖW62’#âG·F÷FÇÓÂ÷7G&öæsâF–2;§FV—2‡6Vr×6W‚’VÒÇ7G&öæsâG´ÔU4U5¶ÖW5×ÒòG¶æ÷ÓÂ÷7G&öæsãÆ'#à¢Ç7â7G–ÆSÒ&6öÆ÷#§f"‚ÒÖ7¢“¶föçB×6—¦S£'ƒ¶Ö&v–â×F÷£Gƒ¶F—7Æ“¦&Æö6²#âG·6'2æÆVæwF‡Ò<:&F÷3¢G·6'2æÖ†CÓæBævWDFFR‚’²ròr²†BævWDÖöçF‚‚’³’’æ¦ö–â‚rÂr—ÓÂ÷7ãæ°§Ğ ¢òòÓÓÓÓÒ<8$Dõ2ÓÓÓÓĞ¦gVæ7F–öâ&VæFW%6&F÷2†æòÂÖW2’°¢6öç7B&òÒ²vf–ææ6V—&òrÂvvW7F÷"uÒæ–æ6ÇVFW2‡W&f–ÃòçW&f–Â“°¢6öç7B6'2Ò6&F÷4FôÖW2†æòÂÖW2“°¢6öç7B2ÒFö7VÖVçBævWDVÆVÖVçD'”–B‚w6"Ö6öçF–æW"r“°¢–b‚6'2æÆVæwF‚’²2æ–ææW$…DÔÂÒsÇ7G–ÆSÒ&6öÆ÷#§f"‚ÒÖ7¢’#äæVæ‡VÒ<:&FòæW7FRÜ:§2ãÂ÷âs²&WGW&ã²Ğ¢2æ–ææW$…DÔÂÒÆF—b6Æ73Ò'6&w&–B#æ·6'2æÖ†BÓâ°¢6öç7BG2ÒBçFô•4õ7G&–ær‚’ç7Æ—B‚uBr•³Ó°¢6öç7BW‚Ò6&F÷2æf–æB‡2Óâ2æFF÷6&FòÓÓÒG2“°¢&WGW&âÆF—b6Æ73Ò'6&’#ãÆF—b6Æ73Ò'6&B#âG¶f×DFF†B—ÓÂöF—cà¢ÆÆ&VÂ6Æ73Ò'6&6²#ãÆ–çWBG—SÒ&6†V6¶&÷‚"–CÒ'6ÒG¶G7Ò"G¶WƒòçGW&Ööòv6†V6¶VBs¢rwÒG·&óòvF—6&ÆVBs¢rwÒóâGW&ÖÂöÆ&VÃà¢ÆÆ&VÂ6Æ73Ò'6&6²#ãÆ–çWBG—SÒ&6†V6¶&÷‚"–CÒ'6"ÒG¶G7Ò"G¶WƒòçGW&Öö#òv6†V6¶VBs¢rwÒG·&óòvF—6&ÆVBs¢rwÒóâGW&Ö#ÂöÆ&VÃà¢ÂöF—cæ°¢Ò’æ¦ö–â‚rr’¶ÂöF—cæ°§Ğ ¦7–æ2gVæ7F–öâ6Çf%6&F÷2‚’°¢6öç7BæòÒ'6T–çB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖæòr’çfÇVR“°¢6öç7BÖW2Ò'6T–çB†Fö7VÖVçBævWDVÆVÖVçD'”–B‚wÖÖW2r’çfÇVR“°¢6öç7B&÷w2Ò6&F÷4FôÖW2†æòÂÖW2’æÖ†BÓâ°¢6öç7BG2ÒBçFô•4õ7G&–ær‚’ç7Æ—B‚uBr•³Ó°¢&WGW&â²æòÂÖW2ÂFF÷6&Fó¢G2À¢GW&Öö¢Fö7VÖVçBævWDVÆVÖVçD'”–B†6ÒG¶G7Ö“òæ6†V6¶VGÇÆfÇ6RÀ¢GW&Öö#¢Fö7VÖVçBævWDVÆVÖVçD'”–B†6"ÒG¶G7Ö“òæ6†V6¶VGÇÆfÇ6RÓ°¢Ò“°¢6öç7B²W'&÷"ÒÒv—B6"æg&öÒ‚w6&F÷5ö6öæf–rr’çW6W'B‡&÷w2Â²öä6öæfÆ–7C¢væòÆÖW2ÆFF÷6&FòrÒ“°¢–b†W'&÷"’²Fö7B‚tW'&ó¢r¶W'&÷"æÖW76vRÂvW'&÷"r“²&WGW&ã²Ğ¢6&F÷2Ò&÷w3°¢Fö7B‚u<:&F÷26Çf÷2rÂw7V66W72r“°§Ğ ¢òòÓÓÓÓÒdU$”Dõ2ÓÓÓÓĞ¦ÆWBfW&–F÷4Æö6ÂÒµÓ²òòW7FFòÆö6ÂçFW2FR6Çf  ¦gVæ7F–öâ&VæFW$fW&–F÷2‚’°¢6öç7B&òÒ²vf–ææ6V—&òrÂvvW7F÷"uÒæ–æ6ÇVFW2‡W&f–ÃòçW&f–Â“°¢–b‡&ò’°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚vfW"×&VFöæÇ’r’ç7G–ÆRæF—7Æ’Òv&Æö6²s°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚v'FâÖFBÖfW&–Fòr’ç7G–ÆRæF—7Æ’ÒvæöæRs°¢Fö7VÖVçBævWDVÆVÖVçD'”–B‚v'FâÖfW&–F÷2×6Çf"r’ç7G–ÆRæF—7Æ’ÒvæöæRs°¢Ğ¢fW&–F÷4Æö6ÂÒfW&–F÷2æÖ†bÓâ‡²ââægÒ’“°¢&VæFW$fW&–F÷4Æ—7B‚“°§Ğ ¦gVæ7F–öâ&VæFW$fW&–F÷4Æ—7B‚’°¢6öç7B&òÒ²vf–ææ6V—&òrÂvvW7F÷"uÒæ–æ6ÇVFW2‡W&f–ÃòçW&f–Â“°¢6öç7B2ÒFö7VÖVçBævWDVÆVÖVçD'”–B‚vfW&–F÷2Ö6öçF–æW"r“°¢–b‚fW&–F÷4Æö6ÂæÆVæwF‚’²2æ–ææW$…DÔÂÒsÇ7G–ÆSÒ&6öÆ÷#§f"‚ÒÖ7¢“·FF–æs£'‚#äæVæ‡VÒfW&–Fò6F7G&Fò&W7FRÜ:§2ãÂ÷âs²&WGW&ã²Ğ¢2æ–ææW$…DÔÂÒÆF—b6Æ73Ò'Gr#ãÇF&ÆSà¢ÇF†VCãÇG#ãÇFƒäFFÂ÷FƒãÇFƒäFW67&œ:|:6óÂ÷FƒãÇF‚7G–ÆSÒ'FW‡BÖÆ–vã¦ type="number" min="0" max="31" value="${nJus}" id="jus-${col.id}" style="width:70px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
+  const { data } = await sb.from('parametros_mes').select('*').eq('ano', ano).CÂ¢6ffb#Ã£Ã†Ã·FÂ–Ã¶Ã¢fÃ‡VSÃ’"#Ã¥FÃ¶FÃ·2Ã·2473Ã‚Ã¶Ã·FÂ–Ã¶Ã£Ã£Ã‚Ã·6VÃ†V7CÃ Â¢Ã†Â–Ã§WBGÂ—SÃ’'FWÂ‡B"Â–CÃ’'&W2Ã–'W66"Ã†6VÂ†Ã¶Ã†FW#Ã’$'W66"Ã¢Ã¢Ã¢"Ã¶Ã¦Â–Ã§WCÃ’&fÂ–Ã‡G&%&W7VÃ‡FFÃ²Â‚Â’"7GÂ–Ã†SÃ’'FFÂ–Ã¦sÂ£Â‡Â‚'ÂƒÂ¶&Ã·&FW#Â£Ã£WÂ‚6Ã¶Ã†Â–Bf"Â‚Ã’Ã–&BÂ“Â¶&Ã·&FW"Ã—&FÂ—W3Â£wÂƒÂ¶fÃ¶Ã§BÃ—6Â—Â¦SÂ£7ÂƒÂ¶Ã·WFÃ†Â–Ã¦SÂ¦Ã¦Ã¶Ã¦R"Ã³Ã Â¢Ã‚Ã¶FÂ—cÃ Â¢Ã†FÂ—b6Ã†73Ã’'Gr#Ã Â¢Ã‡F&Ã†SÃ Â¢Ã‡FÂ†VCÃ£Ã‡G#Ã Â¢Ã‡FÂƒÃ¤6Ã¶Ã†&Ã·&FÃ·#Ã‚Ã·FÂƒÃ£Ã‡FÂƒÃ¤43Ã‚Ã·FÂƒÃ£Ã‡FÂƒÃ¤W66Ã†Ã‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¤BÃ¬9Â§FVÂ—3Ã‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¥<:"Ã¥G&"Ã£Ã‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¤fÃ‡FÂ–Ã¦Â¢Ã£Ã‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¤fÃ‡FÂ§W7BÃ£Ã‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¤l:Â—&Â–2Â†BÃ§RÃ¢Â“Ã‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¥<:"Ã¤l:Â—&Â–3Ã‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¤FÂ–2ÃµdÃ‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¤FÂ–2ÃµeCÃ‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¥dÂ…"BÂ“Ã‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¥eBÂ…"BÂ“Ã‚Ã·FÂƒÃ Â¢Ã‡FÂ‚6Ã†73Ã’&Ã§"#Ã¥FÃ·FÃ‚Â…"BÂ“Ã‚Ã·FÂƒÃ Â¢Ã‡FÂƒÃ¤Ã¶'3Ã‚Ã·FÂƒÃ Â¢Ã‚Ã·G#Ã£Ã‚Ã·FÂ†VCÃ Â¢Ã‡F&Ã¶GÂ’Â–CÃ’'&W2Ã—F&Ã¶GÂ’#Ã£Ã‚Ã·F&Ã¶GÂ“Ã Â¢Ã‚Ã·F&Ã†SÃ Â¢Ã‚Ã¶FÂ—cÃ Â¢Ã‚Ã¶FÂ—cÃ Â Â¢Ã‚Ã’Ã’5U5DÃµ2Ãµ"42Ã’Ã“Ã Â¢Ã†FÂ—b6Ã†73Ã’'F2"Â–CÃ’'F"Ã–7W7FÃ·2#Ã Â¢Ã†FÂ—bÂ–CÃ’&7W7FÃ·2Ã–6Ã¶Ã§FÂ–Ã¦W"#Ã£Ã‡7GÂ–Ã†SÃ’&6Ã¶Ã†Ã·#Â§f"Â‚Ã’Ã–7Â¢Â“Â·FFÂ–Ã¦sÂ£#Â‚#Ã¤6Ã†Â—VRVÃ’6Ã†7VÃ†"Ã¦&&W7VÃ‡FFÃ²&Â–Ã–VÂ—&Ã²Ã£Ã‚Ã·Ã£Ã‚Ã¶FÂ—cÃ Â¢Ã‚Ã¶FÂ—cÃ Â Â¢Ã‚Ã’Ã’4Ã´Ã„$Ãµ$DÃµ$U2Ã’Ã“Ã Â¢Ã†FÂ—b6Ã†73Ã’'F2"Â–CÃ’'F"Ã–6Ã¶Ã†&Ã·&FÃ·&W2#Ã Â¢Ã†FÂ—bÂ–CÃ’&6Ã¶Ã†"Ã—&Ã²"6Ã†73Ã’'&Ã¶Ã¦Ã·FR"7GÂ–Ã†SÃ’&FÂ—7Ã†Â“Â¦Ã¦Ã¶Ã¦R#Ã®)ÂªÃ»ÂˆÃ²VÃ¦2FÃ–Â–Ã¢R$Â‚Ã¶FVÃ’VFÂ—F"6Ã¶Ã†&Ã·&FÃ·&W2Ã£Ã‚Ã¶FÂ—cÃ Â¢Ã†FÂ—b6Ã†73Ã’&6&B#Ã Â¢Ã†FÂ—b6Ã†73Ã’&7FÂ—B#Ã¤6Ã¶Ã†&Ã·&FÃ·&W2(	B&VÃ¦Vl:Ã–6Â–Ã·2dReCÃ‚Ã¶FÂ—cÃ Â¢Ã†FÂ—b6Ã†73Ã’'6&"#Ã Â¢Ã†Â–Ã§WBGÂ—SÃ’'FWÂ‡B"Â–CÃ’&6Ã¶Ã†"Ã–'W66"Ã†6VÂ†Ã¶Ã†FW#Ã’$'W66"Ã·"Ã¦Ã¶Ã–RÃ¢Ã¢Ã¢"Ã¶Ã¦Â–Ã§WCÃ’'&VÃ¦FW$6Ã¶Ã†&Ã·&FÃ·&W2Â‚Â’"Ã³Ã Â¢Ã‡6VÃ†V7BÂ–CÃ’&6Ã¶Ã†"Ã–62"Ã¶Ã¦6Â†Ã¦vSÃ’'&VÃ¦FW$6Ã¶Ã†&Ã·&FÃ·&W2Â‚Â’#Ã£Ã†Ã·FÂ–Ã¶Ã¢fÃ‡VSÃ’"#Ã¥FÃ¶FÃ·2Ã·2473Ã‚Ã¶Ã·FÂ–Ã¶Ã£Ã£Ã‚Ã·6VÃ†V7CÃ Â¢Ã†'WGFÃ¶Ã¢6Ã†73Ã’&'FÃ¢&"Â–CÃ’&'FÃ¢Ã–6Ã¶Ã†"Ã—6Ã‡f""Ã¶Ã¦6Ã†Â–6Â³Ã’'6Ã‡f$6Ã¶Ã†&Ã·&FÃ·&W2Â‚Â’#Ã¯	Ã¹+Ã¢6Ã‡f"Ã‡FW&:|;VW3Ã‚Ã¶'WGFÃ¶Ã£Ã Â¢Ã‚Ã¶FÂ—cÃ Â¢Ã†FÂ—bÂ–CÃ’&6Ã¶Ã†"Ã–6Ã¶Ã§FÂ–Ã¦W""6Ã†73Ã’&Ã†Ã¶FÂ–Ã¦r#Ã£Ã†FÂ—b6Ã†73Ã’'7Â–Ã¢#Ã£Ã‚Ã¶FÂ—cÃ£Ã‚Ã¶FÂ—cÃ Â¢Ã‚Ã¶FÂ—cÃ Â¢Ã‚Ã¶FÂ—cÃ Â£Ã‚Ã¶FÂ—cÃ Â Â£Ã†FÂ—bÂ–CÃ’'FÃ¶7B#Ã£Ã‚Ã¶FÂ—cÃ Â Â£Ã‡67&Â—CÃ Â¢Ã²Ã²Ã“Ã“Ã“Ã“Ã’4Ã´Ã¤dÂ”rÃ“Ã“Ã“Ã“ÃÂ¦6Ã¶Ã§7B4%ÃµU$Ã‚Ã’vÂ‡GG3Â¢Ã²Ã¶Ã¦'Â§GÂ–Ã·Â–Ã¦Ã†Ã–vÂ—&Â·67gGÂ’Ã§7W&6RÃ¦6Ã²sÂ°Â¦6Ã¶Ã§7B4%Ã´Â´UÂ’Ã’vWÂ”Â¦Â†$v6Â”Ã¶Â”Â¤Â•WÂ¤Â“Ã¦Â”Â—4Â–Ã¥#V44Â“dÂ–Â·Â…d4Â£Â’Ã¦WÂ”Â§34Ã–Â”Ã¶Â”Â§Â¦EÂ„&Â…Â–Ã”gÂ¥Â¥4Â—4Â–Ã¤Â¦Ã…Â¦Â”Â“dÂ–Ã“VÂ–VÃ¥#V#6Ã‡V$sÃ¦Â„Â§&3$Ã£&5Â…#TÂ–Â—vÂ–6Ã“Â—5Â¥4Â“dÂ–Ã”gV##FÂ”Ã„4Â§Â•Â…Â”Ã¶Â¤S4Ã´EÂ“Ã§Â¦Â³TÃµFw4Â–Ã•cF44Â“dÃ–Â¤WtÃ–Â¤Ã¥FÂ³TÃ´ÂƒÃ¥t%Â…Â‡&Â³Â”'tÂ—fÂ…%Â·6C'Â–eÂ„efsÂ•Â…Â„Ãƒ6TÂ³&Â†&Â´4RsÂ°Â¦6Ã¶Ã§7B6"Ã’7W&6RÃ¦7&VFT6Ã†Â–VÃ§BÂ…4%ÃµU$Ã‚Ã‚4%Ã´Â´UÂ’Â“Â°Â Â¢Ã²Ã²Ã“Ã“Ã“Ã“Ã’5DDRÃ“Ã“Ã“Ã“ÃÂ¦Ã†WBW&fÂ–Ã‚Ã’Ã§VÃ†Ã‚Ã‚6Ã¶Ã†&Ã·&FÃ·&W2Ã’ÂµÃ’Ã‚6&FÃ·2Ã’ÂµÃ’Ã‚W6VÃ¦6Â–2Ã’ÂµÃ’Ã‚fW&Â–FÃ·2Ã’ÂµÃ’Ã‚&W7VÃ‡FFÃ·2Ã’ÂµÃ“Â°Â¦Ã†WB&Ã—2Ã’Â²Ã¦Ã³Â¢Ã¦WrFFRÂ‚Â’Ã¦vWDgVÃ†Ã…Â–V"Â‚Â’Ã‚Ã–W3Â¢Ã¦WrFFRÂ‚Â’Ã¦vWDÃ–Ã¶Ã§FÂ‚Â‚Â’Â³Ã‚fÃ†Ã·%Ã·fÂ¢#CÃ“Â°Â Â¢Ã²Ã²Ã“Ã“Ã“Ã“Ã’UDÂ‚Ã“Ã“Ã“Ã“ÃÂ¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢fÂ¦W$Ã†Ã¶vÂ–Ã¢Â‚Â’Â°Â¢6Ã¶Ã§7BVÃ–Â–Ã‚Ã’FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÃ‚Ã–VÃ–Â–Ã‚rÂ’Ã§fÃ‡VRÃ§G&Â–Ã’Â‚Â“Â°Â¢6Ã¶Ã§7B6VÃ¦Â†Ã’FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÃ‚Ã—6VÃ¦Â†rÂ’Ã§fÃ‡VSÂ°Â¢6Ã¶Ã§7BW'"Ã’FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÃ‚Ã–W'&Ã²rÂ“Â°Â¢W'"Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’rsÂ°Â¢6Ã¶Ã§7B'FÃ¢Ã’FÃ¶7VÃ–VÃ§BÃ§VW'Â•6VÃ†V7FÃ·"Â‚rÃ¦Ã†'FÃ¢rÂ“Â°Â¢'FÃ¢Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’tVÃ§G&Ã¦FÃ²Ã¢Ã¢Ã¢sÂ²'FÃ¢Ã¦FÂ—6&Ã†VBÃ’G'VSÂ°Â¢6Ã¶Ã§7BÂ²W'&Ã·"Ã’Ã’vÂ—B6"Ã¦WFÂ‚Ã§6Â–vÃ¤Â–Ã¥vÂ—FÂ…77vÃ·&BÂ‡Â²VÃ–Â–Ã‚Ã‚77vÃ·&CÂ¢6VÃ¦Â†Ã’Â“Â°Â¢'FÃ¢Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’tVÃ§G&"sÂ²'FÃ¢Ã¦FÂ—6&Ã†VBÃ’fÃ‡6SÂ°Â¢Â–bÂ†W'&Ã·"Â’Â²W'"Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’tRÃ–Ã–Â–Ã‚Ã·R6VÃ¦Â†Â–Ã¦6Ã·'&WFÃ·2Ã¢sÂ²&WGW&Ã£Â²ÃÂ¢vÂ—BÂ–Ã¦Â–6Â–$Â‚Â“Â°Â§ÃÂ¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢fÂ¦W$Ã†Ã¶vÃ·WBÂ‚Â’Â°Â¢vÂ—B6"Ã¦WFÂ‚Ã§6Â–vÃ¤Ã·WBÂ‚Â“Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vrÂ’Ã§7GÂ–Ã†RÃ¦FÂ—7Ã†Â’Ã’vÃ¦Ã¶Ã¦RsÂ°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÃ†Ã¶vÂ–Ã¢Ã—67&VVÃ¢rÂ’Ã§7GÂ–Ã†RÃ¦FÂ—7Ã†Â’Ã’vfÃ†WÂ‚sÂ°Â§ÃÂ§6"Ã¦WFÂ‚Ã¦Ã¶Ã¤WFÂ…7FFT6Â†Ã¦vRÂ†7Â–Ã¦2Â†WbÃ‚6W76Â–Ã¶Ã¢Â’Ã“Ã¢Â²Â–bÂ†WbÃ“Ã“Ã’u4Â”tÃ¤TEÃ´Â”Ã¢rbb6W76Â–Ã¶Ã¢Â’Â²FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÃ†Ã¶vÂ–Ã¢Ã—67&VVÃ¢rÂ’Ã§7GÂ–Ã†RÃ¦FÂ—7Ã†Â’Ã’vÃ¦Ã¶Ã¦RsÂ²vÂ—BÂ–Ã¦Â–6Â–$Â‚Â“Â²Ã’Ã’Â“Â°Â Â¢Ã²Ã²Ã“Ã“Ã“Ã“Ã’Â”Ã¤Â•BÃ“Ã“Ã“Ã“ÃÂ¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢Â–Ã¦Â–6Â–$Â‚Â’Â°Â¢6Ã¶Ã§7BÂ²FFÂ¢Â²W6W"Ã’Ã’Ã’vÂ—B6"Ã¦WFÂ‚Ã¦vWEW6W"Â‚Â“Â°Â¢Â–bÂ‚W6W"Â’&WGW&Ã£Â°Â¢6Ã¶Ã§7BÂ²FFÂ¢Ã’Ã’vÂ—B6"Ã¦g&Ã¶Ã’Â‚wW&fÂ—2rÂ’Ã§6VÃ†V7BÂ‚rÂ¢rÂ’Ã¦WÂ‚vÂ–BrÃ‚W6W"Ã¦Â–BÂ’Ã§6Â–Ã¦vÃ†RÂ‚Â“Â°Â¢Â–bÂ‚Â’Â²FÃ¶7BÂ‚uW&fÂ–Ã‚Ã¬:6Ã²VÃ¦6Ã¶Ã§G&FÃ²Ã¢rÃ‚vW'&Ã·"rÂ“Â²&WGW&Ã£Â²ÃÂ¢W&fÂ–Ã‚Ã’Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÂ‚Ã–Ã¦Ã¶Ã–RrÂ’Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’Ã¦Ã¦Ã¶Ã–SÂ°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÂ‚Ã—W&fÂ–Ã‚rÂ’Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’Ã§W&fÂ–ÃƒÂ°Â¢Â§W7F%TÂ’Â‚Â“Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vrÂ’Ã§7GÂ–Ã†RÃ¦FÂ—7Ã†Â’Ã’v&Ã†Ã¶6Â²sÂ°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÃ†Ã¶vÂ–Ã¢Ã—67&VVÃ¢rÂ’Ã§7GÂ–Ã†RÃ¦FÂ—7Ã†Â’Ã’vÃ¦Ã¶Ã¦RsÂ°Â¢vÂ—B&Ã¶Ã–Â—6RÃ¦Ã†Ã‚Â…Â¶6'&Vv$6Ã¶Ã†&Ã·&FÃ·&W2Â‚Â’Ã‚6'&Vv%&Ã–WG&Ã·2Â‚Â•Ã’Â“Â°Â¢&VÃ¦FW$W6VÃ¦6Â–2Â‚Â“Â²&VÃ¦FW$fW&Â–2Â‚Â“Â²&VÃ¦FW$fW&Â–FÃ·2Â‚Â“Â²&VÃ¦FW$6Ã¶Ã†&Ã·&FÃ·&W2Â‚Â“Â°Â§ÃÂ Â¦gVÃ¦7FÂ–Ã¶Ã¢Â§W7F%TÂ’Â‚Â’Â°Â¢6Ã¶Ã§7B&Ã²Ã’Â²vfÂ–Ã¦Ã¦6VÂ—&Ã²rÃ‚vvW7FÃ·"uÃ’Ã¦Â–Ã¦6Ã‡VFW2Â‡W&fÂ–ÃƒÃ²Ã§W&fÂ–Ã‚Â“Â°Â¢Â–bÂ‡&Ã²Â’Â°Â¢Â²w6&FÃ·2rÃ‚vfW&Â–FÃ·2rÃ‚vW6VÃ¦6Â–2rÃ‚vfW&Â–2uÃ’Ã¦fÃ·$V6Â‚Â‡BÃ“Ã¢FÃ¶7VÃ–VÃ§BÃ§VW'Â•6VÃ†V7FÃ·"Â†Â¶FFÃ—F#Ã’"GÂ·GÃ’%Ã–Â’Ã¦6Ã†74Ã†Â—7BÃ¦FBÂ‚vÂ†Â–FFVÃ¢rÂ’Â“Â°Â¢Â²v'FÃ¢Ã–6Ã†7VÃ†"rÃ‚v'FÃ¢Ã—Ã—6Ã‡f"rÃ‚v'FÃ¢Ã—6"Ã—6Ã‡f"uÃ’Ã¦fÃ·$V6Â‚Â†Â–BÃ“Ã¢Â²6Ã¶Ã§7BVÃ‚Ã’FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ†Â–BÂ“Â²Â–bÂ†VÃ‚Â’VÃ‚Ã§7GÂ–Ã†RÃ¦FÂ—7Ã†Â“Ã’vÃ¦Ã¶Ã¦RsÂ²Ã’Â“Â°Â¢ÃÂ§ÃÂ Â¢Ã²Ã²Ã“Ã“Ã“Ã“Ã’DDÃµ2Ã“Ã“Ã“Ã“ÃÂ¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢6'&Vv$6Ã¶Ã†&Ã·&FÃ·&W2Â‚Â’Â°Â¢6Ã¶Ã§7BÂ²FFÃ’Ã’vÂ—B6"Ã¦g&Ã¶Ã’Â‚v6Ã¶Ã†&Ã·&FÃ·&W2rÂ’Ã§6VÃ†V7BÂ‚rÂ¢rÂ’Ã¦WÂ‚vFÂ—fÃ²rÃ‚G'VRÂ’Ã¦Ã·&FW"Â‚vÃ¦Ã¶Ã–RrÂ“Â°Â¢6Ã¶Ã†&Ã·&FÃ·&W2Ã’FFÃ‡Ã‚ÂµÃ“Â°Â¢6Ã¶Ã§7B672Ã’Â²Ã¢Ã¢Ã¦Ã¦Wr6WBÂ†6Ã¶Ã†&Ã·&FÃ·&W2Ã¦Ã–Â†2Ã“Ã¢2Ã¦6VÃ§G&ÃµÃ¶FUÃ¶7W7FÃ²Â’Ã¦fÂ–Ã‡FW"Â„&Ã¶Ã¶Ã†VÃ¢Â’Â•Ã’Ã§6Ã·'BÂ‚Â“Â°Â¢Â²vW2Ã–62rÃ‚vfW&Â–2Ã–62rÃ‚w&W2Ã–62rÃ‚v6Ã¶Ã†"Ã–62uÃ’Ã¦fÃ·$V6Â‚Â†Â–BÃ“Ã¢Â°Â¢6Ã¶Ã§7BVÃ‚Ã’FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ†Â–BÂ“Â²Â–bÂ‚VÃ‚Â’&WGW&Ã£Â°Â¢VÃ‚Ã¦Â–Ã¦Ã¦W$Â…DÃ”Ã‚Ã’sÃ†Ã·FÂ–Ã¶Ã¢fÃ‡VSÃ’"#Ã¥FÃ¶FÃ·2Ã·2473Ã‚Ã¶Ã·FÂ–Ã¶Ã£Ã¢sÂ°Â¢672Ã¦fÃ·$V6Â‚Â†62Ã“Ã¢VÃ‚Ã¦Â–Ã¦Ã¦W$Â…DÃ”Ã‚Â³Ã’Ã†Ã·FÂ–Ã¶Ã¢fÃ‡VSÃ’"GÂ¶67Ã’#Ã¢GÂ¶67Ã“Ã‚Ã¶Ã·FÂ–Ã¶Ã£Ã¦Â“Â°Â¢Ã’Â“Â°Â§ÃÂ Â¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢6'&Vv%&Ã–WG&Ã·2Â‚Â’Â°Â¢6Ã¶Ã§7BÃ¦Ã²Ã’'6TÂ–Ã§BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã¦Ã²rÂ’Ã§fÃ‡VRÂ’Ã‡Ã‚&Ã—2Ã¦Ã¦Ã³Â°Â¢6Ã¶Ã§7BÃ–W2Ã’'6TÂ–Ã§BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã–W2rÂ’Ã§fÃ‡VRÂ’Ã‡Ã‚&Ã—2Ã¦Ã–W3Â°Â¢6Ã¶Ã§7BÂ²FFÃ’Ã’vÂ—B6"Ã¦g&Ã¶Ã’Â‚w&Ã–WG&Ã·5Ã¶Ã–W2rÂ’Ã§6VÃ†V7BÂ‚rÂ¢rÂ’Ã¦WÂ‚vÃ¦Ã²rÃ‚Ã¦Ã²Â’Ã¦WÂ‚vÃ–W2rÃ‚Ã–W2Â’Ã§6Â–Ã¦vÃ†RÂ‚Â“Â°Â¢Â–bÂ†FFÂ’Â°Â¢&Ã—2Ã’FFÂ°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ—frÂ’Ã§fÃ‡VRÃ’FFÃ§fÃ†Ã·%Ã·fÂ°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã–W2rÂ’Ã§fÃ‡VRÃ’FFÃ¦Ã–W3Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã¦Ã²rÂ’Ã§fÃ‡VRÃ’FFÃ¦Ã¦Ã³Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ—7FGW2rÂ’Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’~)Ã‰26'&VvFÃ²sÂ°Â¢Ã’VÃ‡6RÂ°Â¢&Ã—2Ã’Â²Ã¦Ã²Ã‚Ã–W2Ã‚fÃ†Ã·%Ã·fÂ¢'6TfÃ†Ã¶BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ—frÂ’Ã§fÃ‡VRÂ’Ã‡Ã‚#CÃ“Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ—7FGW2rÂ’Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’tÃ¦Ã·fÃ²Ãœ:Â§2sÂ°Â¢ÃÂ¢GVÃ†Â—Â¦$FÂ–4Â–Ã¦fÃ²Â‚Â“Â°Â¢vÂ—B&Ã¶Ã–Â—6RÃ¦Ã†Ã‚Â…Â¶6'&Vv%6&FÃ·2Â†Ã¦Ã²Ã‚Ã–W2Â’Ã‚6'&Vv$W6VÃ¦6Â–2Â†Ã¦Ã²Ã‚Ã–W2Â’Ã‚6'&Vv$fW&Â–FÃ·2Â†Ã¦Ã²Ã‚Ã–W2Â•Ã’Â“Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÂ‚Ã—7V"rÂ’Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’GÂ´Ã”U4U5Â¶Ã–W5Ã—Ã’Ã²GÂ¶Ã¦Ã·Ã–Â°Â§ÃÂ Â¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢6'&Vv%6&FÃ·2Â†Ã¦Ã²Ã‚Ã–W2Â’Â°Â¢6Ã¶Ã§7BÂ²FFÃ’Ã’vÂ—B6"Ã¦g&Ã¶Ã’Â‚w6&FÃ·5Ã¶6Ã¶Ã¦fÂ–rrÂ’Ã§6VÃ†V7BÂ‚rÂ¢rÂ’Ã¦WÂ‚vÃ¦Ã²rÃ‚Ã¦Ã²Â’Ã¦WÂ‚vÃ–W2rÃ‚Ã–W2Â“Â°Â¢6&FÃ·2Ã’FFÃ‡Ã‚ÂµÃ“Â°Â¢&VÃ¦FW%6&FÃ·2Â†Ã¦Ã²Ã‚Ã–W2Â“Â°Â§ÃÂ Â¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢6'&Vv$W6VÃ¦6Â–2Â†Ã¦Ã²Ã‚Ã–W2Â’Â°Â¢6Ã¶Ã§7BÂ²FFÃ’Ã’vÂ—B6"Ã¦g&Ã¶Ã’Â‚vW6VÃ¦6Â–2rÂ’Ã§6VÃ†V7BÂ‚rÂ¢rÂ’Ã¦WÂ‚vÃ¦Ã²rÃ‚Ã¦Ã²Â’Ã¦WÂ‚vÃ–W2rÃ‚Ã–W2Â“Â°Â¢W6VÃ¦6Â–2Ã’FFÃ‡Ã‚ÂµÃ“Â°Â§ÃÂ Â¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢6'&Vv$fW&Â–FÃ·2Â†Ã¦Ã²Ã‚Ã–W2Â’Â°Â¢G'Â’Â°Â¢6Ã¶Ã§7BÂ²FFÃ’Ã’vÂ—B6"Ã¦g&Ã¶Ã’Â‚vfW&Â–FÃ·2rÂ’Ã§6VÃ†V7BÂ‚rÂ¢rÂ’Ã¦WÂ‚vÃ¦Ã²rÃ‚Ã¦Ã²Â’Ã¦WÂ‚vÃ–W2rÃ‚Ã–W2Â’Ã¦Ã·&FW"Â‚vFFrÂ“Â°Â¢fW&Â–FÃ·2Ã’FFÃ‡Ã‚ÂµÃ“Â°Â¢Ã’6F6Â‚Â†RÂ’Â²fW&Â–FÃ·2Ã’ÂµÃ“Â²ÃÂ¢&VÃ¦FW$fW&Â–FÃ·2Â‚Â“Â°Â§ÃÂ Â¢Ã²Ã²Ã“Ã“Ã“Ã“Ã’,8$Ã”UE$Ãµ2Ã“Ã“Ã“Ã“ÃÂ¦FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã–W2rÂ’Ã¦FDWfVÃ§DÃ†Â—7FVÃ¦W"Â‚v6Â†Ã¦vRrÃ‚Â‚Â’Ã“Ã¢6'&Vv%&Ã–WG&Ã·2Â‚Â’Â“Â°Â¦FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã¦Ã²rÂ’Ã¦FDWfVÃ§DÃ†Â—7FVÃ¦W"Â‚v6Â†Ã¦vRrÃ‚Â‚Â’Ã“Ã¢6'&Vv%&Ã–WG&Ã·2Â‚Â’Â“Â°Â Â¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢6Ã‡f%&Ã–WG&Ã·2Â‚Â’Â°Â¢6Ã¶Ã§7BÃ¦Ã²Ã’'6TÂ–Ã§BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã¦Ã²rÂ’Ã§fÃ‡VRÂ“Â°Â¢6Ã¶Ã§7BÃ–W2Ã’'6TÂ–Ã§BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã–W2rÂ’Ã§fÃ‡VRÂ“Â°Â¢6Ã¶Ã§7BfÃ†Ã·%Ã·fÃ’'6TfÃ†Ã¶BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ—frÂ’Ã§fÃ‡VRÂ“Â°Â¢6Ã¶Ã§7BÂ²W'&Ã·"Ã’Ã’vÂ—B6"Ã¦g&Ã¶Ã’Â‚w&Ã–WG&Ã·5Ã¶Ã–W2rÂ’Ã§W6W'BÂ‡Â²Ã¦Ã²Ã‚Ã–W2Ã‚fÃ†Ã·%Ã·fÃ’Ã‚Â²Ã¶Ã¤6Ã¶Ã¦fÃ†Â–7CÂ¢vÃ¦Ã²Ã†Ã–W2rÃ’Â“Â°Â¢Â–bÂ†W'&Ã·"Â’Â²FÃ¶7BÂ‚tW'&Ã³Â¢rÂ¶W'&Ã·"Ã¦Ã–W76vRÃ‚vW'&Ã·"rÂ“Â²&WGW&Ã£Â²ÃÂ¢&Ã—2Ã’Â²Ã¢Ã¢Ã§&Ã—2Ã‚Ã¦Ã²Ã‚Ã–W2Ã‚fÃ†Ã·%Ã·fÃ“Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ—7FGW2rÂ’Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’~)Ã‰26Ã‡fÃ²sÂ°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vÂ‚Ã—7V"rÂ’Ã§FWÂ‡D6Ã¶Ã§FVÃ§BÃ’GÂ´Ã”U4U5Â¶Ã–W5Ã—Ã’Ã²GÂ¶Ã¦Ã·Ã–Â°Â¢GVÃ†Â—Â¦$FÂ–4Â–Ã¦fÃ²Â‚Â“Â°Â¢vÂ—B6'&Vv%6&FÃ·2Â†Ã¦Ã²Ã‚Ã–W2Â“Â°Â¢vÂ—B6'&Vv$W6VÃ¦6Â–2Â†Ã¦Ã²Ã‚Ã–W2Â“Â°Â¢vÂ—B6'&Vv$fW&Â–FÃ·2Â†Ã¦Ã²Ã‚Ã–W2Â“Â°Â¢&VÃ¦FW$W6VÃ¦6Â–2Â‚Â“Â²&VÃ¦FW$fW&Â–2Â‚Â“Â°Â¢FÃ¶7BÂ‚u,:&Ã–WG&Ã·26Ã‡fÃ·2rÃ‚w7V66W72rÂ“Â°Â§ÃÂ Â¦gVÃ¦7FÂ–Ã¶Ã¢GVÃ†Â—Â¦$FÂ–4Â–Ã¦fÃ²Â‚Â’Â°Â¢6Ã¶Ã§7BÃ¦Ã²Ã’'6TÂ–Ã§BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã¦Ã²rÂ’Ã§fÃ‡VRÂ’Ã‡Ã‚&Ã—2Ã¦Ã¦Ã³Â°Â¢6Ã¶Ã§7BÃ–W2Ã’'6TÂ–Ã§BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã–W2rÂ’Ã§fÃ‡VRÂ’Ã‡Ã‚&Ã—2Ã¦Ã–W3Â°Â¢6Ã¶Ã§7BFÃ·FÃ‚Ã’FÂ–5WFVÂ—2Â†Ã¦WrFFRÂ†Ã¦Ã²Ã‚Ã–W2Ã“Ã‚Â’Ã‚Ã¦WrFFRÂ†Ã¦Ã²Ã‚Ã–W2Ã‚Â’Â“Â°Â¢6Ã¶Ã§7B6'2Ã’6&FÃ·4FÃ´Ã–W2Â†Ã¦Ã²Ã‚Ã–W2Â“Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vFÂ–2Ã–Â–Ã¦fÃ²rÂ’Ã¦Â–Ã¦Ã¦W$Â…DÃ”Ã‚ÃÂ¢Ã‡7G&Ã¶Ã¦r7GÂ–Ã†SÃ’&fÃ¶Ã§BÃ—6Â—Â¦SÂ£Â‡ÂƒÂ¶6Ã¶Ã†Ã·#Â§f"Â‚Ã’Ã–W62Â’#Ã¢GÂ·FÃ·FÃ‡Ã“Ã‚Ã·7G&Ã¶Ã¦sÃ¢FÂ–2;Â§FVÂ—2Â‡6VrÃ—6WÂ‚Â’VÃ’Ã‡7G&Ã¶Ã¦sÃ¢GÂ´Ã”U4U5Â¶Ã–W5Ã—Ã’Ã²GÂ¶Ã¦Ã·Ã“Ã‚Ã·7G&Ã¶Ã¦sÃ£Ã†'#Ã Â¢Ã‡7Ã¢7GÂ–Ã†SÃ’&6Ã¶Ã†Ã·#Â§f"Â‚Ã’Ã–7Â¢Â“Â¶fÃ¶Ã§BÃ—6Â—Â¦SÂ£'ÂƒÂ¶Ã–&vÂ–Ã¢Ã—FÃ·Â£GÂƒÂ¶FÂ—7Ã†Â“Â¦&Ã†Ã¶6Â²#Ã¢GÂ·6'2Ã¦Ã†VÃ¦wFÂ‡Ã’<:&FÃ·3Â¢GÂ·6'2Ã¦Ã–Â†CÃ“Ã¦BÃ¦vWDFFRÂ‚Â’Â²rÃ²rÂ²Â†BÃ¦vWDÃ–Ã¶Ã§FÂ‚Â‚Â’Â³Â’Â’Ã¦Â¦Ã¶Â–Ã¢Â‚rÃ‚rÂ—Ã“Ã‚Ã·7Ã£Ã¦Â°Â§ÃÂ Â¢Ã²Ã²Ã“Ã“Ã“Ã“Ã’<8$DÃµ2Ã“Ã“Ã“Ã“ÃÂ¦gVÃ¦7FÂ–Ã¶Ã¢&VÃ¦FW%6&FÃ·2Â†Ã¦Ã²Ã‚Ã–W2Â’Â°Â¢6Ã¶Ã§7B&Ã²Ã’Â²vfÂ–Ã¦Ã¦6VÂ—&Ã²rÃ‚vvW7FÃ·"uÃ’Ã¦Â–Ã¦6Ã‡VFW2Â‡W&fÂ–ÃƒÃ²Ã§W&fÂ–Ã‚Â“Â°Â¢6Ã¶Ã§7B6'2Ã’6&FÃ·4FÃ´Ã–W2Â†Ã¦Ã²Ã‚Ã–W2Â“Â°Â¢6Ã¶Ã§7B2Ã’FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚w6"Ã–6Ã¶Ã§FÂ–Ã¦W"rÂ“Â°Â¢Â–bÂ‚6'2Ã¦Ã†VÃ¦wFÂ‚Â’Â²2Ã¦Â–Ã¦Ã¦W$Â…DÃ”Ã‚Ã’sÃ‡7GÂ–Ã†SÃ’&6Ã¶Ã†Ã·#Â§f"Â‚Ã’Ã–7Â¢Â’#Ã¤Ã¦VÃ¦Â‡VÃ’<:&FÃ²Ã¦W7FRÃœ:Â§2Ã£Ã‚Ã·Ã¢sÂ²&WGW&Ã£Â²ÃÂ¢2Ã¦Â–Ã¦Ã¦W$Â…DÃ”Ã‚Ã’Ã†FÂ—b6Ã†73Ã’'6&w&Â–B#Ã¦Â·6'2Ã¦Ã–Â†BÃ“Ã¢Â°Â¢6Ã¶Ã§7BG2Ã’BÃ§FÃ´Â•4Ãµ7G&Â–Ã¦rÂ‚Â’Ã§7Ã†Â—BÂ‚uBrÂ•Â³Ã“Â°Â¢6Ã¶Ã§7BWÂ‚Ã’6&FÃ·2Ã¦fÂ–Ã¦BÂ‡2Ã“Ã¢2Ã¦FFÃ·6&FÃ²Ã“Ã“Ã’G2Â“Â°Â¢&WGW&Ã¢Ã†FÂ—b6Ã†73Ã’'6&Â’#Ã£Ã†FÂ—b6Ã†73Ã’'6&B#Ã¢GÂ¶fÃ—DFFÂ†BÂ—Ã“Ã‚Ã¶FÂ—cÃ Â¢Ã†Ã†&VÃ‚6Ã†73Ã’'6&6Â²#Ã£Ã†Â–Ã§WBGÂ—SÃ’&6Â†V6Â¶&Ã·Â‚"Â–CÃ’'6Ã’GÂ¶G7Ã’"GÂ¶WÂƒÃ²Ã§GW&Ã–Ã¶Ã²v6Â†V6Â¶VBsÂ¢rwÃ’GÂ·&Ã³Ã²vFÂ—6&Ã†VBsÂ¢rwÃ’Ã³Ã¢GW&Ã–Ã‚Ã¶Ã†&VÃƒÃ Â¢Ã†Ã†&VÃ‚6Ã†73Ã’'6&6Â²#Ã£Ã†Â–Ã§WBGÂ—SÃ’&6Â†V6Â¶&Ã·Â‚"Â–CÃ’'6"Ã’GÂ¶G7Ã’"GÂ¶WÂƒÃ²Ã§GW&Ã–Ã¶#Ã²v6Â†V6Â¶VBsÂ¢rwÃ’GÂ·&Ã³Ã²vFÂ—6&Ã†VBsÂ¢rwÃ’Ã³Ã¢GW&Ã–#Ã‚Ã¶Ã†&VÃƒÃ Â¢Ã‚Ã¶FÂ—cÃ¦Â°Â¢Ã’Â’Ã¦Â¦Ã¶Â–Ã¢Â‚rrÂ’Â¶Ã‚Ã¶FÂ—cÃ¦Â°Â§ÃÂ Â¦7Â–Ã¦2gVÃ¦7FÂ–Ã¶Ã¢6Ã‡f%6&FÃ·2Â‚Â’Â°Â¢6Ã¶Ã§7BÃ¦Ã²Ã’'6TÂ–Ã§BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã¦Ã²rÂ’Ã§fÃ‡VRÂ“Â°Â¢6Ã¶Ã§7BÃ–W2Ã’'6TÂ–Ã§BÂ†FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚wÃ–Ã–W2rÂ’Ã§fÃ‡VRÂ“Â°Â¢6Ã¶Ã§7B&Ã·w2Ã’6&FÃ·4FÃ´Ã–W2Â†Ã¦Ã²Ã‚Ã–W2Â’Ã¦Ã–Â†BÃ“Ã¢Â°Â¢6Ã¶Ã§7BG2Ã’BÃ§FÃ´Â•4Ãµ7G&Â–Ã¦rÂ‚Â’Ã§7Ã†Â—BÂ‚uBrÂ•Â³Ã“Â°Â¢&WGW&Ã¢Â²Ã¦Ã²Ã‚Ã–W2Ã‚FFÃ·6&FÃ³Â¢G2Ã€Â¢GW&Ã–Ã¶Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ†6Ã’GÂ¶G7Ã–Â“Ã²Ã¦6Â†V6Â¶VGÃ‡Ã†fÃ‡6RÃ€Â¢GW&Ã–Ã¶#Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ†6"Ã’GÂ¶G7Ã–Â“Ã²Ã¦6Â†V6Â¶VGÃ‡Ã†fÃ‡6RÃ“Â°Â¢Ã’Â“Â°Â¢6Ã¶Ã§7BÂ²W'&Ã·"Ã’Ã’vÂ—B6"Ã¦g&Ã¶Ã’Â‚w6&FÃ·5Ã¶6Ã¶Ã¦fÂ–rrÂ’Ã§W6W'BÂ‡&Ã·w2Ã‚Â²Ã¶Ã¤6Ã¶Ã¦fÃ†Â–7CÂ¢vÃ¦Ã²Ã†Ã–W2Ã†FFÃ·6&FÃ²rÃ’Â“Â°Â¢Â–bÂ†W'&Ã·"Â’Â²FÃ¶7BÂ‚tW'&Ã³Â¢rÂ¶W'&Ã·"Ã¦Ã–W76vRÃ‚vW'&Ã·"rÂ“Â²&WGW&Ã£Â²ÃÂ¢6&FÃ·2Ã’&Ã·w3Â°Â¢FÃ¶7BÂ‚u<:&FÃ·26Ã‡fÃ·2rÃ‚w7V66W72rÂ“Â°Â§ÃÂ Â¢Ã²Ã²Ã“Ã“Ã“Ã“Ã’dU$Â”DÃµ2Ã“Ã“Ã“Ã“ÃÂ¦Ã†WBfW&Â–FÃ·4Ã†Ã¶6Ã‚Ã’ÂµÃ“Â²Ã²Ã²W7FFÃ²Ã†Ã¶6Ã‚Ã§FW2FR6Ã‡f Â Â¦gVÃ¦7FÂ–Ã¶Ã¢&VÃ¦FW$fW&Â–FÃ·2Â‚Â’Â°Â¢6Ã¶Ã§7B&Ã²Ã’Â²vfÂ–Ã¦Ã¦6VÂ—&Ã²rÃ‚vvW7FÃ·"uÃ’Ã¦Â–Ã¦6Ã‡VFW2Â‡W&fÂ–ÃƒÃ²Ã§W&fÂ–Ã‚Â“Â°Â¢Â–bÂ‡&Ã²Â’Â°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vfW"Ã—&VFÃ¶Ã¦Ã‡Â’rÂ’Ã§7GÂ–Ã†RÃ¦FÂ—7Ã†Â’Ã’v&Ã†Ã¶6Â²sÂ°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚v'FÃ¢Ã–FBÃ–fW&Â–FÃ²rÂ’Ã§7GÂ–Ã†RÃ¦FÂ—7Ã†Â’Ã’vÃ¦Ã¶Ã¦RsÂ°Â¢FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚v'FÃ¢Ã–fW&Â–FÃ·2Ã—6Ã‡f"rÂ’Ã§7GÂ–Ã†RÃ¦FÂ—7Ã†Â’Ã’vÃ¦Ã¶Ã¦RsÂ°Â¢ÃÂ¢fW&Â–FÃ·4Ã†Ã¶6Ã‚Ã’fW&Â–FÃ·2Ã¦Ã–Â†bÃ“Ã¢Â‡Â²Ã¢Ã¢Ã¦gÃ’Â’Â“Â°Â¢&VÃ¦FW$fW&Â–FÃ·4Ã†Â—7BÂ‚Â“Â°Â§ÃÂ Â¦gVÃ¦7FÂ–Ã¶Ã¢&VÃ¦FW$fW&Â–FÃ·4Ã†Â—7BÂ‚Â’Â°Â¢6Ã¶Ã§7B&Ã²Ã’Â²vfÂ–Ã¦Ã¦6VÂ—&Ã²rÃ‚vvW7FÃ·"uÃ’Ã¦Â–Ã¦6Ã‡VFW2Â‡W&fÂ–ÃƒÃ²Ã§W&fÂ–Ã‚Â“Â°Â¢6Ã¶Ã§7B2Ã’FÃ¶7VÃ–VÃ§BÃ¦vWDVÃ†VÃ–VÃ§D'Â”Â–BÂ‚vfW&Â–FÃ·2Ã–6Ã¶Ã§FÂ–Ã¦W"rÂ“Â°Â¢Â–bÂ‚fW&Â–FÃ·4Ã†Ã¶6Ã‚Ã¦Ã†VÃ¦wFÂ‚Â’Â²2Ã¦Â–Ã¦Ã¦W$Â…DÃ”Ã‚Ã’sÃ‡7GÂ–Ã†SÃ’&6Ã¶Ã†Ã·#Â§f"Â‚Ã’Ã–7Â¢Â“Â·FFÂ–Ã¦sÂ£'Â‚#Ã¤Ã¦VÃ¦Â‡VÃ’fW&Â–FÃ²6F7G&FÃ²&W7FRÃœ:Â§2Ã£Ã‚Ã·Ã¢sÂ²&WGW&Ã£Â²ÃÂ¢2Ã¦Â–Ã¦Ã¦W$Â…DÃ”Ã‚Ã’Ã†FÂ—b6Ã†73Ã’'Gr#Ã£Ã‡F&Ã†SÃ Â¢Ã‡FÂ†VCÃ£Ã‡G#Ã£Ã‡FÂƒÃ¤FFÃ‚Ã·FÂƒÃ£Ã‡FÂƒÃ¤FW67&Âœ:|:6Ã³Ã‚Ã·FÂƒÃ£Ã‡FÂ‚7GÂ–Ã†SÃ’'FWÂ‡BÃ–Ã†Â–vÃ£Â¦ type="number" min="0" max="31" value="${nJus}" id="jus-${col.id}" style="width:70px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
       </tr>`;
     }).join('')+`</tbody></table></div>`;
 }
@@ -391,10 +396,10 @@ async function salvarTodasAusencias() {
   const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
   const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
   const btn = document.getElementById('btn-aus-salvar');
-  btn.textContent='â³ Salvando...'; btn.disabled=true;
+  btn.textContent='Ã¢ÂÂ³ Salvando...'; btn.disabled=true;
   try {
     const ids = colaboradores.map(c=>c.id);
-    // Preserva Ferias, deleta sÃ³ Injustificada e Justificada
+    // Preserva Ferias, deleta sÃƒÂ³ Injustificada e Justificada
     const { error: de } = await sb.from('ausencias').delete().eq('ano',ano).eq('mes',mes).in('colaborador_id',ids).in('tipo',['Injustificada','Justificada']);
     if (de) throw de;
     const rows = [];
@@ -407,12 +412,12 @@ async function salvarTodasAusencias() {
     }
     if (rows.length) { const { error: ie } = await sb.from('ausencias').insert(rows); if (ie) throw ie; }
     ausencias = [...ausencias.filter(a=>a.tipo==='Ferias'), ...rows];
-    toast('AusÃªncias salvas! ('+rows.length+' registros)', 'success');
+    toast('AusÃƒÂªncias salvas! ('+rows.length+' registros)', 'success');
   } catch(e) { toast('Erro: '+(e.message||e), 'error'); }
-  btn.textContent='ğŸ’¾ Salvar AusÃªncias'; btn.disabled=false;
+  btn.textContent='Ã°ÂŸÂ’Â¾ Salvar AusÃƒÂªncias'; btn.disabled=false;
 }
 
-// ===== FÃ‰RIAS =====
+// ===== FÃƒÂ‰RIAS =====
 function renderFerias() {
   const ro = ['financeiro','gestor'].includes(perfil?.perfil);
   if (ro) document.getElementById('fer-ro').style.display='block';
@@ -423,7 +428,7 @@ function renderFerias() {
   const c = document.getElementById('ferias-container');
   if (!lista.length) { c.innerHTML='<p style="color:var(--cz)">Nenhum colaborador.</p>'; return; }
   c.innerHTML = `<div class="tw"><table>
-    <thead><tr><th>Colaborador</th><th>CC</th><th>Escala</th><th>InÃ­cio FÃ©rias</th><th>Fim FÃ©rias</th><th>Dias Ãšteis (auto)</th><th>SÃ¡b. FÃ©rias (auto)</th></tr></thead>
+    <thead><tr><th>Colaborador</th><th>CC</th><th>Escala</th><th>InÃƒÂ­cio FÃƒÂ©rias</th><th>Fim FÃƒÂ©rias</th><th>Dias ÃƒÂšteis (auto)</th><th>SÃƒÂ¡b. FÃƒÂ©rias (auto)</th></tr></thead>
     <tbody>`+lista.map(col => {
       const fer = ausencias.find(a=>a.colaborador_id===col.id && a.tipo==='Ferias');
       const ini = fer?.datas?.[0]||'';
@@ -436,7 +441,7 @@ function renderFerias() {
         <td>${ro?(ini||'-'):`<input type="date" value="${ini}" id="fi-${col.id}" onchange="atualizarInfoFer('${col.id}')" style="padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
         <td>${ro?(fim||'-'):`<input type="date" value="${fim}" id="ff-${col.id}" onchange="atualizarInfoFer('${col.id}')" style="padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px"/>`}</td>
         <td id="fdu-${col.id}" style="text-align:center">${du>0?`<span class="badge bam">${du} d.u.</span>`:'-'}</td>
-        <td id="fsf-${col.id}" style="text-align:center">${sf>0?`<span class="badge bcz">${sf} sÃ¡b.</span>`:'-'}</td>
+        <td id="fsf-${col.id}" style="text-align:center">${sf>0?`<span class="badge bcz">${sf} sÃƒÂ¡b.</span>`:'-'}</td>
       </tr>`;
     }).join('')+`</tbody></table></div>`;
 }
@@ -447,14 +452,14 @@ function atualizarInfoFer(id) {
   const col = colaboradores.find(c=>c.id===id);
   const { du, sf } = calcFeriasInfo(ini, fim, col?.escala);
   const du_el = document.getElementById(`fdu-${id}`); if(du_el) du_el.innerHTML = du>0?`<span class="badge bam">${du} d.u.</span>`:'-';
-  const sf_el = document.getElementById(`fsf-${id}`); if(sf_el) sf_el.innerHTML = sf>0?`<span class="badge bcz">${sf} sÃ¡b.</span>`:'-';
+  const sf_el = document.getElementById(`fsf-${id}`); if(sf_el) sf_el.innerHTML = sf>0?`<span class="badge bcz">${sf} sÃƒÂ¡b.</span>`:'-';
 }
 
 function calcFeriasInfo(ini, fim, escala) {
   if (!ini||!fim||fim<ini) return { du:0, sf:0 };
   const fi = new Date(ini+'T00:00:00'), ff = new Date(fim+'T00:00:00');
   const du = diasUteis(fi, ff, feriadosDates(escala));
-  // conta sÃ¡bados dentro do perÃ­odo que sÃ£o da escala do colaborador
+  // conta sÃƒÂ¡bados dentro do perÃƒÂ­odo que sÃƒÂ£o da escala do colaborador
   let sf = 0;
   for (const sab of sabados) {
     const sd = new Date(sab.data_sabado+'T00:00:00');
@@ -470,7 +475,7 @@ async function salvarTodasFerias() {
   const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
   const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
   const btn = document.getElementById('btn-ferias-salvar');
-  btn.textContent='â³ Salvando...'; btn.disabled=true;
+  btn.textContent='Ã¢ÂÂ³ Salvando...'; btn.disabled=true;
   try {
     const ids = colaboradores.map(c=>c.id);
     const { error: de } = await sb.from('ausencias').delete().eq('ano',ano).eq('mes',mes).in('colaborador_id',ids).eq('tipo','Ferias');
@@ -483,15 +488,15 @@ async function salvarTodasFerias() {
     }
     if (rows.length) { const { error: ie } = await sb.from('ausencias').insert(rows); if (ie) throw ie; }
     ausencias = [...ausencias.filter(a=>a.tipo!=='Ferias'), ...rows];
-    toast('FÃ©rias salvas! ('+rows.length+' registros)', 'success');
+    toast('FÃƒÂ©rias salvas! ('+rows.length+' registros)', 'success');
   } catch(e) { toast('Erro: '+(e.message||e), 'error'); }
-  btn.textContent='ğŸ’¾ Salvar FÃ©rias'; btn.disabled=false;
+  btn.textContent='Ã°ÂŸÂ’Â¾ Salvar FÃƒÂ©rias'; btn.disabled=false;
 }
 
-// ===== CÃLCULO =====
+// ===== CÃƒÂLCULO =====
 async function calcular() {
   const btn = document.getElementById('btn-calcular');
-  btn.textContent='â³ Calculando...'; btn.disabled=true;
+  btn.textContent='Ã¢ÂÂ³ Calculando...'; btn.disabled=true;
 
   const ano = parseInt(document.getElementById('p-ano').value)||params.ano;
   const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
@@ -506,23 +511,23 @@ async function calcular() {
   resultados = colaboradores.map(emp => {
     const adm = emp.admissao ? new Date(emp.admissao+'T00:00:00') : null;
     const dem = emp.desligamento ? new Date(emp.desligamento+'T00:00:00') : null;
-    if (!adm) return { emp, valid:false, obs:'Sem data de admissÃ£o', VA:0, VT:0 };
-    if (!(adm<=meDate && (!dem||dem>=msDate))) return { emp, valid:false, obs:'Inativo no perÃ­odo', VA:0, VT:0 };
+    if (!adm) return { emp, valid:false, obs:'Sem data de admissÃƒÂ£o', VA:0, VT:0 };
+    if (!(adm<=meDate && (!dem||dem>=msDate))) return { emp, valid:false, obs:'Inativo no perÃƒÂ­odo', VA:0, VT:0 };
 
     const start = adm>msDate ? adm : new Date(msDate);
     const end = dem&&dem<meDate ? dem : new Date(meDate);
 
-    // Feriados que a escala nÃ£o trabalhou (excluir dos dias Ãºteis)
+    // Feriados que a escala nÃƒÂ£o trabalhou (excluir dos dias ÃƒÂºteis)
     const ferExclude = feriadosDates(emp.escala);
     const totalWD = diasUteis(msDate, meDate, feriadosDates(emp.escala)); // total esperado p/ esta escala
     const activeWD = diasUteis(start, end, ferExclude);
 
-    // AusÃªncias
+    // AusÃƒÂªncias
     const ea = ausencias.filter(a=>a.colaborador_id===emp.id);
     const injust = ea.find(a=>a.tipo==='Injustificada')?.datas?.length||0;
     const just   = ea.find(a=>a.tipo==='Justificada')?.datas?.length||0;
 
-    // FÃ©rias (armazenadas como [ini, fim])
+    // FÃƒÂ©rias (armazenadas como [ini, fim])
     const ferEntry = ea.find(a=>a.tipo==='Ferias');
     let ferWD=0, sabsFer=0;
     if (ferEntry?.datas?.length>=2) {
@@ -542,7 +547,7 @@ async function calcular() {
       }
     }
 
-    // SÃ¡bados trabalhados (bruto da escala no perÃ­odo ativo)
+    // SÃƒÂ¡bados trabalhados (bruto da escala no perÃƒÂ­odo ativo)
     let sabsBruto=0;
     for (const sab of sabados) {
       const sd = new Date(sab.data_sabado+'T00:00:00');
@@ -556,20 +561,20 @@ async function calcular() {
     // Dias efetivamente trabalhados (mesma base para VA e VT)
     const diasTrab = Math.max(0, activeWD - injust - just - ferWD);
 
-    // FÃ³rmulas:
-    // VA proporcional: (dias trabalhados / total esperado) Ã— valor_VA
+    // FÃƒÂ³rmulas:
+    // VA proporcional: (dias trabalhados / total esperado) ÃƒÂ— valor_VA
     const VA = emp.ajuda_va ? Math.max(0, valorVA * diasTrab / totalWD) : 0;
-    // VT: dias trabalhados + sÃ¡bados lÃ­quidos Ã— valor/dia
+    // VT: dias trabalhados + sÃƒÂ¡bados lÃƒÂ­quidos ÃƒÂ— valor/dia
     const VT = Math.max(0, (diasTrab + sabsLiq) * (parseFloat(emp.vt_dia)||0));
 
     return { emp, valid:true, activeWD, totalWD, injust, just, ferWD, sabsFer, sabsBruto, sabsLiq, diasTrab, VA, VT, total:VA+VT, obs:'' };
   });
 
-  btn.textContent='âš¡ Calcular'; btn.disabled=false;
+  btn.textContent='Ã¢ÂšÂ¡ Calcular'; btn.disabled=false;
   document.getElementById('btn-salvar-res').style.display='inline-flex';
   document.getElementById('btn-resetar').style.display='inline-flex';
   renderResultado(); renderCustos();
-  toast('CÃ¡lculo concluÃ­do!', 'success');
+  toast('CÃƒÂ¡lculo concluÃƒÂ­do!', 'success');
 }
 
 function filtrarResultado() {
@@ -611,7 +616,7 @@ async function salvarResultado() {
   const mes = parseInt(document.getElementById('p-mes').value)||params.mes;
   const { data: { user } } = await sb.auth.getUser();
   const btn = document.getElementById('btn-salvar-res');
-  btn.textContent='â³ Salvando...'; btn.disabled=true;
+  btn.textContent='Ã¢ÂÂ³ Salvando...'; btn.disabled=true;
   const rows = resultados.filter(r=>r.valid).map(r=>({
     ano, mes, colaborador_id:r.emp.id, centro_de_custo:r.emp.centro_de_custo,
     dias_uteis_ativo:r.activeWD, sabs_trabalhados:r.sabsLiq,
@@ -620,27 +625,27 @@ async function salvarResultado() {
     observacao:r.obs||null, calculado_por:user.id
   }));
   const { error } = await sb.from('resultado').upsert(rows, { onConflict:'ano,mes,colaborador_id' });
-  btn.textContent='ğŸ’¾ Salvar + Baixar CSV'; btn.disabled=false;
+  btn.textContent='Ã°ÂŸÂ’Â¾ Salvar + Baixar CSV'; btn.disabled=false;
   if (error) { toast('Erro: '+error.message, 'error'); return; }
   baixarCSV(ano, mes);
   toast(rows.length+' registros salvos! CSV baixado.', 'success');
 }
 
 function baixarCSV(ano, mes) {
-  const header = ['Colaborador','CC','Escala','D.Ãšteis','SÃ¡b.Trab.','Falta Inj.','Falta Just.','FÃ©rias d.u.','SÃ¡b.FÃ©rias','Dias p/VA','Dias p/VT','VA (R$)','VT (R$)','Total (R$)'];
+  const header = ['Colaborador','CC','Escala','D.ÃƒÂšteis','SÃƒÂ¡b.Trab.','Falta Inj.','Falta Just.','FÃƒÂ©rias d.u.','SÃƒÂ¡b.FÃƒÂ©rias','Dias p/VA','Dias p/VT','VA (R$)','VT (R$)','Total (R$)'];
   const linhas = resultados.filter(r=>r.valid).map(r=>[
     r.emp.nome, r.emp.centro_de_custo||'', r.emp.escala||'',
     r.activeWD, r.sabsBruto, r.injust, r.just, r.ferWD, r.sabsFer, r.diasTrab, r.diasTrab+r.sabsLiq,
     r.VA.toFixed(2).replace('.',','), r.VT.toFixed(2).replace('.',','), r.total.toFixed(2).replace('.',',')
   ].map(v=>`"${v}"`).join(';'));
   const csv = [header.join(';'), ...linhas].join('\n');
-  const blob = new Blob(['ï»¿'+csv], { type:'text/csv;charset=utf-8;' });
+  const blob = new Blob(['Ã¯Â»Â¿'+csv], { type:'text/csv;charset=utf-8;' });
   const a = document.createElement('a'); a.href=URL.createObjectURL(blob);
   a.download=`VA_VT_${MESES[mes]}_${ano}.csv`; a.click(); URL.revokeObjectURL(a.href);
 }
 
 function resetarCalculo() {
-  if (!confirm('Resetar o cÃ¡lculo? Os dados salvos no banco nÃ£o serÃ£o apagados.')) return;
+  if (!confirm('Resetar o cÃƒÂ¡lculo? Os dados salvos no banco nÃƒÂ£o serÃƒÂ£o apagados.')) return;
   resultados=[];
   document.getElementById('res-tbody').innerHTML='';
   ['s-va','s-vt','s-tot'].forEach(id=>document.getElementById(id).textContent='R$ 0,00');
@@ -648,7 +653,7 @@ function resetarCalculo() {
   document.getElementById('btn-salvar-res').style.display='none';
   document.getElementById('btn-resetar').style.display='none';
   document.getElementById('custos-container').innerHTML='<p style="color:var(--cz);padding:20px">Clique em Calcular na aba Resultado primeiro.</p>';
-  toast('CÃ¡lculo resetado.', '');
+  toast('CÃƒÂ¡lculo resetado.', '');
 }
 
 function renderCustos() {
@@ -685,14 +690,14 @@ function renderColaboradores() {
       <td><span class="badge bcz">${col.centro_de_custo||'-'}</span></td>
       <td style="font-size:12px;color:var(--cz)">${col.cargo||'-'}</td>
       <td><span class="badge besc">${col.escala||'-'}</span></td>
-      <td style="text-align:center">${ro?`<span class="badge ${col.ajuda_va?'bam':'bcz'}">${col.ajuda_va?'Sim':'NÃ£o'}</span>`:`<input type="checkbox" id="va-${col.id}" ${col.ajuda_va?'checked':''} style="width:17px;height:17px;accent-color:var(--am);cursor:pointer"/>`}</td>
+      <td style="text-align:center">${ro?`<span class="badge ${col.ajuda_va?'bam':'bcz'}">${col.ajuda_va?'Sim':'NÃƒÂ£o'}</span>`:`<input type="checkbox" id="va-${col.id}" ${col.ajuda_va?'checked':''} style="width:17px;height:17px;accent-color:var(--am);cursor:pointer"/>`}</td>
       <td style="text-align:right">${ro?`<span style="font-weight:700">R$ ${(parseFloat(col.vt_dia)||0).toFixed(2).replace('.',',')}</span>`:`<input type="number" id="vt-${col.id}" value="${parseFloat(col.vt_dia)||0}" min="0" step="0.01" style="width:90px;padding:5px 8px;border:1.5px solid var(--bd);border-radius:5px;font-size:13px;text-align:right"/>`}</td>
     </tr>`).join('')+`</tbody></table></div>`;
 }
 
 async function salvarColaboradores() {
   const btn = document.getElementById('btn-colab-salvar');
-  btn.textContent='â³ Salvando...'; btn.disabled=true;
+  btn.textContent='Ã¢ÂÂ³ Salvando...'; btn.disabled=true;
   try {
     const alt = [];
     for (const col of colaboradores) {
@@ -706,11 +711,11 @@ async function salvarColaboradores() {
         col.vt_dia=novoVT; col.ajuda_va=novoVA;
       }
     }
-    if (!alt.length) { toast('Nenhuma alteraÃ§Ã£o.',''); btn.textContent='ğŸ’¾ Salvar AlteraÃ§Ãµes'; btn.disabled=false; return; }
+    if (!alt.length) { toast('Nenhuma alteraÃƒÂ§ÃƒÂ£o.',''); btn.textContent='Ã°ÂŸÂ’Â¾ Salvar AlteraÃƒÂ§ÃƒÂµes'; btn.disabled=false; return; }
     for (const r of alt) { const { error } = await sb.from('colaboradores').update({ vt_dia:r.vt_dia, ajuda_va:r.ajuda_va, atualizado_em:new Date().toISOString() }).eq('id',r.id); if(error) throw error; }
     toast(alt.length+' colaborador(es) atualizado(s)!','success');
   } catch(e) { toast('Erro: '+(e.message||e),'error'); }
-  btn.textContent='ğŸ’¾ Salvar AlteraÃ§Ãµes'; btn.disabled=false;
+  btn.textContent='Ã°ÂŸÂ’Â¾ Salvar AlteraÃƒÂ§ÃƒÂµes'; btn.disabled=false;
 }
 
 // ===== TABS =====
@@ -734,7 +739,7 @@ function diasUteis(start, end, excludeDates=[]) {
   return count;
 }
 
-// Retorna datas de feriados onde essa escala NÃƒO trabalhou
+// Retorna datas de feriados onde essa escala NÃƒÂƒO trabalhou
 function feriadosDates(escala) {
   return feriados
     .filter(f => !escalaTrabalheuFeriado(escala, f))
@@ -756,7 +761,7 @@ function sabadosDoMes(ano, mes) {
 
 function fmt(v) { return 'R$ '+(v||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
 function fmtData(d) { return d.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'}); }
-const MESES = ['','Janeiro','Fevereiro','MarÃ§o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+const MESES = ['','Janeiro','Fevereiro','MarÃƒÂ§o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 
 function toast(msg, tipo='') {
   const el=document.createElement('div'); el.className=`tmsg ${tipo}`; el.textContent=msg;
